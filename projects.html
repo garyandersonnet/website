@@ -172,7 +172,7 @@
 </div>
 <div class="px-6 flex-1 flex flex-col">
 <p class="text-[#2c2416]/75 mb-4 flex-1">Notes-to-multimedia pipeline covering Epictetus, Seneca, and Marcus Aurelius, built for repeated listening and reflection.</p>
-<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>Fed the course readings and lecture transcripts through the pipeline to produce an overview video for a first pass, a slide deck for review, and a podcast-style deep dive for focused listening.</p><p>The study guide breaks the \"dichotomy of control\" down into a checklist I actually use.</p></div>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>Fed the course readings and lecture transcripts through the pipeline to produce an overview video for a first pass, a slide deck for review, and a podcast-style deep dive for focused listening.</p><p>The study guide breaks the "dichotomy of control" down into a checklist I actually use.</p></div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Philosophy</span>
 <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Stoicism</span>
@@ -193,33 +193,33 @@
 <script>
 (function () {
   function esc(s) {
-    return String(s == null ? \"\" : s)
-      .replace(/&/g, \"&amp;\")
-      .replace(/</g, \"&lt;\")
-      .replace(/>/g, \"&gt;\")
-      .replace(/\"/g, \"&quot;\");
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
-  fetch(\"/assets/courses.json\")
+  fetch("/assets/courses.json")
     .then(function (r) { return r.json(); })
     .then(function (courses) {
-      var body = document.getElementById(\"catalog-body\");
-      var count = document.getElementById(\"catalog-count\");
-      count.textContent = courses.length + \" courses · semesters 1–6\";
+      var body = document.getElementById('catalog-body');
+      var count = document.getElementById('catalog-count');
+      count.textContent = courses.length + ' courses · semesters 1–6';
       body.innerHTML = courses.map(function (c) {
-        var sem = c.semester || \"—\";
-        var typ = c.type || \"—\";
-        return \"<tr class=\\\"border-b border-[#2c2416]/10 last:border-0 hover:bg-[#2c2416]/5\\\">\" +
-          \"<td class=\\\"px-3 py-2.5 text-[#2c2416]/60 tabular-nums\\\">\" + esc(sem) + \"</td>\" +
-          \"<td class=\\\"px-3 py-2.5 text-[#2c2416]/75\\\">\" + esc(typ) + \"</td>\" +
-          \"<td class=\\\"px-3 py-2.5 font-mono text-xs whitespace-nowrap\\\">\" + esc(c.code) + \"</td>\" +
-          \"<td class=\\\"px-3 py-2.5\\\">\" + esc(c.title) + \"</td>\" +
-          \"<td class=\\\"px-3 py-2.5 text-[#2c2416]/75\\\">\" + esc(c.instructor) + \"</td>\" +
-          \"</tr>\";
-      }).join(\"\");
+        var sem = c.semester || '—';
+        var typ = c.type || '—';
+        return '<tr class="border-b border-[#2c2416]/10 last:border-0 hover:bg-[#2c2416]/5">' +
+          '<td class="px-3 py-2.5 text-[#2c2416]/60 tabular-nums">' + esc(sem) + '</td>' +
+          '<td class="px-3 py-2.5 text-[#2c2416]/75">' + esc(typ) + '</td>' +
+          '<td class="px-3 py-2.5 font-mono text-xs whitespace-nowrap">' + esc(c.code) + '</td>' +
+          '<td class="px-3 py-2.5">' + esc(c.title) + '</td>' +
+          '<td class="px-3 py-2.5 text-[#2c2416]/75">' + esc(c.instructor) + '</td>' +
+          '</tr>';
+      }).join('');
     })
     .catch(function () {
-      document.getElementById(\"catalog-body\").innerHTML =
-        \"<tr><td class=\\\"px-3 py-4 text-[#2c2416]/70\\\" colspan=\\\"5\\\">Could not load the course catalog.</td></tr>\";
+      document.getElementById('catalog-body').innerHTML =
+        '<tr><td class="px-3 py-4 text-[#2c2416]/70" colspan="5">Could not load the course catalog.</td></tr>';
     });
 })();
 </script>
