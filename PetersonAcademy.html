@@ -113,7 +113,7 @@
   .semester-nav button {
     min-width: 2.5rem;
     height: 2.5rem;
-    padding: 0 0.65rem;
+    padding: 0 0.75rem;
     border-radius: 999px;
     border: 1px solid rgba(44, 36, 22, 0.2);
     background: rgba(255, 255, 255, 0.45);
@@ -255,7 +255,7 @@
 <label class="sr-only" for="catalog-search">Search courses</label>
 <input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
 </div>
-<p class="catalog-hint">Search matches across all semesters. Semester bubbles filter the list when search is empty (… is unassigned) and clear the search box.</p>
+<p class="catalog-hint">Search matches across all semesters. All shows every course; semester bubbles filter when search is empty (… is unassigned) and clear the search box.</p>
 <nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester (top)">
 <span class="sem-label">Semester</span>
 </nav>
@@ -308,13 +308,15 @@
   var table = null;
   var searchQ = "";
 
-  var SEMESTERS = ["1", "2", "3", "4", "5", "6", "—"];
+  var SEMESTERS = ["all", "1", "2", "3", "4", "5", "6", "—"];
 
   function labelFor(sem) {
+    if (sem === "all") return "All";
     return sem === "—" ? "…" : sem;
   }
 
   function ariaFor(sem) {
+    if (sem === "all") return "All courses";
     return sem === "—" ? "Unassigned semester" : "Semester " + sem;
   }
 
@@ -379,14 +381,19 @@
     if (searchQ) {
       return allRows.filter(matchesSearch);
     }
+    if (activeSem === "all") {
+      return allRows.slice();
+    }
     return allRows.filter(function (r) { return r.semester === activeSem; });
   }
 
   function applyView() {
     var rows = filteredRows();
     table.replaceData(rows);
-    var semLabel = activeSem === "—" ? "unassigned" : "semester " + activeSem;
-    var semTotal = allRows.filter(function (r) { return r.semester === activeSem; }).length;
+    var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
+    var semTotal = activeSem === "all"
+      ? allRows.length
+      : allRows.filter(function (r) { return r.semester === activeSem; }).length;
     if (searchQ) {
       statusEl.textContent = rows.length + " of " + allRows.length + " courses match (all semesters)";
       // Dim semester bubbles while searching across all
