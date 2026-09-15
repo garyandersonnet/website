@@ -255,7 +255,7 @@
 <label class="sr-only" for="catalog-search">Search courses</label>
 <input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
 </div>
-<p class="catalog-hint">Search matches across all semesters. Semester bubbles filter the list when search is empty (… is unassigned). Click a column header to sort.</p>
+<p class="catalog-hint">Search matches across all semesters. Semester bubbles filter the list when search is empty (… is unassigned) and clear the search box.</p>
 <nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester (top)">
 <span class="sem-label">Semester</span>
 </nav>
@@ -355,6 +355,8 @@
 
   function setSemester(sem) {
     activeSem = sem;
+    searchQ = "";
+    if (searchEl) searchEl.value = "";
     syncNavButtons();
     applyView();
   }
@@ -420,14 +422,13 @@
         responsiveLayout: "collapse",
         pagination: false,
         movableColumns: false,
-        initialSort: [{ column: "code", dir: "asc" }],
         columns: [
           {
             title: "Semester",
             field: "semester",
             width: 110,
             hozAlign: "center",
-            headerSort: true,
+            headerSort: false,
             sorter: function (a, b) {
               var na = a === "—" ? 99 : parseInt(a, 10) || 99;
               var nb = b === "—" ? 99 : parseInt(b, 10) || 99;
@@ -442,7 +443,7 @@
             title: "Type",
             field: "type",
             width: 120,
-            headerSort: true,
+            headerSort: false,
             formatter: function (cell) {
               var v = cell.getValue();
               return v === "—" ? '<span class="cell-muted">—</span>' : v;
@@ -452,13 +453,13 @@
             title: "Code",
             field: "code",
             width: 130,
-            headerSort: true,
+            headerSort: false,
             formatter: function (cell) {
               return '<span class="cell-code">' + cell.getValue() + "</span>";
             }
           },
-          { title: "Title", field: "title", minWidth: 220, headerSort: true },
-          { title: "Instructor", field: "instructor", minWidth: 180, headerSort: true }
+          { title: "Title", field: "title", minWidth: 220, headerSort: false },
+          { title: "Instructor", field: "instructor", minWidth: 180, headerSort: false }
         ]
       });
 
