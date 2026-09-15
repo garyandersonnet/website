@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- deploy 2026-09-15-sort-all-v2 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -334,21 +335,20 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.textContent = labelFor(sem);
-      btn.dataset.semester = sem;
+      btn.setAttribute("data-sem", sem);
       btn.setAttribute("aria-label", ariaFor(sem));
-      btn.setAttribute("aria-pressed", sem === activeSem ? "true" : "false");
-      if (sem === activeSem) btn.classList.add("active");
       btn.addEventListener("click", function () {
         setSemester(sem);
       });
       navEl.appendChild(btn);
     });
+    syncNavButtons();
   }
 
   function syncNavButtons() {
     navEls.forEach(function (navEl) {
-      Array.prototype.forEach.call(navEl.querySelectorAll("button"), function (b) {
-        var on = b.dataset.semester === activeSem;
+      Array.prototype.forEach.call(navEl.querySelectorAll("button[data-sem]"), function (b) {
+        var on = b.getAttribute("data-sem") === activeSem;
         b.classList.toggle("active", on);
         b.setAttribute("aria-pressed", on ? "true" : "false");
       });
@@ -431,8 +431,13 @@
     ];
   }
 
+  var sortEnabled = null;
+
   function setColumnSorting(enabled) {
     if (!table) return;
+    enabled = !!enabled;
+    if (sortEnabled === enabled) return;
+    sortEnabled = enabled;
     table.setColumns(catalogColumns(enabled));
     if (!enabled) {
       try { table.clearSort(); } catch (e) {}
@@ -441,7 +446,7 @@
 
   function applyView() {
     var rows = filteredRows();
-    // Sorting only when viewing All — rebuild columns so Tabulator binds headers.
+    // Sorting only when viewing All — rebuild columns when mode changes.
     setColumnSorting(activeSem === "all");
     table.replaceData(rows);
     var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
@@ -478,6 +483,7 @@
       });
 
       navEls.forEach(buildNav);
+      syncNavButtons();
 
       table = new Tabulator("#course-catalog", {
         data: [],
