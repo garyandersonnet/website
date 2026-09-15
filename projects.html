@@ -119,6 +119,67 @@
     white-space: nowrap;
     border: 0;
   }
+
+  /* iPhone/mobile: catalog is landscape-only — gate portrait */
+  .landscape-gate {
+    display: none;
+  }
+  @media (orientation: portrait) and (max-width: 900px) {
+    .page-main {
+      display: none !important;
+    }
+    .landscape-gate {
+      display: flex;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: #f4ecd8;
+      color: #2c2416;
+    }
+    .landscape-gate .phone {
+      width: 3.25rem;
+      height: 5rem;
+      border: 2.5px solid #2c2416;
+      border-radius: 0.55rem;
+      position: relative;
+      animation: tip-landscape 1.6s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    .landscape-gate .phone::after {
+      content: "";
+      position: absolute;
+      bottom: 0.35rem;
+      left: 50%;
+      width: 0.9rem;
+      height: 0.2rem;
+      margin-left: -0.45rem;
+      border-radius: 999px;
+      background: #2c2416;
+    }
+    @keyframes tip-landscape {
+      0%, 20% { transform: rotate(0deg); }
+      45%, 70% { transform: rotate(90deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .landscape-gate h2 {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .landscape-gate p {
+      margin: 0;
+      max-width: 18rem;
+      color: rgba(44, 36, 22, 0.75);
+      line-height: 1.45;
+    }
+  }
+
   #catalog-status {
     font-size: 0.875rem;
     color: rgba(44, 36, 22, 0.6);
@@ -139,7 +200,12 @@
 </nav>
 </div>
 </header>
-<div class="min-h-screen">
+<div class="landscape-gate" role="dialog" aria-modal="true" aria-labelledby="landscape-gate-title">
+<div class="phone" aria-hidden="true"></div>
+<h2 id="landscape-gate-title">Turn your phone sideways</h2>
+<p>The course catalog is built for landscape. Rotate to continue — Safari can’t lock orientation for you.</p>
+</div>
+<div class="min-h-screen page-main">
 <div class="max-w-5xl mx-auto px-4 py-12">
 <h1 class="font-serif text-4xl mb-2">Peterson Academy</h1>
 <p class="text-[#2c2416]/75 mb-8">The full course catalog, plus study packs Publius rebuilds into an overview video, a slide deck, a deep-dive podcast, and a study guide.</p>
@@ -296,6 +362,25 @@
 </section>
 </div>
 </div>
+
+<script>
+(function () {
+  function tryLockLandscape() {
+    try {
+      var o = screen.orientation || screen.mozOrientation || screen.msOrientation;
+      if (o && typeof o.lock === "function") {
+        o.lock("landscape").catch(function () {});
+      } else if (typeof screen.lockOrientation === "function") {
+        screen.lockOrientation("landscape");
+      } else if (typeof screen.mozLockOrientation === "function") {
+        screen.mozLockOrientation("landscape");
+      }
+    } catch (e) {}
+  }
+  tryLockLandscape();
+  window.addEventListener("orientationchange", tryLockLandscape);
+})();
+</script>
 <script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
 <script>
 (function () {
