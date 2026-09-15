@@ -86,18 +86,54 @@
     line-height: 1.45;
   }
   #course-catalog .tabulator-footer {
-    background: rgba(44, 36, 22, 0.04) !important;
-    border-top: 1px solid rgba(44, 36, 22, 0.12) !important;
-    color: rgba(44, 36, 22, 0.7);
-    padding: 0.65rem 0.75rem !important;
+    display: none !important;
   }
-  #course-catalog .tabulator-page,
-  #course-catalog .tabulator-page-size {
-    color: #2c2416 !important;
+  #semester-nav-top {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding-top: 0.25rem;
   }
-  #course-catalog .tabulator-page.active {
-    background: rgba(44, 36, 22, 0.12) !important;
-    border-color: transparent !important;
+  #semester-nav-bottom {
+    margin-top: 1rem;
+  }
+  .semester-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem 0.5rem;
+  }
+  .semester-nav .sem-label {
+    font-size: 0.8rem;
+    color: rgba(44, 36, 22, 0.55);
+    margin-right: 0.35rem;
+  }
+  .semester-nav button {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(44, 36, 22, 0.2);
+    background: rgba(255, 255, 255, 0.45);
+    color: #2c2416;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .semester-nav button:hover {
+    background: rgba(44, 36, 22, 0.08);
+  }
+  .semester-nav button.active {
+    background: rgba(44, 36, 22, 0.14);
+    border-color: rgba(44, 36, 22, 0.35);
+    font-weight: 600;
+  }
+  .semester-nav button:focus-visible {
+    outline: 2px solid rgba(44, 36, 22, 0.3);
+    outline-offset: 2px;
   }
   #course-catalog .cell-muted {
     color: rgba(44, 36, 22, 0.45);
@@ -223,8 +259,14 @@
 <label class="sr-only" for="catalog-search">Search courses</label>
 <input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
 </div>
-<p class="catalog-hint">Click a column header to sort. Blank semester or type shows as —.</p>
+<p class="catalog-hint">Use the semester bubbles below to switch lists (… is unassigned). Click a column header to sort.</p>
+<nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester (top)">
+<span class="sem-label">Semester</span>
+</nav>
 <div id="course-catalog"></div>
+<nav id="semester-nav-bottom" class="semester-nav" aria-label="Filter by semester (bottom)">
+<span class="sem-label">Semester</span>
+</nav>
 </section>
 
 <section>
@@ -389,11 +431,96 @@
   }
   var statusEl = document.getElementById("catalog-status");
   var searchEl = document.getElementById("catalog-search");
+  var navEls = [
+    document.getElementById("semester-nav-top"),
+    document.getElementById("semester-nav-bottom")
+  ].filter(Boolean);
+  var activeSem = "1";
+  var allRows = [];
+  var table = null;
+  var searchQ = "";
+
+  var SEMESTERS = ["1", "2", "3", "4", "5", "6", "—"];
+
+  function labelFor(sem) {
+    return sem === "—" ? "…" : sem;
+  }
+
+  function ariaFor(sem) {
+    return sem === "—" ? "Unassigned semester" : "Semester " + sem;
+  }
+
+  function buildNav(navEl) {
+    var label = navEl.querySelector(".sem-label");
+    navEl.innerHTML = "";
+    if (label) navEl.appendChild(label);
+    else {
+      var span = document.createElement("span");
+      span.className = "sem-label";
+      span.textContent = "Semester";
+      navEl.appendChild(span);
+    }
+    SEMESTERS.forEach(function (sem) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = labelFor(sem);
+      btn.dataset.semester = sem;
+      btn.setAttribute("aria-label", ariaFor(sem));
+      btn.setAttribute("aria-pressed", sem === activeSem ? "true" : "false");
+      if (sem === activeSem) btn.classList.add("active");
+      btn.addEventListener("click", function () {
+        setSemester(sem);
+      });
+      navEl.appendChild(btn);
+    });
+  }
+
+  function syncNavButtons() {
+    navEls.forEach(function (navEl) {
+      Array.prototype.forEach.call(navEl.querySelectorAll("button"), function (b) {
+        var on = b.dataset.semester === activeSem;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    });
+  }
+
+  function setSemester(sem) {
+    activeSem = sem;
+    syncNavButtons();
+    applyView();
+  }
+
+  function filteredRows() {
+    var rows = allRows.filter(function (r) { return r.semester === activeSem; });
+    if (!searchQ) return rows;
+    var q = searchQ.toLowerCase();
+    return rows.filter(function (r) {
+      return (
+        String(r.title).toLowerCase().indexOf(q) !== -1 ||
+        String(r.code).toLowerCase().indexOf(q) !== -1 ||
+        String(r.instructor).toLowerCase().indexOf(q) !== -1 ||
+        String(r.type).toLowerCase().indexOf(q) !== -1
+      );
+    });
+  }
+
+  function applyView() {
+    var rows = filteredRows();
+    table.replaceData(rows);
+    var semLabel = activeSem === "—" ? "unassigned" : "semester " + activeSem;
+    var semTotal = allRows.filter(function (r) { return r.semester === activeSem; }).length;
+    if (searchQ) {
+      statusEl.textContent = rows.length + " of " + semTotal + " courses in " + semLabel + " match";
+    } else {
+      statusEl.textContent = semTotal + " courses in " + semLabel + " (full list)";
+    }
+  }
 
   fetch("/assets/courses.json")
     .then(function (r) { return r.json(); })
     .then(function (courses) {
-      var rows = courses.map(function (c) {
+      allRows = courses.map(function (c) {
         return {
           semester: dash(c.semester),
           type: dash(c.type),
@@ -402,17 +529,16 @@
           instructor: c.instructor || ""
         };
       });
-      statusEl.textContent = rows.length + " courses · click a header to sort";
 
-      var table = new Tabulator("#course-catalog", {
-        data: rows,
+      navEls.forEach(buildNav);
+
+      table = new Tabulator("#course-catalog", {
+        data: [],
         layout: "fitColumns",
         responsiveLayout: "collapse",
-        pagination: "local",
-        paginationSize: 25,
-        paginationSizeSelector: [15, 25, 50, 100],
+        pagination: false,
         movableColumns: false,
-        initialSort: [{ column: "semester", dir: "asc" }],
+        initialSort: [{ column: "code", dir: "asc" }],
         columns: [
           {
             title: "Semester",
@@ -454,27 +580,18 @@
         ]
       });
 
+      table.on("tableBuilt", function () {
+        applyView();
+      });
+      // In case tableBuilt already fired
+      setTimeout(applyView, 0);
+
       var searchTimer;
       searchEl.addEventListener("input", function () {
         clearTimeout(searchTimer);
-        var q = searchEl.value.trim();
         searchTimer = setTimeout(function () {
-          if (!q) {
-            table.clearFilter(true);
-            statusEl.textContent = rows.length + " courses · click a header to sort";
-            return;
-          }
-          table.setFilter([
-            [
-              { field: "title", type: "like", value: q },
-              { field: "code", type: "like", value: q },
-              { field: "instructor", type: "like", value: q },
-              { field: "type", type: "like", value: q },
-              { field: "semester", type: "like", value: q }
-            ]
-          ]);
-          var n = table.getDataCount("active");
-          statusEl.textContent = n + " of " + rows.length + " courses match";
+          searchQ = searchEl.value.trim();
+          applyView();
         }, 120);
       });
     })
@@ -485,5 +602,6 @@
     });
 })();
 </script>
+
 </body>
 </html>
