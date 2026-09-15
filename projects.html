@@ -1,1 +1,404 @@
-PLACEHOLDER_WILL_REPLACE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peterson Academy — Publius Nakamoto</title>
+<meta name="description" content="Full Peterson Academy course catalog, plus Publius Nakamoto study packs.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/style.css">
+<link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+<style>
+  /* Parchment catalog — looser spacing + Tabulator skin */
+  .catalog-wrap {
+    margin-bottom: 4rem;
+  }
+  .catalog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .catalog-search {
+    width: min(100%, 20rem);
+    border: 1px solid rgba(44, 36, 22, 0.2);
+    background: rgba(255, 255, 255, 0.45);
+    color: #2c2416;
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  .catalog-search::placeholder {
+    color: rgba(44, 36, 22, 0.45);
+  }
+  .catalog-search:focus {
+    outline: 2px solid rgba(44, 36, 22, 0.25);
+    outline-offset: 1px;
+  }
+  .catalog-hint {
+    font-size: 0.875rem;
+    color: rgba(44, 36, 22, 0.65);
+    margin: 0 0 1rem;
+  }
+  #course-catalog {
+    border: 1px solid rgba(44, 36, 22, 0.15) !important;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: inherit;
+  }
+  #course-catalog .tabulator-header {
+    background: rgba(44, 36, 22, 0.06) !important;
+    border-bottom: 1px solid rgba(44, 36, 22, 0.15) !important;
+    font-weight: 500;
+    color: rgba(44, 36, 22, 0.72);
+  }
+  #course-catalog .tabulator-col {
+    background: transparent !important;
+    border-right: 1px solid rgba(44, 36, 22, 0.08) !important;
+  }
+  #course-catalog .tabulator-col-content {
+    padding: 1rem 1rem !important;
+  }
+  #course-catalog .tabulator-col.tabulator-sortable .tabulator-col-title {
+    padding-right: 1.5rem;
+  }
+  #course-catalog .tabulator-row {
+    background: transparent !important;
+    min-height: 3.25rem;
+    border-bottom: 1px solid rgba(44, 36, 22, 0.08) !important;
+  }
+  #course-catalog .tabulator-row:hover {
+    background: rgba(44, 36, 22, 0.05) !important;
+  }
+  #course-catalog .tabulator-row.tabulator-row-even {
+    background: rgba(44, 36, 22, 0.02) !important;
+  }
+  #course-catalog .tabulator-row.tabulator-row-even:hover {
+    background: rgba(44, 36, 22, 0.05) !important;
+  }
+  #course-catalog .tabulator-cell {
+    padding: 0.95rem 1rem !important;
+    border-right: 1px solid rgba(44, 36, 22, 0.06) !important;
+    color: #2c2416;
+    line-height: 1.45;
+  }
+  #course-catalog .tabulator-footer {
+    background: rgba(44, 36, 22, 0.04) !important;
+    border-top: 1px solid rgba(44, 36, 22, 0.12) !important;
+    color: rgba(44, 36, 22, 0.7);
+    padding: 0.65rem 0.75rem !important;
+  }
+  #course-catalog .tabulator-page,
+  #course-catalog .tabulator-page-size {
+    color: #2c2416 !important;
+  }
+  #course-catalog .tabulator-page.active {
+    background: rgba(44, 36, 22, 0.12) !important;
+    border-color: transparent !important;
+  }
+  #course-catalog .cell-muted {
+    color: rgba(44, 36, 22, 0.45);
+  }
+  #course-catalog .cell-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  #catalog-status {
+    font-size: 0.875rem;
+    color: rgba(44, 36, 22, 0.6);
+  }
+</style>
+</head>
+<body class="bg-[#f4ecd8] text-[#2c2416]">
+<header class="border-b border-[#3a2f22]/15 bg-[#f4ecd8]/90 backdrop-blur-sm sticky top-0 z-10">
+<div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+<a class="font-serif text-lg tracking-wide text-[#2c2416]" href="/">Publius Nakamoto</a>
+<nav class="flex items-center gap-6 text-sm text-[#2c2416]/80">
+<a href="/development" class="hover:text-[#2c2416] transition-colors">Development</a>
+<a href="/" class="hover:text-[#2c2416] transition-colors">Home</a>
+<a class="text-[#2c2416] font-semibold" href="/projects" aria-current="page">Peterson Academy</a>
+<a href="/other-projects" class="hover:text-[#2c2416] transition-colors">Other Projects</a>
+<a href="/about" class="hover:text-[#2c2416] transition-colors">About</a>
+<a href="/contact" class="hover:text-[#2c2416] transition-colors">Contact</a>
+</nav>
+</div>
+</header>
+<div class="min-h-screen">
+<div class="max-w-5xl mx-auto px-4 py-12">
+<h1 class="font-serif text-4xl mb-2">Peterson Academy</h1>
+<p class="text-[#2c2416]/75 mb-8">The full course catalog, plus study packs Publius rebuilds into an overview video, a slide deck, a deep-dive podcast, and a study guide.</p>
+<div class="text-[#2c2416]/75 mb-10 rounded-lg border border-[#3a2f22]/15 bg-[#3a2f22]/5 px-4 py-3">
+<p class="mb-2">Want to take these courses yourself? Sign up with this referral link — copy, paste, and use it to enroll. Signing up this way extends both the new student's and Publius Nakamoto's terms.</p>
+<a href="https://petersonacademy.com/signup?referral_code=293XVS" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#2c2416] break-all">https://petersonacademy.com/signup?referral_code=293XVS</a>
+</div>
+
+<section class="catalog-wrap">
+<div class="catalog-toolbar">
+<div>
+<h2 class="font-serif text-2xl mb-1">Course catalog</h2>
+<p id="catalog-status">Loading catalog…</p>
+</div>
+<label class="sr-only" for="catalog-search">Search courses</label>
+<input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
+</div>
+<p class="catalog-hint">Click a column header to sort. Blank semester or type shows as —.</p>
+<div id="course-catalog"></div>
+</section>
+
+<section>
+<h2 class="font-serif text-2xl mb-2">Study packs</h2>
+<p class="text-[#2c2416]/75 mb-8">Multimedia rebuilds in progress. Resources light up as each piece is finished.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — Psychology</p>
+<div class="font-semibold text-xl">Psych 100: How to Plan Your Life</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">An overview video on turning the course's research into an actual plan for your life.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>The overview video walks through the course's framework for setting and pursuing long-term goals, translated out of dense lecture format into something watchable start to finish.</p><p>Slide deck, podcast, and study guide are still to come.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Psychology</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Life Planning</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<a href="https://youtu.be/1tnwSL6FIuI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-[#2c2416]/80 hover:text-[#2c2416] hover:underline">Overview video</a>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — Economics</p>
+<div class="font-semibold text-xl">Behavioral Economics and Human Decision-Making</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">A full four-part set — overview video, slide deck, podcast, and study guide — on why people don't behave like the models say they should.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>The most complete set so far. The overview video covers prospect theory in five minutes, the slide deck maps every heuristic and bias from the course, the podcast digs into the Kahneman and Tversky experiments, and the study guide turns it all into flashcard-ready prompts.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Economics</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Psychology</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Overview video</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — Physics</p>
+<div class="font-semibold text-xl">Quantum Mechanics for the Curious Mind</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">Turning dense problem-set lectures into an approachable overview video and a podcast that explains superposition without the hand-waving.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>The overview video became the on-ramp for this course, and the deep-dive podcast is what actually made the double-slit experiment click.</p><p>Slide deck and study guide are next up.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Physics</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Quantum Mechanics</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Overview video</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — Art History</p>
+<div class="font-semibold text-xl">The Renaissance Mind: Art, Science, and Invention</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">A study pack on how Leonardo da Vinci and his contemporaries blurred the line between artist and engineer.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>Sourced the course lectures, primary-text excerpts, and museum catalog notes, then generated an overview video, a slide deck for quick review, a deep-dive podcast episode, and a study guide with spaced-repetition prompts.</p><p>The deep dive focuses on da Vinci's notebooks — the mirrored handwriting, the anatomical studies, the habit of treating every observation as both art and data.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Art History</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Renaissance</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Overview video</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — History</p>
+<div class="font-semibold text-xl">The Roman Republic: Rise and Ruin</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">A close read of the Republic's collapse, turned into a slide deck and study guide for tracking the key political flashpoints.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>Ran the lecture set and assigned readings to build a slide deck timeline of the late Republic and a study guide of the Gracchi, Marius, Sulla, and Caesar in sequence.</p><p>Still working on the overview video and podcast for this one.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">History</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Rome</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Overview video</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground gap-6 rounded-xl border py-6 shadow-sm flex flex-col">
+<div class="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+<p class="text-xs uppercase tracking-wide text-[#2c2416]/50">Peterson Academy — Philosophy</p>
+<div class="font-semibold text-xl">Stoicism and the Examined Life</div>
+</div>
+<div class="px-6 flex-1 flex flex-col">
+<p class="text-[#2c2416]/75 mb-4 flex-1">Notes-to-multimedia pipeline covering Epictetus, Seneca, and Marcus Aurelius, built for repeated listening and reflection.</p>
+<div class="prose prose-sm max-w-none mb-4 text-[#2c2416]/75"><p>Fed the course readings and lecture transcripts through the pipeline to produce an overview video for a first pass, a slide deck for review, and a podcast-style deep dive for focused listening.</p><p>The study guide breaks the "dichotomy of control" down into a checklist I actually use.</p></div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Philosophy</span>
+<span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 border-transparent bg-secondary text-secondary-foreground">Stoicism</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Overview video</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Slide deck</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Deep-dive podcast</span>
+<span class="inline-flex items-center gap-2 text-sm text-[#2c2416]/35 cursor-default">Study guide</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+</div>
+</div>
+<script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+<script>
+(function () {
+  function dash(v) {
+    return v == null || String(v).trim() === "" ? "—" : String(v);
+  }
+  var statusEl = document.getElementById("catalog-status");
+  var searchEl = document.getElementById("catalog-search");
+
+  fetch("/assets/courses.json")
+    .then(function (r) { return r.json(); })
+    .then(function (courses) {
+      var rows = courses.map(function (c) {
+        return {
+          semester: dash(c.semester),
+          type: dash(c.type),
+          code: c.code || "",
+          title: c.title || "",
+          instructor: c.instructor || ""
+        };
+      });
+      statusEl.textContent = rows.length + " courses · click a header to sort";
+
+      var table = new Tabulator("#course-catalog", {
+        data: rows,
+        layout: "fitColumns",
+        responsiveLayout: "collapse",
+        pagination: "local",
+        paginationSize: 25,
+        paginationSizeSelector: [15, 25, 50, 100],
+        movableColumns: false,
+        initialSort: [{ column: "semester", dir: "asc" }],
+        columns: [
+          {
+            title: "Semester",
+            field: "semester",
+            width: 110,
+            hozAlign: "center",
+            headerSort: true,
+            sorter: function (a, b) {
+              var na = a === "—" ? 99 : parseInt(a, 10) || 99;
+              var nb = b === "—" ? 99 : parseInt(b, 10) || 99;
+              return na - nb;
+            },
+            formatter: function (cell) {
+              var v = cell.getValue();
+              return v === "—" ? '<span class="cell-muted">—</span>' : v;
+            }
+          },
+          {
+            title: "Type",
+            field: "type",
+            width: 120,
+            headerSort: true,
+            formatter: function (cell) {
+              var v = cell.getValue();
+              return v === "—" ? '<span class="cell-muted">—</span>' : v;
+            }
+          },
+          {
+            title: "Code",
+            field: "code",
+            width: 130,
+            headerSort: true,
+            formatter: function (cell) {
+              return '<span class="cell-code">' + cell.getValue() + "</span>";
+            }
+          },
+          { title: "Title", field: "title", minWidth: 220, headerSort: true },
+          { title: "Instructor", field: "instructor", minWidth: 180, headerSort: true }
+        ]
+      });
+
+      var searchTimer;
+      searchEl.addEventListener("input", function () {
+        clearTimeout(searchTimer);
+        var q = searchEl.value.trim();
+        searchTimer = setTimeout(function () {
+          if (!q) {
+            table.clearFilter(true);
+            statusEl.textContent = rows.length + " courses · click a header to sort";
+            return;
+          }
+          table.setFilter([
+            [
+              { field: "title", type: "like", value: q },
+              { field: "code", type: "like", value: q },
+              { field: "instructor", type: "like", value: q },
+              { field: "type", type: "like", value: q },
+              { field: "semester", type: "like", value: q }
+            ]
+          ]);
+          var n = table.getDataCount("active");
+          statusEl.textContent = n + " of " + rows.length + " courses match";
+        }, 120);
+      });
+    })
+    .catch(function () {
+      statusEl.textContent = "Could not load the course catalog.";
+      document.getElementById("course-catalog").innerHTML =
+        '<p class="px-4 py-6 text-[#2c2416]/70">Could not load the course catalog.</p>';
+    });
+})();
+</script>
+</body>
+</html>
