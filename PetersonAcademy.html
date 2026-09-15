@@ -303,7 +303,7 @@
     document.getElementById("semester-nav-top"),
     document.getElementById("semester-nav-bottom")
   ].filter(Boolean);
-  var activeSem = "1";
+  var activeSem = "all";
   var allRows = [];
   var table = null;
   var searchQ = "";
@@ -387,12 +387,53 @@
     return allRows.filter(function (r) { return r.semester === activeSem; });
   }
 
+  function catalogColumns(sortable) {
+    return [
+      {
+        title: "Seq",
+        field: "sequence",
+        width: 70,
+        hozAlign: "center",
+        headerSort: !!sortable,
+        sorter: "number",
+        formatter: function (cell) {
+          var v = cell.getValue();
+          return v ? '<span class="tabular-nums">' + v + "</span>" : '<span class="cell-muted">—</span>';
+        }
+      },
+      {
+        title: "Semester",
+        field: "semester",
+        width: 110,
+        hozAlign: "center",
+        headerSort: !!sortable,
+        sorter: function (a, b) {
+          var na = a === "—" ? 99 : parseInt(a, 10) || 99;
+          var nb = b === "—" ? 99 : parseInt(b, 10) || 99;
+          return na - nb;
+        },
+        formatter: function (cell) {
+          var v = cell.getValue();
+          return v === "—" ? '<span class="cell-muted">—</span>' : v;
+        }
+      },
+      {
+        title: "Code",
+        field: "code",
+        width: 130,
+        headerSort: !!sortable,
+        formatter: function (cell) {
+          return '<span class="cell-code">' + cell.getValue() + "</span>";
+        }
+      },
+      { title: "Title", field: "title", minWidth: 220, headerSort: !!sortable },
+      { title: "Instructor", field: "instructor", minWidth: 180, headerSort: !!sortable }
+    ];
+  }
+
   function setColumnSorting(enabled) {
     if (!table) return;
-    ["sequence", "semester", "code", "title", "instructor"].forEach(function (field) {
-      var col = table.getColumn(field);
-      if (col) col.updateDefinition({ headerSort: !!enabled });
-    });
+    table.setColumns(catalogColumns(enabled));
     if (!enabled) {
       try { table.clearSort(); } catch (e) {}
     }
@@ -400,9 +441,9 @@
 
   function applyView() {
     var rows = filteredRows();
-    table.replaceData(rows);
-    // Sorting only when viewing All (not a single semester).
+    // Sorting only when viewing All — rebuild columns so Tabulator binds headers.
     setColumnSorting(activeSem === "all");
+    table.replaceData(rows);
     var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
     var semTotal = activeSem === "all"
       ? allRows.length
@@ -444,46 +485,7 @@
         responsiveLayout: "collapse",
         pagination: false,
         movableColumns: false,
-        columns: [
-          {
-            title: "Seq",
-            field: "sequence",
-            width: 70,
-            hozAlign: "center",
-            headerSort: false,
-            formatter: function (cell) {
-              var v = cell.getValue();
-              return v ? '<span class="tabular-nums">' + v + "</span>" : '<span class="cell-muted">—</span>';
-            }
-          },
-          {
-            title: "Semester",
-            field: "semester",
-            width: 110,
-            hozAlign: "center",
-            headerSort: false,
-            sorter: function (a, b) {
-              var na = a === "—" ? 99 : parseInt(a, 10) || 99;
-              var nb = b === "—" ? 99 : parseInt(b, 10) || 99;
-              return na - nb;
-            },
-            formatter: function (cell) {
-              var v = cell.getValue();
-              return v === "—" ? '<span class="cell-muted">—</span>' : v;
-            }
-          },
-          {
-            title: "Code",
-            field: "code",
-            width: 130,
-            headerSort: false,
-            formatter: function (cell) {
-              return '<span class="cell-code">' + cell.getValue() + "</span>";
-            }
-          },
-          { title: "Title", field: "title", minWidth: 220, headerSort: false },
-          { title: "Instructor", field: "instructor", minWidth: 180, headerSort: false }
-        ]
+        columns: catalogColumns(true)
       });
 
       table.on("tableBuilt", function () {
