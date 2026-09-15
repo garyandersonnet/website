@@ -1,1 +1,574 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<!-- deploy 2026-09-15-transcript-psyc100 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peterson Academy — Publius Nakamoto</title>
+<meta name="description" content="Full Peterson Academy course catalog.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/style.css">
+<link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+<style>
+  /* Parchment catalog — looser spacing + Tabulator skin */
+  .catalog-wrap {
+    margin-bottom: 4rem;
+  }
+  .catalog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .semester-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1rem;
+    margin: 0 0 1rem;
+  }
+  .catalog-search {
+    flex: 0 1 18rem;
+    width: min(100%, 18rem);
+    margin-left: auto;
+    border: 1px solid rgba(44, 36, 22, 0.2);
+    background: rgba(255, 255, 255, 0.45);
+    color: #2c2416;
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  .catalog-search::placeholder {
+    color: rgba(44, 36, 22, 0.45);
+  }
+  .catalog-search:focus {
+    outline: 2px solid rgba(44, 36, 22, 0.25);
+    outline-offset: 1px;
+  }
+  .catalog-hint {
+    font-size: 0.875rem;
+    color: rgba(44, 36, 22, 0.65);
+    margin: 0 0 1rem;
+  }
+  #course-catalog {
+    border: 1px solid rgba(44, 36, 22, 0.15) !important;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: inherit;
+  }
+  #course-catalog .tabulator-header {
+    background: rgba(44, 36, 22, 0.06) !important;
+    border-bottom: 1px solid rgba(44, 36, 22, 0.15) !important;
+    font-weight: 500;
+    color: rgba(44, 36, 22, 0.72);
+  }
+  #course-catalog .tabulator-col {
+    background: transparent !important;
+    border-right: 1px solid rgba(44, 36, 22, 0.08) !important;
+  }
+  #course-catalog .tabulator-col-content {
+    padding: 1rem 1rem !important;
+  }
+  #course-catalog .tabulator-col.tabulator-sortable .tabulator-col-title {
+    padding-right: 1.5rem;
+  }
+  #course-catalog .tabulator-row {
+    background: transparent !important;
+    min-height: 3.25rem;
+    border-bottom: 1px solid rgba(44, 36, 22, 0.08) !important;
+  }
+  #course-catalog .tabulator-row:hover {
+    background: rgba(44, 36, 22, 0.05) !important;
+  }
+  #course-catalog .tabulator-row.tabulator-row-even {
+    background: rgba(44, 36, 22, 0.02) !important;
+  }
+  #course-catalog .tabulator-row.tabulator-row-even:hover {
+    background: rgba(44, 36, 22, 0.05) !important;
+  }
+  #course-catalog .tabulator-cell {
+    padding: 0.95rem 1rem !important;
+    border-right: 1px solid rgba(44, 36, 22, 0.06) !important;
+    color: #2c2416;
+    line-height: 1.45;
+  }
+  #course-catalog .tabulator-footer {
+    display: none !important;
+  }
+  #semester-nav-top {
+    margin: 0;
+    padding: 0;
+  }
+  .semester-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.25rem 0;
+    flex: 1 1 auto;
+  }
+  .semester-nav .sem-label {
+    font-size: 0.8rem;
+    color: rgba(44, 36, 22, 0.55);
+    margin-right: 0.35rem;
+  }
+  .semester-nav button {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(44, 36, 22, 0.2);
+    background: rgba(255, 255, 255, 0.45);
+    color: #2c2416;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .semester-nav button:hover {
+    background: rgba(44, 36, 22, 0.08);
+  }
+  .semester-nav button.active {
+    background: rgba(44, 36, 22, 0.14);
+    border-color: rgba(44, 36, 22, 0.35);
+    font-weight: 600;
+  }
+  .semester-nav button:focus-visible {
+    outline: 2px solid rgba(44, 36, 22, 0.3);
+    outline-offset: 2px;
+  }
+  #course-catalog .cell-muted {
+    color: rgba(44, 36, 22, 0.45);
+  }
+  #course-catalog .cell-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  #course-catalog .transcript-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.45rem;
+    color: #2c2416;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  #course-catalog .transcript-link:hover {
+    background: rgba(44, 36, 22, 0.1);
+    color: #1a140c;
+  }
+  #course-catalog .transcript-link:focus-visible {
+    outline: 2px solid rgba(44, 36, 22, 0.3);
+    outline-offset: 2px;
+  }
+  #course-catalog .transcript-link svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    display: block;
+  }
+  #course-catalog .transcript-empty {
+    display: inline-block;
+    width: 1.15rem;
+    height: 1.15rem;
+    opacity: 0.2;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* iPhone/mobile: catalog is landscape-only — gate portrait */
+  .landscape-gate {
+    display: none;
+  }
+  @media (orientation: portrait) and (max-width: 900px) {
+    .page-main {
+      display: none !important;
+    }
+    .landscape-gate {
+      display: flex;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: #f4ecd8;
+      color: #2c2416;
+    }
+    .landscape-gate .phone {
+      width: 3.25rem;
+      height: 5rem;
+      border: 2.5px solid #2c2416;
+      border-radius: 0.55rem;
+      position: relative;
+      animation: tip-landscape 1.6s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    .landscape-gate .phone::after {
+      content: "";
+      position: absolute;
+      bottom: 0.35rem;
+      left: 50%;
+      width: 0.9rem;
+      height: 0.2rem;
+      margin-left: -0.45rem;
+      border-radius: 999px;
+      background: #2c2416;
+    }
+    @keyframes tip-landscape {
+      0%, 20% { transform: rotate(0deg); }
+      45%, 70% { transform: rotate(90deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .landscape-gate h2 {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .landscape-gate p {
+      margin: 0;
+      max-width: 18rem;
+      color: rgba(44, 36, 22, 0.75);
+      line-height: 1.45;
+    }
+  }
+
+  #catalog-status {
+    font-size: 0.875rem;
+    color: rgba(44, 36, 22, 0.6);
+  }
+</style>
+</head>
+<body class="bg-[#f4ecd8] text-[#2c2416]">
+<header class="border-b border-[#3a2f22]/15 bg-[#f4ecd8]/90 backdrop-blur-sm sticky top-0 z-10">
+<div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+<a class="font-serif text-lg tracking-wide text-[#2c2416]" href="/">Publius Nakamoto</a>
+<nav class="flex items-center gap-6 text-sm text-[#2c2416]/80">
+<a href="/development" class="hover:text-[#2c2416] transition-colors">Development</a>
+<a href="/" class="hover:text-[#2c2416] transition-colors">Home</a>
+<a class="text-[#2c2416] font-semibold" href="/PetersonAcademy" aria-current="page">Peterson Academy</a>
+<a href="/projects" class="hover:text-[#2c2416] transition-colors">Projects</a>
+<a href="/about" class="hover:text-[#2c2416] transition-colors">About</a>
+<a href="/contact" class="hover:text-[#2c2416] transition-colors">Contact</a>
+</nav>
+</div>
+</header>
+<div class="landscape-gate" role="dialog" aria-modal="true" aria-labelledby="landscape-gate-title">
+<div class="phone" aria-hidden="true"></div>
+<h2 id="landscape-gate-title">Turn your phone sideways</h2>
+<p>The course catalog is built for landscape. Rotate to continue — Safari can’t lock orientation for you.</p>
+</div>
+<div class="min-h-screen page-main">
+<div class="max-w-5xl mx-auto px-4 py-12">
+<h1 class="font-serif text-4xl mb-2">Peterson Academy</h1>
+<p class="text-[#2c2416]/75 mb-8">The full Peterson Academy course catalog.</p>
+
+<section class="catalog-wrap">
+<div class="catalog-toolbar">
+<div>
+<h2 class="font-serif text-2xl mb-1">Course catalog</h2>
+<p id="catalog-status">Loading catalog…</p>
+</div>
+</div>
+<p class="catalog-hint">Search matches across all semesters. All shows every course (columns are sortable there); semester bubbles filter when search is empty (… is unassigned) and clear the search box.</p>
+<div class="semester-bar">
+<nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester">
+<span class="sem-label">Semester</span>
+</nav>
+<label class="sr-only" for="catalog-search">Search courses</label>
+<input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
+</div>
+<div id="course-catalog"></div>
+<div class="text-[#2c2416]/75 mt-10 mb-0 rounded-lg border border-[#3a2f22]/15 bg-[#3a2f22]/5 px-4 py-3">
+<p class="mb-2">Want to take these courses yourself? Sign up with this referral link — copy, paste, and use it to enroll. Signing up this way extends both the new student's and Publius Nakamoto's terms.</p>
+<a href="https://petersonacademy.com/signup?referral_code=293XVS" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#2c2416] break-all">https://petersonacademy.com/signup?referral_code=293XVS</a>
+</div>
+
+</section>
+
+</div>
+</div>
+
+<script>
+(function () {
+  function tryLockLandscape() {
+    try {
+      var o = screen.orientation || screen.mozOrientation || screen.msOrientation;
+      if (o && typeof o.lock === "function") {
+        o.lock("landscape").catch(function () {});
+      } else if (typeof screen.lockOrientation === "function") {
+        screen.lockOrientation("landscape");
+      } else if (typeof screen.mozLockOrientation === "function") {
+        screen.mozLockOrientation("landscape");
+      }
+    } catch (e) {}
+  }
+  tryLockLandscape();
+  window.addEventListener("orientationchange", tryLockLandscape);
+})();
+</script>
+<script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+<script>
+(function () {
+  function dash(v) {
+    return v == null || String(v).trim() === "" ? "—" : String(v);
+  }
+  var statusEl = document.getElementById("catalog-status");
+  var searchEl = document.getElementById("catalog-search");
+  var navEls = [
+    document.getElementById("semester-nav-top")
+  ].filter(Boolean);
+  var activeSem = "all";
+  var allRows = [];
+  var table = null;
+  var searchQ = "";
+
+  var SEMESTERS = ["all", "1", "2", "3", "4", "5", "6", "—"];
+
+  function labelFor(sem) {
+    if (sem === "all") return "All";
+    return sem === "—" ? "…" : sem;
+  }
+
+  function ariaFor(sem) {
+    if (sem === "all") return "All courses";
+    return sem === "—" ? "Unassigned semester" : "Semester " + sem;
+  }
+
+  function buildNav(navEl) {
+    var label = navEl.querySelector(".sem-label");
+    navEl.innerHTML = "";
+    if (label) navEl.appendChild(label);
+    else {
+      var span = document.createElement("span");
+      span.className = "sem-label";
+      span.textContent = "Semester";
+      navEl.appendChild(span);
+    }
+    SEMESTERS.forEach(function (sem) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = labelFor(sem);
+      btn.setAttribute("data-sem", sem);
+      btn.setAttribute("aria-label", ariaFor(sem));
+      btn.addEventListener("click", function () {
+        setSemester(sem);
+      });
+      navEl.appendChild(btn);
+    });
+    syncNavButtons();
+  }
+
+  function syncNavButtons() {
+    navEls.forEach(function (navEl) {
+      Array.prototype.forEach.call(navEl.querySelectorAll("button[data-sem]"), function (b) {
+        var on = b.getAttribute("data-sem") === activeSem;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    });
+  }
+
+  function setSemester(sem) {
+    activeSem = sem;
+    searchQ = "";
+    if (searchEl) searchEl.value = "";
+    syncNavButtons();
+    applyView();
+  }
+
+  function matchesSearch(r) {
+    if (!searchQ) return true;
+    var q = searchQ.toLowerCase();
+    return (
+      String(r.sequence).toLowerCase().indexOf(q) !== -1 ||
+      String(r.title).toLowerCase().indexOf(q) !== -1 ||
+      String(r.code).toLowerCase().indexOf(q) !== -1 ||
+      String(r.instructor).toLowerCase().indexOf(q) !== -1 ||
+      String(r.type).toLowerCase().indexOf(q) !== -1 ||
+      String(r.semester).toLowerCase().indexOf(q) !== -1
+    );
+  }
+
+  function filteredRows() {
+    // Search spans all semesters; semester bubbles only apply when search is empty.
+    if (searchQ) {
+      return allRows.filter(matchesSearch);
+    }
+    if (activeSem === "all") {
+      return allRows.slice();
+    }
+    return allRows.filter(function (r) { return r.semester === activeSem; });
+  }
+
+  function catalogColumns(sortable) {
+    return [
+      {
+        title: "Seq",
+        field: "sequence",
+        width: 70,
+        hozAlign: "center",
+        headerSort: !!sortable,
+        sorter: "number",
+        formatter: function (cell) {
+          var v = cell.getValue();
+          return v ? '<span class="tabular-nums">' + v + "</span>" : '<span class="cell-muted">—</span>';
+        }
+      },
+      {
+        title: "Semester",
+        field: "semester",
+        width: 110,
+        hozAlign: "center",
+        headerSort: !!sortable,
+        sorter: function (a, b) {
+          var na = a === "—" ? 99 : parseInt(a, 10) || 99;
+          var nb = b === "—" ? 99 : parseInt(b, 10) || 99;
+          return na - nb;
+        },
+        formatter: function (cell) {
+          var v = cell.getValue();
+          return v === "—" ? '<span class="cell-muted">—</span>' : v;
+        }
+      },
+      {
+        title: "Code",
+        field: "code",
+        width: 130,
+        headerSort: !!sortable,
+        formatter: function (cell) {
+          return '<span class="cell-code">' + cell.getValue() + "</span>";
+        }
+      },
+      { title: "Title", field: "title", minWidth: 220, headerSort: !!sortable },
+      { title: "Instructor", field: "instructor", minWidth: 180, headerSort: !!sortable },
+      {
+        title: "",
+        field: "transcript",
+        width: 64,
+        minWidth: 56,
+        hozAlign: "center",
+        headerSort: false,
+        cssClass: "col-transcript",
+        formatter: function (cell) {
+          var url = cell.getValue();
+          if (!url) {
+            return '<span class="transcript-empty" aria-hidden="true"></span>';
+          }
+          var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg>';
+          return '<a class="transcript-link" href="' + url + '" target="_blank" rel="noopener" title="Course transcript" aria-label="Open course transcript">' + icon + '</a>';
+        }
+      }
+    ];
+  }
+
+  var sortEnabled = null;
+
+  function setColumnSorting(enabled) {
+    if (!table) return;
+    enabled = !!enabled;
+    if (sortEnabled === enabled) return;
+    sortEnabled = enabled;
+    table.setColumns(catalogColumns(enabled));
+    if (!enabled) {
+      try { table.clearSort(); } catch (e) {}
+    }
+  }
+
+  function applyView() {
+    var rows = filteredRows();
+    // Sorting only when viewing All — rebuild columns when mode changes.
+    setColumnSorting(activeSem === "all");
+    table.replaceData(rows);
+    var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
+    var semTotal = activeSem === "all"
+      ? allRows.length
+      : allRows.filter(function (r) { return r.semester === activeSem; }).length;
+    if (searchQ) {
+      statusEl.textContent = rows.length + " of " + allRows.length + " courses match (all semesters)";
+      // Dim semester bubbles while searching across all
+      navEls.forEach(function (navEl) {
+        Array.prototype.forEach.call(navEl.querySelectorAll("button"), function (b) {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      });
+    } else {
+      statusEl.textContent = semTotal + " courses in " + semLabel + " (full list)";
+      syncNavButtons();
+    }
+  }
+
+  fetch("/assets/courses.json")
+    .then(function (r) { return r.json(); })
+    .then(function (courses) {
+      allRows = courses.map(function (c) {
+        return {
+          sequence: c.sequence || "",
+          semester: dash(c.semester),
+          type: dash(c.type),
+          code: c.code || "",
+          title: c.title || "",
+          instructor: c.instructor || "",
+          transcript: c.transcript || ""
+        };
+      });
+
+      navEls.forEach(buildNav);
+      syncNavButtons();
+
+      table = new Tabulator("#course-catalog", {
+        data: [],
+        layout: "fitColumns",
+        responsiveLayout: "collapse",
+        pagination: false,
+        movableColumns: false,
+        columns: catalogColumns(true)
+      });
+
+      table.on("tableBuilt", function () {
+        applyView();
+      });
+      // In case tableBuilt already fired
+      setTimeout(applyView, 0);
+
+      var searchTimer;
+      searchEl.addEventListener("input", function () {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(function () {
+          searchQ = searchEl.value.trim();
+          applyView();
+        }, 120);
+      });
+    })
+    .catch(function () {
+      statusEl.textContent = "Could not load the course catalog.";
+      document.getElementById("course-catalog").innerHTML =
+        '<p class="px-4 py-6 text-[#2c2416]/70">Could not load the course catalog.</p>';
+    });
+})();
+</script>
+
+</body>
+</html>
