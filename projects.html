@@ -259,7 +259,7 @@
 <label class="sr-only" for="catalog-search">Search courses</label>
 <input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
 </div>
-<p class="catalog-hint">Use the semester bubbles below to switch lists (… is unassigned). Click a column header to sort.</p>
+<p class="catalog-hint">Search matches across all semesters. Semester bubbles filter the list when search is empty (… is unassigned). Click a column header to sort.</p>
 <nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester (top)">
 <span class="sem-label">Semester</span>
 </nav>
@@ -358,18 +358,24 @@
     applyView();
   }
 
-  function filteredRows() {
-    var rows = allRows.filter(function (r) { return r.semester === activeSem; });
-    if (!searchQ) return rows;
+  function matchesSearch(r) {
+    if (!searchQ) return true;
     var q = searchQ.toLowerCase();
-    return rows.filter(function (r) {
-      return (
-        String(r.title).toLowerCase().indexOf(q) !== -1 ||
-        String(r.code).toLowerCase().indexOf(q) !== -1 ||
-        String(r.instructor).toLowerCase().indexOf(q) !== -1 ||
-        String(r.type).toLowerCase().indexOf(q) !== -1
-      );
-    });
+    return (
+      String(r.title).toLowerCase().indexOf(q) !== -1 ||
+      String(r.code).toLowerCase().indexOf(q) !== -1 ||
+      String(r.instructor).toLowerCase().indexOf(q) !== -1 ||
+      String(r.type).toLowerCase().indexOf(q) !== -1 ||
+      String(r.semester).toLowerCase().indexOf(q) !== -1
+    );
+  }
+
+  function filteredRows() {
+    // Search spans all semesters; semester bubbles only apply when search is empty.
+    if (searchQ) {
+      return allRows.filter(matchesSearch);
+    }
+    return allRows.filter(function (r) { return r.semester === activeSem; });
   }
 
   function applyView() {
@@ -378,9 +384,17 @@
     var semLabel = activeSem === "—" ? "unassigned" : "semester " + activeSem;
     var semTotal = allRows.filter(function (r) { return r.semester === activeSem; }).length;
     if (searchQ) {
-      statusEl.textContent = rows.length + " of " + semTotal + " courses in " + semLabel + " match";
+      statusEl.textContent = rows.length + " of " + allRows.length + " courses match (all semesters)";
+      // Dim semester bubbles while searching across all
+      navEls.forEach(function (navEl) {
+        Array.prototype.forEach.call(navEl.querySelectorAll("button"), function (b) {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      });
     } else {
       statusEl.textContent = semTotal + " courses in " + semLabel + " (full list)";
+      syncNavButtons();
     }
   }
 
