@@ -255,7 +255,7 @@
 <label class="sr-only" for="catalog-search">Search courses</label>
 <input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off">
 </div>
-<p class="catalog-hint">Search matches across all semesters. All shows every course; semester bubbles filter when search is empty (… is unassigned) and clear the search box.</p>
+<p class="catalog-hint">Search matches across all semesters. All shows every course (columns are sortable there); semester bubbles filter when search is empty (… is unassigned) and clear the search box.</p>
 <nav id="semester-nav-top" class="semester-nav" aria-label="Filter by semester (top)">
 <span class="sem-label">Semester</span>
 </nav>
@@ -387,9 +387,22 @@
     return allRows.filter(function (r) { return r.semester === activeSem; });
   }
 
+  function setColumnSorting(enabled) {
+    if (!table) return;
+    ["sequence", "semester", "code", "title", "instructor"].forEach(function (field) {
+      var col = table.getColumn(field);
+      if (col) col.updateDefinition({ headerSort: !!enabled });
+    });
+    if (!enabled) {
+      try { table.clearSort(); } catch (e) {}
+    }
+  }
+
   function applyView() {
     var rows = filteredRows();
     table.replaceData(rows);
+    // Sorting only when viewing All (not a single semester).
+    setColumnSorting(activeSem === "all");
     var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
     var semTotal = activeSem === "all"
       ? allRows.length
