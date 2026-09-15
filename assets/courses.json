@@ -5,7 +5,8 @@
     "type": "Required",
     "code": "PSYC 100",
     "title": "How to Plan Your Life",
-    "instructor": "Dr. Jordan B. Peterson"
+    "instructor": "Dr. Jordan B. Peterson",
+    "transcript": "/assets/transcripts/psyc-100-how-to-plan-your-life.pdf"
   },
   {
     "sequence": "2",
