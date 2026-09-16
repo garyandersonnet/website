@@ -1,0 +1,528 @@
+{
+  "id": "bio-101-final",
+  "course": "BIO 101",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Biology investigates life from:",
+      "choices": [
+        "A Only ecosystems, never cells.",
+        "B Cells through tissues, systems, and organisms.",
+        "C Only fossils without living things.",
+        "D Nonliving chemistry alone."
+      ],
+      "answer": 1,
+      "cite": "1.2",
+      "explain": "Spans cellular to organismal levels."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "Seven criteria of life begin with cells and include metabolism that:",
+      "choices": [
+        "A Never eliminates waste.",
+        "B Takes in/transforms energy and eliminates waste.",
+        "C Applies only to viruses always.",
+        "D Ignores growth."
+      ],
+      "answer": 1,
+      "cite": "1.8",
+      "explain": "Metabolism includes energy use and waste elimination."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Prokaryotes are introduced as:",
+      "choices": [
+        "A Identical to plants with nuclei.",
+        "B A major family line distinct as you reverse up from a singular origin point—without the eukaryotic nucleus story.",
+        "C Only extinct.",
+        "D Larger than whales always."
+      ],
+      "answer": 1,
+      "cite": "1.29",
+      "explain": "Prokaryotes are a fundamental cellular family."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "Famous organelle second to nucleus often:",
+      "choices": [
+        "A Only the vacuole of steel.",
+        "B Mitochondria (energy)—he ranks nucleus most famous then energy organelle fame.",
+        "C Cellulose exclusive.",
+        "D Ribosome-free cytoplasm only."
+      ],
+      "answer": 1,
+      "cite": "1.50",
+      "explain": "Nucleus most famous; mitochondria among next-most famous."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "Charged large molecules crossing membranes:",
+      "choices": [
+        "A Freely diffuse like tiny water always.",
+        "B Generally need help—charge plus size impede free passage.",
+        "C Never exist.",
+        "D Only travel through cellulose."
+      ],
+      "answer": 1,
+      "cite": "1.85",
+      "explain": "Large charged molecules don't freely cross like small water."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "Diffusion after a meal example:",
+      "choices": [
+        "A Glucose moves from low blood to high liver always.",
+        "B Glucose can move down its gradient from higher blood into relatively lower liver cells.",
+        "C Water is the only solute.",
+        "D Gradients never matter postprandially."
+      ],
+      "answer": 1,
+      "cite": "2.15",
+      "explain": "Glucose down its concentration gradient into liver cells."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "Osmosis focuses on movement of:",
+      "choices": [
+        "A Only DNA.",
+        "B Water/solvent across a membrane impermeable to the solute of interest, equalizing effective concentrations.",
+        "C Entire cells walking.",
+        "D Only sodium forever."
+      ],
+      "answer": 1,
+      "cite": "2.22",
+      "explain": "Water moves to equalize osmotic situations."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "Channels versus transporters:",
+      "choices": [
+        "A Identical in every mechanism.",
+        "B Channels open for rapid rush; transporters are distinct membrane machines that move cargo differently.",
+        "C Neither exists in intestine.",
+        "D Only plants have transporters."
+      ],
+      "answer": 1,
+      "cite": "2.50",
+      "explain": "Channels vs transporters are similar but distinct."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Exercising muscle glucose uptake can be:",
+      "choices": [
+        "A Always fully insulin-dependent with no exceptions.",
+        "B So metabolically hungry it need not wait on insulin—transporters respond to demand.",
+        "C Impossible during exercise.",
+        "D Only via phagocytosis of sugar cubes."
+      ],
+      "answer": 1,
+      "cite": "2.71",
+      "explain": "Hard-working muscle can take glucose without waiting on insulin."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Transcytosis is highlighted in:",
+      "choices": [
+        "A Only nuclear pores of yeast.",
+        "B Gut cells moving cargo across the cell for absorption contexts.",
+        "C Exclusive bone marrow.",
+        "D Virus naming only."
+      ],
+      "answer": 1,
+      "cite": "2.84",
+      "explain": "Transcytosis relevant to intestinal absorption."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "Central dogma lecture builds through biomolecules toward:",
+      "choices": [
+        "A Only ecology of forests.",
+        "B Flow of genetic information defining who we are.",
+        "C Ignoring nucleic acids.",
+        "D Deleting carbon from organics."
+      ],
+      "answer": 1,
+      "cite": "3.2",
+      "explain": "Biomolecules lead into central dogma."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "Fats versus carbs oxygen content:",
+      "choices": [
+        "A Fats are oxygen-rich like carbs.",
+        "B Fats have very little oxygen versus more balanced CHO in carbs.",
+        "C Carbs have no oxygen.",
+        "D Both are pure N2."
+      ],
+      "answer": 1,
+      "cite": "3.19",
+      "explain": "Fats are oxygen-poor relative to carbohydrates."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "Primary protein structure must still:",
+      "choices": [
+        "A Already be the final folded functional form always.",
+        "B Fold/alter beyond a mere amino-acid string to become the needed protein.",
+        "C Remain linear forever to work.",
+        "D Exclude all side chains."
+      ],
+      "answer": 1,
+      "cite": "3.37",
+      "explain": "String must fold/process into functional structure."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "GLP-1 agonists are peptides that:",
+      "choices": [
+        "A Are always oral vitamins.",
+        "B Must be injected because they are peptides—famous modern weight-loss drugs.",
+        "C Are DNA vaccines only.",
+        "D Are pure cellulose."
+      ],
+      "answer": 1,
+      "cite": "3.43",
+      "explain": "Peptide drugs need injection; GLP-1 class example."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "DNA bases he lists as the four abundant nitrogenous bases context:",
+      "choices": [
+        "A Only one base exists.",
+        "B Four bases on DNA with deoxyribose sugar backbone chemistry.",
+        "C Bases are lipids.",
+        "D DNA has no sugar."
+      ],
+      "answer": 1,
+      "cite": "3.49",
+      "explain": "DNA: deoxyribose + four nitrogenous bases."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "Who you are via cells is largely:",
+      "choices": [
+        "A Independent of proteins.",
+        "B Determined by protein expression flowing from DNA→RNA→protein, with modest environmental influence.",
+        "C Only epigenetic and never genetic.",
+        "D Random hourly."
+      ],
+      "answer": 1,
+      "cite": "4.5",
+      "explain": "DNA to protein dominates; environment modest."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Transcription initiation involves:",
+      "choices": [
+        "A Ribosomes reading DNA directly always.",
+        "B RNA polymerase recognizing a start signal, uncoiling, and synthesizing RNA.",
+        "C Only tRNA without mRNA.",
+        "D Ignoring promoters."
+      ],
+      "answer": 1,
+      "cite": "4.57",
+      "explain": "RNA polymerase initiation is first transcription step."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "After splicing, mature mRNA:",
+      "choices": [
+        "A Still needs spliceosome leftovers as exons discarded only.",
+        "B Is the processed mRNA ready to proceed toward translation.",
+        "C Is permanently DNA.",
+        "D Cannot leave the nucleus ever in eukaryotes in his story."
+      ],
+      "answer": 1,
+      "cite": "4.65",
+      "explain": "Spliceosome yields mature mRNA."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "Translation uses tRNA to:",
+      "choices": [
+        "A Copy DNA polymerase.",
+        "B Deliver amino acids as the ribosome reads codons.",
+        "C Cut cellulose.",
+        "D Pump protons only."
+      ],
+      "answer": 1,
+      "cite": "4.73",
+      "explain": "tRNA brings amino acids; ribosome holds the chain."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "Epigenetic famine example suggests:",
+      "choices": [
+        "A Genetics alone with zero expression change across generations.",
+        "B Parental environment can alter offspring outcomes via expression differences despite same genetics themes.",
+        "C Radiation never affects expression.",
+        "D Only height is genetic."
+      ],
+      "answer": 1,
+      "cite": "4.97",
+      "explain": "Famine history linked to offspring outcomes epigenetically discussed."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "Chromosome word care matters because:",
+      "choices": [
+        "A Meiosis ignores chromosomes.",
+        "B Counting and homology language matter for mitosis vs meiosis discussions.",
+        "C Humans have no chromosomes.",
+        "D Only bacteria have 23 pairs."
+      ],
+      "answer": 1,
+      "cite": "5.3",
+      "explain": "Define chromosome carefully before division talk."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "G1-related preparation includes:",
+      "choices": [
+        "A Only DNA packing with no organelle copying.",
+        "B Organelles/mitochondria etc. increasing to ready the cell to divide.",
+        "C Immediate cytokinesis only.",
+        "D Deleting centrosomes."
+      ],
+      "answer": 1,
+      "cite": "5.21",
+      "explain": "Organelle replication readies division."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "Crossing over aids:",
+      "choices": [
+        "A Cloning identical offspring always.",
+        "B Genetic variability valuable for the species.",
+        "C Removing all meiosis.",
+        "D Mitosis only."
+      ],
+      "answer": 1,
+      "cite": "5.51",
+      "explain": "Recombination variability helps species."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "MYC mutation example:",
+      "choices": [
+        "A Never linked to cancer.",
+        "B Common breast-cancer related gene/protein mutation/duplication theme.",
+        "C Only causes taller height.",
+        "D Is an RNA virus exclusively."
+      ],
+      "answer": 1,
+      "cite": "5.61",
+      "explain": "MYC mutations common in some breast cancers."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "Default internal sex structures without male signals:",
+      "choices": [
+        "A Always male indefinitely.",
+        "B Female structures unless testes signals (e.g., AMH/testosterone pathways) redirect.",
+        "C No structures form ever.",
+        "D Only SRY-independent male default."
+      ],
+      "answer": 1,
+      "cite": "5.101",
+      "explain": "Default female internal structures unless actively redirected."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "Nutrient catabolism feeds into:",
+      "choices": [
+        "A Only photosynthesis in animals.",
+        "B Citrate cycle and mitochondrial electron transport for energy.",
+        "C Exclusive nuclear fusion.",
+        "D Cellulose export only."
+      ],
+      "answer": 1,
+      "cite": "6.3",
+      "explain": "Catabolism → citrate cycle → ETS."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "Animals obtain plant-captured solar energy by:",
+      "choices": [
+        "A Photosynthesizing with chloroplasts in muscle.",
+        "B Eating plants (or animals that ate plants) whose carbon bonds store that energy.",
+        "C Absorbing moonlight only.",
+        "D Ignoring carbon bonds."
+      ],
+      "answer": 1,
+      "cite": "6.5",
+      "explain": "Eat the carbon bonds plants built."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "Glycolysis discussion sits under:",
+      "choices": [
+        "A Only DNA repair.",
+        "B Step-one nutrient catabolism before mitochondrial commitment options for pyruvate.",
+        "C Exclusive beta-oxidation of DNA.",
+        "D Cell wall synthesis."
+      ],
+      "answer": 1,
+      "cite": "6.45",
+      "explain": "Pyruvate outside mitochondria after glycolysis pathways."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "Lipolysis versus lipogenesis:",
+      "choices": [
+        "A Identical pathways.",
+        "B Lipolysis breaks lipids down; lipogenesis builds new lipid—acetyl-CoA can go either way conceptually.",
+        "C Both occur only in plant vacuoles.",
+        "D Neither involves acetyl-CoA."
+      ],
+      "answer": 1,
+      "cite": "6.78",
+      "explain": "Opposite directions of lipid metabolism."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "Chloroplast vs mitochondrion energy story:",
+      "choices": [
+        "A Identical gas exchange always.",
+        "B Mitochondria take carbons+O2 toward energy/CO2; chloroplasts take CO2 toward building with light energy—complementary.",
+        "C Animals run chloroplasts for ATP mainly.",
+        "D Neither uses membranes."
+      ],
+      "answer": 1,
+      "cite": "6.111",
+      "explain": "Complementary organelle chemistry."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Learning outcomes for lecture 1 include cell theory and:",
+      "choices": [
+        "A Only ecology of deserts.",
+        "B Prokaryote vs eukaryote families and compartments, plus gradients/osmosis appreciation.",
+        "C Ignoring membranes.",
+        "D Only paleontology."
+      ],
+      "answer": 1,
+      "cite": "1.5",
+      "explain": "Cell theory, prokaryote/eukaryote, compartments, osmosis/diffusion."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "Brownian motion underlies:",
+      "choices": [
+        "A Directed muscular walking of solutes.",
+        "B Random erratic molecular motion enabling net diffusion down gradients.",
+        "C Zero relevance in biology.",
+        "D Only star formation."
+      ],
+      "answer": 1,
+      "cite": "2.6",
+      "explain": "Brownian movement of solutes in solvent."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "Enzyme competition means:",
+      "choices": [
+        "A Affinity is always exclusive to one molecule forever.",
+        "B Another molecule can share affinity and compete at the enzyme.",
+        "C Enzymes never bind substrates.",
+        "D Only temperature competes."
+      ],
+      "answer": 1,
+      "cite": "3.78",
+      "explain": "Competition for enzyme affinity possible."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "DNA polymerase on the leading strand:",
+      "choices": [
+        "A Cannot read continuously once helicase opens DNA.",
+        "B Can continue reading as helicase/SSBs keep the fork open on the leading strand.",
+        "C Works only on RNA primers forever without DNA.",
+        "D Is optional for replication."
+      ],
+      "answer": 1,
+      "cite": "4.41",
+      "explain": "Leading-strand polymerase continues as fork opens."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "Translation's 'who we are' punchline:",
+      "choices": [
+        "A Lipids alone define identity.",
+        "B Protein products determine cellular function from genetic expression.",
+        "C Only water defines phenotype.",
+        "D mRNA never matters."
+      ],
+      "answer": 1,
+      "cite": "4.17",
+      "explain": "Protein determines function after expression."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "Mitotic spindles extend from:",
+      "choices": [
+        "A Lysosomes only.",
+        "B Centrosomes that copied earlier and move apart.",
+        "C Only plant cellulose.",
+        "D Extracellular matrix exclusively."
+      ],
+      "answer": 1,
+      "cite": "5.31",
+      "explain": "Spindles from duplicated centrosomes."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "Androgen receptor absence phenotype note:",
+      "choices": [
+        "A Massive body hair always.",
+        "B Little body hair like a child—no axillary/pubic hair pattern he describes.",
+        "C Guaranteed XY female with no other effects.",
+        "D Only taller stature."
+      ],
+      "answer": 1,
+      "cite": "5.124",
+      "explain": "No androgen receptor → childlike hair pattern."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "Citrate cycle's role in the lecture arc:",
+      "choices": [
+        "A Replaces electron transport entirely.",
+        "B Links nutrient breakdown products into the mitochondrial energy pathway sequence.",
+        "C Occurs only in the nucleus.",
+        "D Is optional for aerobes always."
+      ],
+      "answer": 1,
+      "cite": "6.89",
+      "explain": "After catabolism steps, citrate cycle then ETS."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "Statins discussion point he raises:",
+      "choices": [
+        "A LDL level alone should always force immediate statin with no nuance.",
+        "B Clinicians often treat high LDL reflexively; he co-authored work questioning that simplicity.",
+        "C Statins are carbohydrates.",
+        "D LDL is irrelevant entirely."
+      ],
+      "answer": 1,
+      "cite": "6.122",
+      "explain": "Critiques LDL-only reflexive statin decisions."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "Glucose ketone index (Seyfried context):",
+      "choices": [
+        "A Maximizes glucose relative to ketones always for cancer cells.",
+        "B Aims to lower glucose and raise ketones—metabolic pressure on cancer cells alongside other therapies.",
+        "C Ignores dietary carbs/ketones.",
+        "D Only applies to plant chloroplasts."
+      ],
+      "answer": 1,
+      "cite": "6.130",
+      "explain": "GKI frames glucose vs ketone levels in cancer metabolic therapy discussions."
+    }
+  ]
+}
