@@ -218,7 +218,7 @@ claude</pre>
 Reference UX (already live for PHIL 102):
 - Catalog study-aid icon “practice-tests” opens a lecture menu (all lectures + Final Exam).
 - Selecting an item opens an on-page overlay quiz (do not navigate away; do not force a download).
-- Reuse / adapt assets from PHIL 102: quiz-player.js, quiz.css, and the catalog modal wiring on PetersonAcademy.html.
+- Reuse the shared site-level player at /assets/quiz-player.js and /assets/quiz.css, plus the catalog modal wiring on PetersonAcademy.html. Per-course quiz JSON stays under /assets/courses/{COURSE_CODE}/quizzes/.
 
 Content requirements:
 1) One quiz per lecture: exactly 5 questions, 4 choices each, answer index 0–3.
@@ -276,10 +276,11 @@ Process:
 
 IP / posture: quizzes are original study aids derived from the student’s own numbered transcript workflow — do not republish verbatim PA transcript text inside the quiz JSON beyond short paraphrases needed for questions.</pre>
 
-<p class="text-sm text-[#2c2416]/70 mb-3">PHIL 102 files live under <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/PHIL-102/quizzes/</code> with shared player <code class="bg-[#2c2416]/5 px-1 rounded">quiz-player.js</code> / <code class="bg-[#2c2416]/5 px-1 rounded">quiz.css</code>. For the next course, either reuse those player files globally or copy them beside the new course’s quiz JSON.</p>
+<p class="text-sm text-[#2c2416]/70 mb-3">Quiz JSON stays per-course under <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/{CODE}/quizzes/</code>. Shared player logic/UI lives at <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz-player.js</code> and <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz.css</code> — do not nest those under a single course.</p>
 
 <h2 class="font-serif text-2xl mt-10 mb-3">Change Log</h2>
 <ul class="text-sm space-y-1 text-[#2c2416]/80">
+<li><span class="text-[#2c2416]/50">2026-09-16</span> — Moved shared quiz player from <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/PHIL-102/</code> to site-level <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz-player.js</code> and <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz.css</code>; catalog now loads those paths (via Grok Bot / Cursor)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Restored the missing Peterson Academy catalog course-link icon at <code class="bg-[#2c2416]/5 px-1 rounded">/assets/pa-logo.png</code> (plus SVG source); the HTML already pointed at that path but the file was never in git (via Grok Bot / Cursor)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Assembled the full Peterson Academy catalog into <code class="bg-[#2c2416]/5 px-1 rounded">assets/courses.json</code> (115 courses: semesters 1–6 plus unassigned) from <code class="bg-[#2c2416]/5 px-1 rounded">assets/courses/parts/</code>, keeping semester-1 quiz wiring intact; semester filter bubbles no longer blank the table (via Grok Bot)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Rebuilt the missing shared practice-quiz player (<code class="bg-[#2c2416]/5 px-1 rounded">quiz-player.js</code> / <code class="bg-[#2c2416]/5 px-1 rounded">quiz.css</code> under PHIL-102) plus PHIL 102 lecture/final quiz JSON from the numbered transcript so catalog practice-tests load (via Grok Bot)</li>

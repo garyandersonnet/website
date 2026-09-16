@@ -1,7 +1,8 @@
 /**
  * Shared Peterson Academy practice-quiz player.
  * Catalog overlay calls window.PaQuiz.fetchAndRender / unlockAudio
- * (see PetersonAcademy.html). Loaded from this PHIL-102 path for every course.
+ * (see PetersonAcademy.html). Shared site-level player; per-course quiz JSON
+ * stays under assets/courses/<CODE>/quizzes/.
  */
 (function (global) {
   "use strict";
