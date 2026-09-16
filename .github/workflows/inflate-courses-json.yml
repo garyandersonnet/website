@@ -1,0 +1,39 @@
+name: Inflate courses.json
+on:
+  push:
+    paths:
+      - 'assets/courses.json.zlib.b64'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inflate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inflate courses.json from zlib.b64
+        run: |
+          python3 << 'PY'
+          import base64, zlib
+          from pathlib import Path
+          b64 = Path('assets/courses.json.zlib.b64').read_text().strip()
+          raw = zlib.decompress(base64.b64decode(b64))
+          assert raw.startswith(b'[')
+          assert b'PLACEHOLDER' not in raw
+          assert b'testLectures' in raw
+          Path('assets/courses.json').write_bytes(raw)
+          print('wrote', len(raw), 'bytes')
+          PY
+      - name: Commit inflated courses.json
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/courses.json
+          if git diff --cached --quiet; then
+            echo 'no changes'
+            exit 0
+          fi
+          git commit -m "Inflate courses.json from zlib.b64 (semester 1 PAs)
+
+Co-authored-by: Grok Bot"
+          git push
