@@ -1,0 +1,528 @@
+{
+  "id": "psyc-101-final",
+  "course": "PSYC 101",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Psychology as logos of psyche means:",
+      "choices": [
+        "A Irrational myth only.",
+        "B Rational study of the soul/human sense-making and relations.",
+        "C Only phrenology bumps.",
+        "D Exclusive animal husbandry."
+      ],
+      "answer": 1,
+      "cite": "1.2",
+      "explain": "Rational inquiry into psyche."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "Field scale today:",
+      "choices": [
+        "A handful of papers yearly.",
+        "B Massive output—on the order of ~100 papers in a day imaginable via Scholar.",
+        "C Zero empirical work.",
+        "D Only one lab worldwide."
+      ],
+      "answer": 1,
+      "cite": "1.6",
+      "explain": "Huge contemporary publication volume."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Heraclitus river insight:",
+      "choices": [
+        "A Self and world are perfectly static.",
+        "B You can't step in the same river twice—change is constant for world and self.",
+        "C Rivers never change.",
+        "D Only applies to fish."
+      ],
+      "answer": 1,
+      "cite": "1.19",
+      "explain": "Constant change of river and person."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "Pavlov's contribution highlighted:",
+      "choices": [
+        "A Only dream analysis.",
+        "B Learning in animals—classical conditioning fame via dogs.",
+        "C Humanistic peak experiences only.",
+        "D Attitude scaling by Thurstone alone."
+      ],
+      "answer": 1,
+      "cite": "1.46",
+      "explain": "Pavlov: animal learning / conditioning."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "Levels of analysis point:",
+      "choices": [
+        "A Psychology studies only one level forever.",
+        "B From brain/physiology to groups—same department spans rodents to corporate applied work.",
+        "C Development is not a field.",
+        "D Science forbids self-study."
+      ],
+      "answer": 1,
+      "cite": "1.100",
+      "explain": "Developmental and applied span levels."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "Dress color internet fight illustrates:",
+      "choices": [
+        "A Perception is identical for all viewers always.",
+        "B Same stimulus, different constructed percepts—people war over blue vs gold/silver.",
+        "C Only cameras matter.",
+        "D Sensation equals reality exhaustively."
+      ],
+      "answer": 1,
+      "cite": "2.11",
+      "explain": "Same dress, different perceptions."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "Dual-process / two-system mind:",
+      "choices": [
+        "A Humans have only one slow system.",
+        "B Mind uses dual processes for sense-making under constraints.",
+        "C Heuristics never appear.",
+        "D Working models forbid intuition."
+      ],
+      "answer": 1,
+      "cite": "2.21",
+      "explain": "Two-system model of mind."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "'Do a lot of little good stuff' heuristic:",
+      "choices": [
+        "A One big win always creates lasting happiness.",
+        "B Good accumulates by numbers—don't bank on one jackpot happiness event.",
+        "C Only disasters teach.",
+        "D Avoid all small acts."
+      ],
+      "answer": 1,
+      "cite": "2.41",
+      "explain": "Many small goods beat one mythical jackpot."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Festinger earthquake/India story seeds:",
+      "choices": [
+        "A Dissonance theory from weird post-disaster belief patterns via anthropologist chat.",
+        "B Proof dissonance is false.",
+        "C Only golf training.",
+        "D Naive realism about sharks only."
+      ],
+      "answer": 0,
+      "cite": "2.61",
+      "explain": "Festinger–anthropologist earthquake anecdote for dissonance."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Group constructing reality then bringing Steve in shows:",
+      "choices": [
+        "A Social construction/conformity pressures on newcomers.",
+        "B That individuals never influence groups.",
+        "C Only genetic determinism.",
+        "D Perception without sensation."
+      ],
+      "answer": 0,
+      "cite": "2.81",
+      "explain": "Converged group reality then newcomer pressure."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "Freud's psychosexual stages include anal stage about:",
+      "choices": [
+        "A Only adolescent identity.",
+        "B Toilet training / control themes in early childhood.",
+        "C Retirement integrity only.",
+        "D Workplace leadership solely."
+      ],
+      "answer": 1,
+      "cite": "3.41",
+      "explain": "Anal stage ↔ toilet training."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "Secure attachment surprising finding vs chaos intuition:",
+      "choices": [
+        "A Attached kids never explore.",
+        "B Secure base enables exploration; lack of attachment can hinder healthy venturing.",
+        "C Attachment is irrelevant.",
+        "D Only Star Wars models apply."
+      ],
+      "answer": 1,
+      "cite": "3.51",
+      "explain": "Secure kids explore; insecure patterns differ."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "Agency across development:",
+      "choices": [
+        "A Useless after infancy.",
+        "B Building control—from toilet training to student cooperation—matters across stages.",
+        "C Only genetics grant agency.",
+        "D Emerging adults need zero agency."
+      ],
+      "answer": 1,
+      "cite": "3.123",
+      "explain": "Develop agency/control across skills."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "Don't judge an 18-year-old as a 50-year-old because:",
+      "choices": [
+        "A Age is irrelevant.",
+        "B Different wiring/challenges by life stage.",
+        "C All ages are identical.",
+        "D Only infants differ."
+      ],
+      "answer": 1,
+      "cite": "3.124",
+      "explain": "Stage-appropriate judgment."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "Needs vs goals language:",
+      "choices": [
+        "A Always identical.",
+        "B Need implies must-have; goals/motives cover broader pulls—vast repertoire at many levels.",
+        "C Humans have only one motive.",
+        "D Food is never motivational."
+      ],
+      "answer": 1,
+      "cite": "4.3",
+      "explain": "Needs/goals/motives related but not identical."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "Approach vs avoidance systems:",
+      "choices": [
+        "A Unrelated to personality.",
+        "B Align with personality—some people more approach-wired, others more avoidance.",
+        "C Only apply to rats.",
+        "D Maslow rejected them."
+      ],
+      "answer": 1,
+      "cite": "4.25",
+      "explain": "Approach/avoidance map onto personality."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Overjustification art-drawing study theme:",
+      "choices": [
+        "A Rewards never change intrinsic interest.",
+        "B Paying for drawing can undermine later free drawing—extrinsic can crowd intrinsic.",
+        "C Only adults draw.",
+        "D Art forbids motives."
+      ],
+      "answer": 1,
+      "cite": "4.37",
+      "explain": "Reward conditions can reduce later voluntary art."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "Unconscious motives require:",
+      "choices": [
+        "A Simple self-report always sufficient.",
+        "B Indirect methods—you can't just look inward and list them by definition.",
+        "C Ignoring McClelland.",
+        "D Only EEG of toes."
+      ],
+      "answer": 1,
+      "cite": "4.49",
+      "explain": "Unconscious ⇒ can't directly introspect them."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "Child safety need (Maslow quote theme):",
+      "choices": [
+        "A Kids prefer total chaos always.",
+        "B Preference for predictable routine; quarreling/assault/separation threaten safety.",
+        "C Safety is only for adults.",
+        "D Hierarchy has one level."
+      ],
+      "answer": 1,
+      "cite": "4.73",
+      "explain": "Kids need orderly predictable world."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "Happiness pie debates (genetics/environment):",
+      "choices": [
+        "A Exactly 100% parenting always.",
+        "B Rough splits involving genetics and environments are discussed; neat viral percentages get contested.",
+        "C Zero genetic role ever.",
+        "D Only income predicts."
+      ],
+      "answer": 1,
+      "cite": "4.146",
+      "explain": "Genetics/environment pie charts are debated."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "Lexical hypothesis flavor for traits:",
+      "choices": [
+        "A Useful differences get words (e.g., smart).",
+        "B Language never reflects personality.",
+        "C Only numbers without words.",
+        "D Traits are unspeakable."
+      ],
+      "answer": 0,
+      "cite": "5.12",
+      "explain": "Useful descriptors become words."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "Self-esteem as attitude toward self:",
+      "choices": [
+        "A Not an evaluation.",
+        "B An evaluative attitude—do you like/worth yourself?",
+        "C Only others' ratings exist.",
+        "D Identical to extraversion."
+      ],
+      "answer": 1,
+      "cite": "5.78",
+      "explain": "Self-concept carries an evaluation/attitude."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "Symbolic self-completion / Land Cruiser vignette:",
+      "choices": [
+        "A Possessions never signal identity.",
+        "B People may use products to reclaim a cooler past self-image.",
+        "C Only applies to food.",
+        "D Forbids consumer behavior."
+      ],
+      "answer": 1,
+      "cite": "5.89",
+      "explain": "Buying to support a desired self-image."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "Multiple selves conflict example:",
+      "choices": [
+        "A Girlfriend-soft vs tough-guy selves can clash socially.",
+        "B People have only one self-state always.",
+        "C Friends never notice inconsistency.",
+        "D James denied self complexity."
+      ],
+      "answer": 0,
+      "cite": "5.100",
+      "explain": "Different relational selves can conflict."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "Business-leader hero stories sell because:",
+      "choices": [
+        "A Unbroken privilege resumes are most inspiring.",
+        "B Struggle, loss, and return narratives move people more than 'I was smart and succeeded linearly.'",
+        "C Myths ignore failure.",
+        "D Only GPAs matter."
+      ],
+      "answer": 1,
+      "cite": "5.140",
+      "explain": "Ordeal-and-comeback stories resonate."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "Longest relationship often is:",
+      "choices": [
+        "A Only with coworkers.",
+        "B With siblings if you have them.",
+        "C Never family.",
+        "D Only online strangers."
+      ],
+      "answer": 1,
+      "cite": "6.2",
+      "explain": "Sibling relationships can be longest."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "Parental investment asymmetry note:",
+      "choices": [
+        "A Gestation costs are identical for both sexes always.",
+        "B Female mammals typically invest more time/energy in offspring than males (with caveats).",
+        "C Males always invest more biologically.",
+        "D Investment is irrelevant to mating psychology."
+      ],
+      "answer": 1,
+      "cite": "6.43",
+      "explain": "Higher typical female obligatory investment."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "Tropical island as most romantic setting:",
+      "choices": [
+        "A Never chosen in class polls.",
+        "B Common top answer when asked for most romantic setting.",
+        "C Only libraries win.",
+        "D Romance ignores settings."
+      ],
+      "answer": 1,
+      "cite": "6.71",
+      "explain": "Tropical island #1 romantic setting answer."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "Pragmatic love:",
+      "choices": [
+        "A Only spontaneous passion.",
+        "B List-based partner selection—know what you want and marry when criteria met.",
+        "C Forbids commitment.",
+        "D Ignores all preferences."
+      ],
+      "answer": 1,
+      "cite": "6.113",
+      "explain": "Pragmatic: checklist then commit."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "Accommodation in conflict:",
+      "choices": [
+        "A Responding to partner's destructive act with constructive response to stop escalation.",
+        "B Always matching destruction with destruction.",
+        "C Ignoring Rusbult.",
+        "D Only about money."
+      ],
+      "answer": 0,
+      "cite": "6.141",
+      "explain": "Accommodation breaks destructive spirals."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Historical mental illness care:",
+      "choices": [
+        "A Began only with Freud's couch.",
+        "B Long pre-psychology history; medical treatments tried for psychiatric-looking problems.",
+        "C Zero premodern interest.",
+        "D Only Axis II existed in antiquity."
+      ],
+      "answer": 1,
+      "cite": "7.4",
+      "explain": "Premodern medicalized approaches to disorders."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "Axis I vs Axis II (older DSM framing he teaches):",
+      "choices": [
+        "A Axis II = clinical syndromes only; Axis I = personality forever.",
+        "B Axis I psychological diseases/syndromes; Axis II personality disorders.",
+        "C Identical axes.",
+        "D Axes ignore personality."
+      ],
+      "answer": 1,
+      "cite": "7.37",
+      "explain": "Axis I syndromes vs Axis II personality disorders."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "HiTOP-style spectra remark:",
+      "choices": [
+        "A No general psychopathology factor discussions exist.",
+        "B Models posit overall psychopathology with multiple spectra underneath.",
+        "C Only six unrelated diseases with no hierarchy.",
+        "D Extraversion cannot relate to trouble."
+      ],
+      "answer": 1,
+      "cite": "7.61",
+      "explain": "General factor plus spectra."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "Major depression cognitive slowing:",
+      "choices": [
+        "A Thinking/memory processing can slow—not 'just sadness.'",
+        "B Never affects cognition.",
+        "C Only causes euphoria.",
+        "D Identical to schizophrenia delusions always."
+      ],
+      "answer": 0,
+      "cite": "7.85",
+      "explain": "Depression slows thinking/processing."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "Addiction judgment complexity:",
+      "choices": [
+        "A If someone feels fine, it cannot be addiction; if life collapses, concern rises—functional impact matters.",
+        "B Any daily habit is addiction by definition.",
+        "C Addiction ignores functioning.",
+        "D Only gambling counts."
+      ],
+      "answer": 0,
+      "cite": "7.109",
+      "explain": "Functioning and consequences inform addiction calls."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "Airport line example of influence:",
+      "choices": [
+        "A Following others can be informational (figuring out the right line) or normative (wanting approval).",
+        "B Social motives never appear in airports.",
+        "C Only genetics choose lines.",
+        "D Normative influence is identical to hunger."
+      ],
+      "answer": 0,
+      "cite": "8.4",
+      "explain": "Follow the crowd to be right or liked."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "Peripheral persuasion / Britney Pepsi:",
+      "choices": [
+        "A Weak arguments lean on attractive celebrity cues rather than strong product logic.",
+        "B Only central statistics sell soda.",
+        "C Experts must be domain-relevant always in ads.",
+        "D Cialdini forbids advertising."
+      ],
+      "answer": 0,
+      "cite": "8.37",
+      "explain": "Celebrity association when reasons are thin."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "Reciprocity / Hare Krishna flower:",
+      "choices": [
+        "A Gift creates obligation pressure to donate—classic influence.",
+        "B Never works in airports.",
+        "C Only foot-in-the-door.",
+        "D Milgram invented it."
+      ],
+      "answer": 0,
+      "cite": "8.61",
+      "explain": "Unsolicited gift → reciprocal pressure."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "Robbers Cave–style superordinate goals:",
+      "choices": [
+        "A Shared goals (stuck bus) can reduce intergroup hostility by requiring cooperation.",
+        "B Competition always increases peace.",
+        "C Groups never form identities.",
+        "D Only random assignment fails."
+      ],
+      "answer": 0,
+      "cite": "8.121",
+      "explain": "Eagles/Rattlers cooperate to free the bus."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "Social media FOMO concern for teens:",
+      "choices": [
+        "A Isolation plus comparison/FOMO is unhelpful versus real-world social activity.",
+        "B FOMO is always healthy.",
+        "C Only adults use social media.",
+        "D Loneliness improves well-being."
+      ],
+      "answer": 1,
+      "cite": "8.150",
+      "explain": "Isolation + social comparison/FOMO harms."
+    }
+  ]
+}
