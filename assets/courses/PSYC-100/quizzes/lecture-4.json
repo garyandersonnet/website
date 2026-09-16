@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-4",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "Fear as a Catalyst",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "Which book by Jeffrey Gray does Peterson single out as exceptionally important for emotion and brain function?",
+      "choices": [
+        "A Beyond Freedom and Dignity.",
+        "B The Neuropsychology of Anxiety (1982).",
+        "C Man and His Symbols.",
+        "D Thinking, Fast and Slow."
+      ],
+      "answer": 1,
+      "cite": "4.6",
+      "explain": "He highlights Gray's 1982 Neuropsychology of Anxiety on emotional response and brain function."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "What does a rat's runway pulling/running illustrate about motivation and incentive?",
+      "choices": [
+        "A Motivation is imaginary and cannot be measured.",
+        "B You can index how much an animal wants something; approach toward reward underpins incentive reward.",
+        "C Rats only respond to punishment, never reward.",
+        "D Hunger never affects behavior once food is visible."
+      ],
+      "answer": 1,
+      "cite": "4.20",
+      "explain": "The rat is happy running toward food—incentive reward while moving toward the goal; satiation changes the frame."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "What critique does he level at the self-esteem movement in schools?",
+      "choices": [
+        "A It perfectly eliminated all neurosis.",
+        "B It made kids more neurotic/higher in negative emotion and confused self-esteem with competence.",
+        "C It should replace all grades with stickers only.",
+        "D It proved that praise without standards always builds mastery."
+      ],
+      "answer": 1,
+      "cite": "4.62",
+      "explain": "Educational psychologists' self-esteem push made kids more neurotic and confused self-esteem with real competence."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "How does he suggest using fear productively rather than being stopped by it?",
+      "choices": [
+        "A Ignore fear completely and never analyze risk.",
+        "B Let ordered fear propel you—know what to fear (including your own self-destructive stupidity).",
+        "C Maximize panic until you freeze permanently.",
+        "D Outsource all fear management to social media."
+      ],
+      "answer": 1,
+      "cite": "4.105",
+      "explain": "If fear stops you, you're stopped; if fear propels you, you're harder to interfere with—know what to fear."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "In exposure/daydream work, why does making a frightening fantasy more realistic help?",
+      "choices": [
+        "A It proves the fantasy is false and can be ignored.",
+        "B More realistic fantasies (e.g., measured by sweating) speed progress in exposure therapy.",
+        "C Fantasy should always stay vague to protect the ego.",
+        "D Only group hypnosis works for fear."
+      ],
+      "answer": 1,
+      "cite": "4.102",
+      "explain": "More realistic frightening fantasies produce stronger physiological response and faster exposure progress."
+    }
+  ]
+}
