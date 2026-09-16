@@ -1,0 +1,528 @@
+{
+  "id": "psyc-100-final",
+  "course": "PSYC 100",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Peterson's opening claim about life-vision is best summarized as:",
+      "choices": [
+        "A Vision is optional if you follow trends.",
+        "B There is no no-vision option—only better/worse visions (or someone else's).",
+        "C Only governments supply personal visions.",
+        "D Hedonism eliminates the need for vision."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "You will be governed by a vision—good, bad, or borrowed."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "A plan, relative to a vision, is:",
+      "choices": [
+        "A Broader and less actionable.",
+        "B A narrowed, focused vision aimed at implementation.",
+        "C A rejection of all theory.",
+        "D Identical to chaos."
+      ],
+      "answer": 1,
+      "cite": "1.3",
+      "explain": "Vision is broad theory; plan focuses it to an implementable point."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Chaos, in his experiential map, includes:",
+      "choices": [
+        "A Only political disorder.",
+        "B What you don't understand—and thus potential for new knowledge.",
+        "C Only moral evil.",
+        "D The domain where actions always succeed."
+      ],
+      "answer": 1,
+      "cite": "1.10",
+      "explain": "Unknown territory is chaos and also potential."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "Interest/grip when you're at the edge of knowledge is described as:",
+      "choices": [
+        "A bug to eliminate with boredom.",
+        "B A manifestation of the learning instinct / meaning signal.",
+        "C Proof that security alone is enough.",
+        "D Evidence you should never leave home."
+      ],
+      "answer": 1,
+      "cite": "1.23",
+      "explain": "Interest grips you at the edge of what you know—optimized learning."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "Pure security without transformation is problematic because:",
+      "choices": [
+        "A It maximizes adventure automatically.",
+        "B It lacks the transformative element needed to move toward a better self/world.",
+        "C It guarantees Pareto success.",
+        "D It is identical to meaning."
+      ],
+      "answer": 1,
+      "cite": "1.34",
+      "explain": "Security alone has no transformation; you also need the developmental edge."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "Pareto-style progress in accomplishment, as he uses it, suggests:",
+      "choices": [
+        "A Progress is strictly linear and slow forever.",
+        "B Success compounds—early gains make later gains easier (geometric/exponential flavor).",
+        "C Only lottery winners improve.",
+        "D First albums are always easiest."
+      ],
+      "answer": 1,
+      "cite": "1.82",
+      "explain": "Success builds on itself across domains—start even if slow."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "On asking for a raise, he emphasizes:",
+      "choices": [
+        "A Never documenting contributions.",
+        "B Presenting a real story of how you made the employer's life easier/more profitable.",
+        "C Threatening without alternatives.",
+        "D Working invisibly forever."
+      ],
+      "answer": 1,
+      "cite": "1.88",
+      "explain": "People need to know you're doing a good job—bring a concrete list when seeking promotion."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "The knight's darkest forest entry point symbolizes:",
+      "choices": [
+        "A Avoiding all fear indefinitely.",
+        "B Entering chaos/potential at the frightening place that is yours to confront.",
+        "C Following only public maps.",
+        "D Waiting for guaranteed outcomes."
+      ],
+      "answer": 1,
+      "cite": "2.3",
+      "explain": "Enter where it looks darkest to you—same destination via fearful entry points."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Therapy's truth-telling and story-straightening is framed as:",
+      "choices": [
+        "A Entertainment only.",
+        "B Exposure to the unknown—clarifying past/present/future vision.",
+        "C A way to avoid responsibility.",
+        "D Proof trauma never matters."
+      ],
+      "answer": 1,
+      "cite": "2.5",
+      "explain": "Getting the story straight is therapeutic exposure and vision work."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Voluntarily confronting small obstacles has what advantage?",
+      "choices": [
+        "A It only shrinks fear of that one object.",
+        "B You simultaneously confront the broader domain of fear and become braver.",
+        "C It makes all relationships worse forever.",
+        "D It replaces bravery with numbness."
+      ],
+      "answer": 1,
+      "cite": "2.16",
+      "explain": "Small voluntary confrontations generalize—building bravery."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "Letting kids suffer appropriately is justified so that you don't:",
+      "choices": [
+        "A Teach them sports.",
+        "B Steal their destinies by doing everything for them.",
+        "C Ever discipline them.",
+        "D Allow any play."
+      ],
+      "answer": 1,
+      "cite": "2.23",
+      "explain": "Mothers must let kids suffer some so destinies aren't stolen."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "Hobbes vs Rousseau, as he sketches walls/order:",
+      "choices": [
+        "A Hobbes sees natural state as chaos/malevolence needing restraint; Rousseau sees restraints as corrupting intrinsic goodness.",
+        "B Both deny any human conflict.",
+        "C Rousseau invented prisons; Hobbes invented play.",
+        "D They agree people need no walls."
+      ],
+      "answer": 0,
+      "cite": "2.75",
+      "explain": "Hobbes: nasty/brutish/short natural state; Rousseau: intrinsic goodness corrupted by strictures."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "Constrained choice (e.g., two outfits) helps because:",
+      "choices": [
+        "A Infinite options always maximize happiness.",
+        "B Walling off options reduces paralysis amid too many alternatives.",
+        "C Children should never choose.",
+        "D Consumer research forbids limited shelves."
+      ],
+      "answer": 1,
+      "cite": "2.69",
+      "explain": "Constrained choice (and consumer literature on too many shampoos) shows limits can help."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "Invitation over compulsion in partnerships/business means:",
+      "choices": [
+        "A Manipulate first, apologize later.",
+        "B Offer solutions seeking voluntary assent; force/deception blocks the shared destination.",
+        "C Never negotiate dishes or chores.",
+        "D Always win by lowering the other."
+      ],
+      "answer": 1,
+      "cite": "2.118",
+      "explain": "Compulsion/deception instead of voluntary assent prevents reaching goals."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "Motivations/emotions help you by:",
+      "choices": [
+        "A Removing all categorization of the world.",
+        "B Providing basic structures that help categorize experience and set goals.",
+        "C Eliminating the need for senses.",
+        "D Guaranteeing no conflicts ever."
+      ],
+      "answer": 1,
+      "cite": "3.4",
+      "explain": "Motivations and emotions structure understanding alongside sensory framing."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "Socialization is less 'forceful suppression' and more:",
+      "choices": [
+        "A Deleting anger permanently.",
+        "B Offering better games that integrate aggression/needs into playable, long-term patterns.",
+        "C Ignoring toilet training.",
+        "D Keeping children as pure id."
+      ],
+      "answer": 1,
+      "cite": "3.21",
+      "explain": "You're offering a better game—e.g., sit until you can play civilly again."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Conscience, in his account, is notable because:",
+      "choices": [
+        "A You can shut it off at will if it were merely 'you'.",
+        "B It has autonomy—it calls you to account, pointing toward who you could become.",
+        "C It only praises you.",
+        "D It is identical to Twitter."
+      ],
+      "answer": 1,
+      "cite": "3.38",
+      "explain": "If conscience were fully you, you could silence it; its autonomy points to higher unity."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "The world shows up primarily as:",
+      "choices": [
+        "A list of inert objects plus optional values painted on later.",
+        "B Pathways, tools, and obstacles (with most of reality invisible).",
+        "C Only mathematical equations.",
+        "D Random noise without goals."
+      ],
+      "answer": 1,
+      "cite": "3.83",
+      "explain": "You don't see bare objects then add value—world appears as pathways/tools/obstacles."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "If you don't know what to do, 'nothing' is:",
+      "choices": [
+        "A The optimal moral solution.",
+        "B The wrong solution—better to try games others play than no game.",
+        "C Required by nihilism forever.",
+        "D Only for infants."
+      ],
+      "answer": 1,
+      "cite": "3.95",
+      "explain": "No game means no progress; look at what others do and try."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "Breaking 'make dinner' into knife-to-table steps illustrates:",
+      "choices": [
+        "A That abstract commands always suffice for toddlers.",
+        "B Decomposing identity/skills to implementable subroutines at the right level.",
+        "C That dinner is unimportant.",
+        "D That children should never help."
+      ],
+      "answer": 1,
+      "cite": "3.103",
+      "explain": "Train by finding the insufficiency level and building subroutines upward."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "Meaning, at the close of lecture 3, is:",
+      "choices": [
+        "A purely abstract metaphysical luxury.",
+        "B The instinct signaling you're integrating motivations into improving multi-person games.",
+        "C Only a chemical accident with no use.",
+        "D Identical to fame."
+      ],
+      "answer": 1,
+      "cite": "3.111",
+      "explain": "Meaning tells you you're integrating lower systems into broader, repeating, improving games."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "Gray's Neuropsychology of Anxiety is praised for linking:",
+      "choices": [
+        "A Only astrology and personality.",
+        "B Emotional response with brain anatomy and pharmacology.",
+        "C Diet fads to IQ.",
+        "D Music theory to taxes."
+      ],
+      "answer": 1,
+      "cite": "4.6",
+      "explain": "Gray connects emotion to anatomical and pharmacological brain function."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "Work, in sacrificial terms he connects to motivation, involves:",
+      "choices": [
+        "A Avoiding all deferred gratification.",
+        "B Giving up present comfort to move toward valued future outcomes (sacrificial stance).",
+        "C Only unpaid volunteering.",
+        "D Never tracking goals."
+      ],
+      "answer": 1,
+      "cite": "4.13",
+      "explain": "Work exemplifies sacrificial relation—foregoing now for valued later ends."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "Self-authoring / vision programs are discussed as potentially costly because:",
+      "choices": [
+        "A Cost always proves a scam.",
+        "B Paying seriously can signal commitment so you take the plan seriously.",
+        "C Free advice is always followed better.",
+        "D Vision cannot be written."
+      ],
+      "answer": 1,
+      "cite": "4.41",
+      "explain": "He notes people may pay a lot partly to take the vision exercise seriously."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "Hillsdale's low dropout is contrasted with typical ~50% rates to suggest:",
+      "choices": [
+        "A Dropping out is always optimal.",
+        "B Institutions can run things so students finish—high dropout is inexcusable.",
+        "C Only conservative colleges teach math.",
+        "D Mystery means nothing can change."
+      ],
+      "answer": 1,
+      "cite": "4.69",
+      "explain": "A 1% dropout shows proper structure vs inexcusable mass dropout."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "Pathological daydreams (even murderous) can emerge when:",
+      "choices": [
+        "A You always tell the truth.",
+        "B Problem-solving fantasy is suppressed/lied about long enough.",
+        "C You finish exposure therapy.",
+        "D You sleep eight hours."
+      ],
+      "answer": 1,
+      "cite": "4.90",
+      "explain": "Suppressed problem-solving can turn fantasy pathological—including violent themes."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "Those who insist they would never obey a totalitarian are, he warns:",
+      "choices": [
+        "A Statistically the safest group.",
+        "B Often the most likely to comply—blindness to one's capacity is the risk.",
+        "C Immune by IQ alone.",
+        "D Exempt if they watch documentaries."
+      ],
+      "answer": 1,
+      "cite": "4.103",
+      "explain": "People who think themselves least likely may be most likely—assume it could be you."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "Job's ordeal is framed as archetypal because:",
+      "choices": [
+        "A Only kings suffer.",
+        "B Everyone must contend with unjust suffering—possibly via children if not oneself.",
+        "C Tragedy is rare and ignorable.",
+        "D Satan never appears in literature."
+      ],
+      "answer": 1,
+      "cite": "5.5",
+      "explain": "Unjust suffering is universal; the story sits at culture's base."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "Ordinary Men's policemen become perpetrators how?",
+      "choices": [
+        "A Overnight, with no steps.",
+        "B Incrementally—one bloody step at a time—until some even enjoy it.",
+        "C Only under alien mind control.",
+        "D Because they were all lifelong criminals."
+      ],
+      "answer": 1,
+      "cite": "5.18",
+      "explain": "Gradual compliance transforms ordinary men into worst murderers."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "Integrating the shadow / knowing you can be dangerous yields:",
+      "choices": [
+        "A Uncontrolled cruelty as the goal.",
+        "B Formidableness—dangerousness integrated rather than naive helplessness.",
+        "C Permanent guilt with no action.",
+        "D Denial that evil exists."
+      ],
+      "answer": 1,
+      "cite": "5.23",
+      "explain": "Knowing you can be dangerous lets you integrate it and become formidable."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Cain's second-rate sacrifices connect to pride because:",
+      "choices": [
+        "A Pride always increases offering quality.",
+        "B Cutting corners assumes reality/God is too blind to notice—an arrogant gamble.",
+        "C Abel forbids all work.",
+        "D Sacrifice is only taxation."
+      ],
+      "answer": 1,
+      "cite": "5.31",
+      "explain": "Pulling wool over the father's eyes is arrogance; twisting reality snaps back."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "Abraham leaving comfort illustrates:",
+      "choices": [
+        "A Satiation at home is the highest aim.",
+        "B Calling beyond mere satisfaction—risking adventure that founds a people.",
+        "C That Islam alone matters.",
+        "D That travel posters define destiny."
+      ],
+      "answer": 1,
+      "cite": "5.72",
+      "explain": "Abraham has satiation yet is called out—pattern of adaptation beyond comfort."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "Marriage shifts the center of gravity because:",
+      "choices": [
+        "A It remains only about you.",
+        "B It's not about you anymore—harmony with spouse stabilizes the household and your psyche.",
+        "C Children forbid all games.",
+        "D Turn-taking is optional after age four."
+      ],
+      "answer": 1,
+      "cite": "5.89",
+      "explain": "Marriage demands sacrifice of pure self-focus; household sanity enables life."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "If someone lacks relationships, friends, and meaningful engagement, Peterson may say:",
+      "choices": [
+        "A They definitely have major depression only.",
+        "B They may simply not have a life—a serious problem distinct from immunological depression.",
+        "C Cats fix everything.",
+        "D Cynicism proves enlightenment."
+      ],
+      "answer": 1,
+      "cite": "6.4",
+      "explain": "Multidimensional life assessment separates 'no life' misery from depression."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "Aiming fantasies at becoming attractive to a worthy partner is preferred over:",
+      "choices": [
+        "A Any self-improvement.",
+        "B Waiting for someone whose life goal is to be 'right for you' as you are.",
+        "C Honesty about desires.",
+        "D Wanting children thoughtfully."
+      ],
+      "answer": 1,
+      "cite": "6.10",
+      "explain": "Better to become worthy of the person you'd want than demand they fit your unworked self."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "Surround yourself with people who:",
+      "choices": [
+        "A Punish your small steps forward.",
+        "B Are aiming up—celebrate progress; don't cynically cut you down.",
+        "C Only gossip.",
+        "D Refuse all projects."
+      ],
+      "answer": 1,
+      "cite": "6.26",
+      "explain": "Aim-up companions matter; helping the willing differs from carrying the unwilling."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "A dead-end job, in his terms, often means:",
+      "choices": [
+        "A Any job with a boss.",
+        "B A tyrannical ruler and no reward for good work—then look elsewhere.",
+        "C All employment is slavery.",
+        "D You must never leave."
+      ],
+      "answer": 1,
+      "cite": "6.33",
+      "explain": "Tyranny plus no reward for good work = reason to seek another place."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "The day confronts you as:",
+      "choices": [
+        "A Fully determined with no possibility.",
+        "B An unformed realm of bounded possibility calling via conscience.",
+        "C Only a calendar app notification.",
+        "D Something to outsource entirely."
+      ],
+      "answer": 1,
+      "cite": "6.61",
+      "explain": "Each day is parameterized possibility that summons you."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "God's offer to Abraham (father of nations) is analogized to:",
+      "choices": [
+        "A Personal brand sponsorships only.",
+        "B Establishing an adaptation pattern successful across generations—even via humble roles done well.",
+        "C Rejecting all family.",
+        "D Winning arguments online."
+      ],
+      "answer": 1,
+      "cite": "6.82",
+      "explain": "Cascading successful pattern down generations could be you—even as a devoted parent."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "A unserious vacation-poster 'vision' fails because:",
+      "choices": [
+        "A Beaches are immoral.",
+        "B You must flesh out a realistic, serious vision of how much good you could do—not a teenage fantasy left unexamined.",
+        "C Canada forbids travel.",
+        "D Mai tais solve nihilism."
+      ],
+      "answer": 1,
+      "cite": "6.103",
+      "explain": "He mocks unexamined Caribbean-poster dreams; take yourself seriously and specify."
+    }
+  ]
+}
