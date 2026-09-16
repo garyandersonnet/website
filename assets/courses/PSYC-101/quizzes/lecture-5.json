@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-5",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "The Self",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "Personality's etymological sense of 'mask' contrasts with self as:",
+      "choices": [
+        "A Identical Latin roots only.",
+        "B Self from roots meaning separate/one's own—what's mine—while personality often maps traits/masks.",
+        "C Self means only Facebook profile.",
+        "D Personality forbids traits."
+      ],
+      "answer": 1,
+      "cite": "5.6",
+      "explain": "Personality≈mask; self≈one's own/separate."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "A personality trait is:",
+      "choices": [
+        "A one-time mood only.",
+        "B A consistent pattern of thoughts, feelings, and behaviors across time and situations.",
+        "C Only IQ score.",
+        "D Unmeasurable by design."
+      ],
+      "answer": 1,
+      "cite": "5.4",
+      "explain": "Traits = consistent patterns across time/situations."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "Extraversion includes more than sociability:",
+      "choices": [
+        "A Only shyness.",
+        "B Sociability plus a big dose of assertiveness/drive/energy—seen in leadership.",
+        "C Only neurotic worry.",
+        "D Agreeableness antagonism."
+      ],
+      "answer": 1,
+      "cite": "5.23",
+      "explain": "E = sociability + assertiveness/energy."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "Low agreeableness clinically maps toward:",
+      "choices": [
+        "A Perfect compassion always.",
+        "B Antagonism—linked to antisocial/narcissistic clinical discussions.",
+        "C Only openness to art.",
+        "D Extraversion facets."
+      ],
+      "answer": 1,
+      "cite": "5.56",
+      "explain": "Low A ≈ antagonism clinically."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "Hero's journey / Odysseus framing of self:",
+      "choices": [
+        "A You never change through trials.",
+        "B Tests and return forge the hero—finding yourself through ordeal, not a boring unbroken success resume.",
+        "C Only business school GPAs define self.",
+        "D Myths ignore transformation."
+      ],
+      "answer": 1,
+      "cite": "5.133",
+      "explain": "Hero's journey: war, tests, return—self through ordeal."
+    }
+  ]
+}

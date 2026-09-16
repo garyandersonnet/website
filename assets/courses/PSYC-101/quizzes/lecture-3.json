@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-3",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Psychology Throughout Life",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "Developmental psychology focuses on:",
+      "choices": [
+        "A Only static adult traits forever.",
+        "B Psychological change across the life course on many dimensions.",
+        "C Exclusive infant reflexes with no adulthood.",
+        "D Ignoring adolescence."
+      ],
+      "answer": 1,
+      "cite": "3.1",
+      "explain": "Development = process of psychological change across life."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "Erikson's model is distinctive because:",
+      "choices": [
+        "A It stops at age 5.",
+        "B It stages challenges through the entire life course.",
+        "C It denies social development.",
+        "D It is only about toilet training."
+      ],
+      "answer": 1,
+      "cite": "3.21",
+      "explain": "Erikson covers whole-life stages and challenges."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "Bowlby's attachment idea of a secure base means:",
+      "choices": [
+        "A Children should never explore.",
+        "B A reliable caregiver base enabling exploration—not clinging forever.",
+        "C Attachment prevents all travel.",
+        "D Only fathers provide bases."
+      ],
+      "answer": 1,
+      "cite": "3.31",
+      "explain": "Secure base supports exploration."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "Emerging adulthood (~18–28) is described as:",
+      "choices": [
+        "A An Erikson stage from 1950 exactly.",
+        "B A newer phase of prolonged integration into adult roles taking longer than it used to.",
+        "C Identical to late-life integrity only.",
+        "D Only about retirement."
+      ],
+      "answer": 1,
+      "cite": "3.91",
+      "explain": "Emerging adulthood: longer path into adult roles."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "Generativity means roughly:",
+      "choices": [
+        "A Only self-absorption.",
+        "B Building/creating for the next generation / future.",
+        "C Refusing all mentorship.",
+        "D Toddler oral stage only."
+      ],
+      "answer": 1,
+      "cite": "3.111",
+      "explain": "Generativity = generating something for the future/next generation."
+    }
+  ]
+}

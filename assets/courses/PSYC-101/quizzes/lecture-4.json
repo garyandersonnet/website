@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-4",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "Motivation and Maslow",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "A motive, as defined here, is:",
+      "choices": [
+        "A Only a brain tumor.",
+        "B A psychological push/pull toward wanted things or away from unwanted ones.",
+        "C Identical to a completed goal always.",
+        "D Only unconscious and never named."
+      ],
+      "answer": 1,
+      "cite": "4.2",
+      "explain": "Motives push/pull toward or away."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "Maslow's hierarchy is used as:",
+      "choices": [
+        "A Proof needs never interact.",
+        "B A familiar guide/pyramid framing layered needs from basic toward higher aims.",
+        "C A rejection of all biological drives.",
+        "D Only a color chart with no psychology."
+      ],
+      "answer": 1,
+      "cite": "4.6",
+      "explain": "Maslow hierarchy as introductory guide."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "Need for achievement (McClelland) emphasizes:",
+      "choices": [
+        "A Only destroying rivals.",
+        "B Building/accomplishing—developing capacity to create and achieve.",
+        "C Avoiding all goals.",
+        "D Power as the only motive."
+      ],
+      "answer": 1,
+      "cite": "4.85",
+      "explain": "Achievement motive: building and accomplishing."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "Lyubomirsky-style happiness definition includes:",
+      "choices": [
+        "A Only wealth metrics.",
+        "B Joy, contentment, or positive well-being (experienced sense of happiness).",
+        "C Exclusive genetic fatalism with no psychology.",
+        "D Only workplace KPIs."
+      ],
+      "answer": 1,
+      "cite": "4.121",
+      "explain": "Happiness as joy/contentment/positive well-being."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "On '90% perception / 10% circumstances' happiness claims he is:",
+      "choices": [
+        "A Fully endorsing Shawn Achor's 10% figure without critique.",
+        "B Skeptical that such a neat 90/10 split is the whole story; discusses richer breakdowns.",
+        "C Saying environment is 100%.",
+        "D Denying genetics entirely."
+      ],
+      "answer": 1,
+      "cite": "4.145",
+      "explain": "He doubts the simplistic 90% perception claim."
+    }
+  ]
+}
