@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-1",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "Between Order and Chaos",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "According to Peterson, what is your real option regarding a vision for your life?",
+      "choices": [
+        "A You can choose to live with no vision at all if you stay busy.",
+        "B You can develop a good vision or a bad one (or live someone else's)—there is no no-vision option.",
+        "C Only childhood trauma determines whether you ever form a vision.",
+        "D Visions are optional luxury goods reserved for executives."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "He opens by saying there is no no-vision option: you develop a good or bad vision, or live out someone else's."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "How does he distinguish a vision from a plan in the course title 'Vision and Plan'?",
+      "choices": [
+        "A vision is a to-do list; a plan is a mystical insight.",
+        "B A vision is a broad theory; a plan is a narrow, focused, implementable vision.",
+        "C They are identical synonyms he uses only for marketing.",
+        "D A plan is chaos; a vision is order."
+      ],
+      "answer": 1,
+      "cite": "1.3",
+      "explain": "He calls a vision a broad theory and a plan a narrow, focused vision that can be implemented."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "In his Daoist framing of experience, what are order and chaos?",
+      "choices": [
+        "A Order is moral goodness; chaos is political liberalism.",
+        "B Order is what you understand; chaos is what you don't understand (also potential).",
+        "C Order is only geography; chaos is only weather.",
+        "D Chaos is always evil and must be eradicated entirely."
+      ],
+      "answer": 1,
+      "cite": "1.10",
+      "explain": "Things you understand are the domain of order; what transcends understanding is chaos—and also potential."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "What does the 'instinct of meaning' signal, on his phenomenological account?",
+      "choices": [
+        "A That life is intrinsically meaningless and should be abandoned.",
+        "B That you are at the border between what you know and what you don't—where optimized learning/transformation occurs.",
+        "C That you should pursue pure security with zero unpredictability.",
+        "D That only monetary rewards create meaning."
+      ],
+      "answer": 1,
+      "cite": "1.24",
+      "explain": "Meaning marks the edge between known and unknown—the place of transforming into a better version of yourself."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "When negotiating a change with a spouse, what kind of change does he recommend seeking?",
+      "choices": [
+        "A The largest possible overhaul so progress is 'real'.",
+        "B A change small enough and interesting enough that both might experiment with it voluntarily.",
+        "C No negotiation—only unilateral demands.",
+        "D Only changes imposed by a therapist's decree."
+      ],
+      "answer": 1,
+      "cite": "1.49",
+      "explain": "Negotiate until you find a small, interesting change both might try happily—humility and play matter."
+    }
+  ]
+}
