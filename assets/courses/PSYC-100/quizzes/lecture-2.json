@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-2",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "The Walled Garden",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "In the Grail story he cites, where does each knight enter the forest?",
+      "choices": [
+        "A At the royal highway marked by the king.",
+        "B At the point that looks darkest to him.",
+        "C Only after a committee vote on the safest path.",
+        "D Never—knights wait for the Grail to arrive."
+      ],
+      "answer": 1,
+      "cite": "2.3",
+      "explain": "Each knight goes into the forest at the point that looks darkest to him—entry points that frighten you."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "After voluntary exposure, what does he say people typically become?",
+      "choices": [
+        "A Less afraid of only that one thing, equally afraid of everything else.",
+        "B Braver—not merely 'less afraid' of the specific threat.",
+        "C More dependent on their therapist forever.",
+        "D Immune to all future anxiety without practice."
+      ],
+      "answer": 1,
+      "cite": "2.17",
+      "explain": "They don't merely become less afraid of the specific thing; they become braver—there's more to them than they realized."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "What rule of care for the elderly (and therapy) does he endorse about helping?",
+      "choices": [
+        "A Do everything for people so they never struggle.",
+        "B Don't do for anyone what they can do themselves—you're stealing from them.",
+        "C Help only if they pay cash upfront.",
+        "D Never help anyone, ever."
+      ],
+      "answer": 1,
+      "cite": "2.22",
+      "explain": "Don't ever do anything for anyone they can do themselves; you're stealing, not helping."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "How does he reframe rules/discipline relative to sophisticated games?",
+      "choices": [
+        "A Rules are only arbitrary control to crush play.",
+        "B Rules are enabling principles for more sophisticated games, not mere imposition.",
+        "C Rules exist only in sports, never in households.",
+        "D Discipline means never allowing any fun."
+      ],
+      "answer": 1,
+      "cite": "2.36",
+      "explain": "Rules aren't only something you impose—they're enabling principles for more sophisticated games."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "In the Exodus anecdote about Moses striking the rock, what lesson does he draw for households and negotiation?",
+      "choices": [
+        "A Force always gets you into the Promised Land faster.",
+        "B Using compulsion instead of invitation/voluntary assent means you don't reach the destination.",
+        "C Deception is preferable to honest offers.",
+        "D Silence is the only acceptable leadership style."
+      ],
+      "answer": 1,
+      "cite": "2.117",
+      "explain": "Because Moses uses force when invitation was possible, he doesn't enter; likewise compulsion/manipulation blocks household goals."
+    }
+  ]
+}
