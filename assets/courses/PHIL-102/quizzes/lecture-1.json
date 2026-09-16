@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-1",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "Why Logic Matters",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "Hicks’s opening claim about why we should bother with logic’s hard abstractions is that, for human beings, logic is:",
+      "choices": [
+        "A An optional hobby useful only to professional mathematicians.",
+        "B The most practical thing one can master.",
+        "C A purely ornamental tradition inherited from medieval monks.",
+        "D A substitute for using the body well in survival."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "He starts by asking why bother, then claims logic is the most practical thing humans can master—controversial even among pro-logic people."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "What does Hicks say Aristotle’s logical writings are collectively called, and what does that Greek word mean?",
+      "choices": [
+        "A The Republic; it means a city.",
+        "B The Organon; it means a tool.",
+        "C The Categories only; it means a list of insults.",
+        "D The Symposium; it means a feast."
+      ],
+      "answer": 1,
+      "cite": "1.8",
+      "explain": "Aristotle’s logic books are the Organon—Greek for a tool: tools of thinking for different circumstances."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "On Hicks’s reading of Aristotle’s formulation, the principle of non-contradiction says that:",
+      "choices": [
+        "A The same attribute cannot at the same time belong and not belong to the same subject in the same respect.",
+        "B Contradictions are allowed if they are emotionally sincere.",
+        "C Every dispute has two equally true sides.",
+        "D Reality regularly contradicts itself, so thought should too."
+      ],
+      "answer": 0,
+      "cite": "1.14",
+      "explain": "He quotes Metaphysics: the same attribute cannot belong and not belong to the same subject at the same time in the same respect."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "In this course’s technical use, an argument is:",
+      "choices": [
+        "A Two people yelling insults at each other.",
+        "B A structure of propositions with a conclusion and premise(s) offered as reasons for it.",
+        "C Any emotionally intense speech, whether or not reasons are given.",
+        "D A list of facts with no inferred claim."
+      ],
+      "answer": 1,
+      "cite": "1.107",
+      "explain": "Yelling is not an argument. An argument has a conclusion (what to believe) and premises (why)."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "How does Hicks distinguish truth from validity when evaluating an argument?",
+      "choices": [
+        "A Truth is whether the pieces correspond to reality; validity is whether the inference’s form preserves that support.",
+        "B Validity means the premises are popular; truth means they are Latin.",
+        "C They are synonyms—both just mean “sounds right.”",
+        "D Truth applies only to conclusions; validity applies only to insults."
+      ],
+      "answer": 0,
+      "cite": "1.146",
+      "explain": "Truth: do the components match reality? Validity: is the structure of the inference good, independent of those contents?"
+    }
+  ]
+}

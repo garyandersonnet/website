@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-2",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Concepts & Our Cognitive Hierarchy",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "Voltaire’s line Hicks quotes, about enlightened people arguing a long time, is used to warn that:",
+      "choices": [
+        "A Logic is useless once people are witty.",
+        "B The question may not be clear—concepts and word-use have gone fuzzy.",
+        "C All long arguments are therefore valid.",
+        "D We should replace concepts with sensations only."
+      ],
+      "answer": 1,
+      "cite": "2.1",
+      "explain": "Long disputes among sharp thinkers often mean the question isn’t clear; concepts need attention."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "In the cognitive hierarchy Hicks sketches, what are percepts?",
+      "choices": [
+        "A Pure numbers with no sensory origin.",
+        "B Integrations of sensations into awareness of objects.",
+        "C Finished scientific theories.",
+        "D Synonyms for informal fallacies."
+      ],
+      "answer": 1,
+      "cite": "2.9",
+      "explain": "Bundles of sensations are integrated into percepts; we then are aware of objects in the environment."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "When a child uses “dog” for the family dog and also for a dog on the street, Hicks treats that as evidence the child is:",
+      "choices": [
+        "A Using a proper name for one percept only.",
+        "B Designating a class—operating at the conceptual level.",
+        "C Still stuck at isolated color patches with no integration.",
+        "D Committing an ad hominem."
+      ],
+      "answer": 1,
+      "cite": "2.11",
+      "explain": "“Dog” is not a proper name for one animal; it names a class of things."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "The speckled-hen example is meant to show that counting the speckles:",
+      "choices": [
+        "A Improves raw visual perception of the hen automatically.",
+        "B Is a learned conceptual achievement that perception alone does not give.",
+        "C Proves hens have no identity.",
+        "D Is an informal fallacy of majority."
+      ],
+      "answer": 1,
+      "cite": "2.14",
+      "explain": "You don’t perceive the number of speckles; counting uses mathematical concepts and does not make the hen look clearer."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "Why does Hicks say adult arguments about God or political labels should start with conceptual work?",
+      "choices": [
+        "A Because definitions are optional decoration after the fight.",
+        "B Because we must get clear what we are talking about before plunging into for/against arguments.",
+        "C Because concepts are impossible for adults.",
+        "D Because Voltaire forbade political words."
+      ],
+      "answer": 1,
+      "cite": "2.37",
+      "explain": "Before arguing whether God exists or whether someone is a socialist, get the concept clear or the discussion talks past itself."
+    }
+  ]
+}

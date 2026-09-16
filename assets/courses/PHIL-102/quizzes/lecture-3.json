@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-3",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Logical Fallacies",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "Informal fallacies, as Hicks defines them here, are mistakes in reasoning where:",
+      "choices": [
+        "A The premises seem to support the conclusion but actually provide no support.",
+        "B Every informal remark is automatically valid.",
+        "C Only categorical syllogisms can go wrong.",
+        "D Emotions have been successfully banned from life."
+      ],
+      "answer": 0,
+      "cite": "3.2",
+      "explain": "They look like support from premises to conclusion, but the support isn’t there—fallacious, and “informal” because they show up across forms of reasoning."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "Subjectivism in its crude form, on this lecture’s account, is:",
+      "choices": [
+        "A I want X to be true, so I will believe X is true.",
+        "B I gather evidence first, then decide what I want.",
+        "C I always go to the doctor when symptoms appear.",
+        "D I treat emotions as the organ of truth."
+      ],
+      "answer": 0,
+      "cite": "3.7",
+      "explain": "Standard form: I want X true; therefore I believe X. The “evidence” is just one’s wanting."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "The appeal to majority is a fallacy, Hicks says, primarily because:",
+      "choices": [
+        "A Crowds never share any true beliefs.",
+        "B Other people’s believing X, by itself, does not tell you whether X is true.",
+        "C History shows majorities are always right.",
+        "D Asch proved visual acuity is impossible."
+      ],
+      "answer": 1,
+      "cite": "3.20",
+      "explain": "You don’t have their reasoning. “Many believe X, therefore I believe X” is a failure of independent judgment."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "Ad hominem, as Hicks explains the Latin label that stuck, is:",
+      "choices": [
+        "A Attacking the person (or the person-as-speaker) instead of the argument or ideas.",
+        "B Citing Aristotle as an authority on biology.",
+        "C Affirming the consequent in a hypothetical syllogism.",
+        "D Defining a square in geometry."
+      ],
+      "answer": 0,
+      "cite": "3.74",
+      "explain": "Instead of attacking the argument/ideas, you attack the person."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "The crude ad hominem pattern Hicks writes as a schema is:",
+      "choices": [
+        "A X says Y; X has some disliked trait; therefore Y is false.",
+        "B X says Y; therefore Y is true because X is famous.",
+        "C If P then Q; not P; therefore not Q (and that is valid).",
+        "D All S are P; some P are Q; therefore gossip is evidence."
+      ],
+      "answer": 0,
+      "cite": "3.77",
+      "explain": "X says Y is true, but X is [insult]; therefore Y is false—the person’s disliked feature is treated as refuting the claim."
+    }
+  ]
+}

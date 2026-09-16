@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-5",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "Deduction: Categorical Syllogisms",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "A syllogism, in this lecture’s definition, is any argument with:",
+      "choices": [
+        "A Exactly one premise and a joke.",
+        "B Two premises and a conclusion.",
+        "C An unlimited number of conclusions and no premises.",
+        "D Only hypothetical if-then sentences."
+      ],
+      "answer": 1,
+      "cite": "5.3",
+      "explain": "Two premises + a conclusion; types include categorical, hypothetical, and disjunctive."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "Validity, as Hicks rehearses it for syllogisms, concerns:",
+      "choices": [
+        "A Whether each premise matches extra-logical facts (biology, etc.).",
+        "B The structure/pattern/form of the move from premises to conclusion.",
+        "C Whether the speaker is famous.",
+        "D Whether the conclusion is popular."
+      ],
+      "answer": 1,
+      "cite": "5.8",
+      "explain": "Truth of premises is largely other fields’ job; logic specializes in the formal pattern—valid or invalid."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "A sound argument, the “gold standard” here, is one that has:",
+      "choices": [
+        "A True premises and valid reasoning.",
+        "B Valid form even with all false premises, and nothing else.",
+        "C True premises even if the inference is a non sequitur.",
+        "D Latin names regardless of form."
+      ],
+      "answer": 0,
+      "cite": "5.21",
+      "explain": "Both virtues: true incoming information and good logic. That combination is called sound."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "Why can “All rabbits are birds; all birds eat whales; so all rabbits eat whales” still be valid?",
+      "choices": [
+        "A Because the premises are true.",
+        "B Because, supposing the premises, the conclusion would follow—the pattern matches the true “humans/mammals/mortal” case.",
+        "C Because medieval monks forbade talking about rabbits.",
+        "D Because it is a disjunctive syllogism."
+      ],
+      "answer": 1,
+      "cite": "5.15",
+      "explain": "Validity ignores actual truth of the contents; the structure is the same as the good mammal example (later named Barbara)."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "The middle term in a categorical syllogism is the term that:",
+      "choices": [
+        "A Appears in both premises (the linking term).",
+        "B Appears only in the conclusion.",
+        "C Is always an either-or connective.",
+        "D Must be a proper name like Aristotle."
+      ],
+      "answer": 0,
+      "cite": "5.73",
+      "explain": "The middle term appears in both premises. Hicks also notes a rule of thumb about not leaving it only in the predicate twice."
+    }
+  ]
+}
