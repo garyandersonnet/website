@@ -32,24 +32,58 @@
       .replace(/"/g, "&quot;");
   }
 
+  function normalizeCourseCode(code) {
+    return String(code || "").trim().replace(/\s+/g, "-");
+  }
+
   function courseCodeFromQuizUrl(url, fallback) {
     var m = String(url || "").match(/\/courses\/([^/]+)\/quizzes\//);
-    if (m) return decodeURIComponent(m[1]);
-    if (fallback) return String(fallback).replace(/\s+/g, "-");
+    if (m) return normalizeCourseCode(decodeURIComponent(m[1]));
+    if (fallback) return normalizeCourseCode(fallback);
     return "";
   }
 
   function paragraphsUrlFromQuizUrl(url, fallbackCode) {
-    var m = String(url || "").match(/^(.*\/courses\/[^/]+)\/quizzes\//);
-    if (m) return m[1] + "/paragraphs.json";
+    var m = String(url || "").match(/^(.*\/courses\/)([^/]+)\/quizzes\//);
+    if (m) return m[1] + normalizeCourseCode(decodeURIComponent(m[2])) + "/paragraphs.json";
     var code = courseCodeFromQuizUrl("", fallbackCode);
     if (code) return "/assets/courses/" + code + "/paragraphs.json";
     return "";
   }
 
   function transcriptPdfUrlFromCode(code) {
+    code = normalizeCourseCode(code);
     if (!code) return "";
     return "/assets/transcripts/" + code + "_transcript.pdf";
+  }
+
+  function normalizeParagraphs(data) {
+    if (!data || typeof data !== "object" || Array.isArray(data)) return null;
+    if (
+      data.paragraphs &&
+      typeof data.paragraphs === "object" &&
+      !Array.isArray(data.paragraphs)
+    ) {
+      return data.paragraphs;
+    }
+    return data;
+  }
+
+  function lookupParagraph(paragraphs, id) {
+    if (!paragraphs || !id) return null;
+    if (Object.prototype.hasOwnProperty.call(paragraphs, id)) {
+      return paragraphs[id];
+    }
+    var nested = paragraphs.paragraphs;
+    if (
+      nested &&
+      typeof nested === "object" &&
+      !Array.isArray(nested) &&
+      Object.prototype.hasOwnProperty.call(nested, id)
+    ) {
+      return nested[id];
+    }
+    return null;
   }
 
   function loadParagraphs(url) {
@@ -61,8 +95,7 @@
           return r.json();
         })
         .then(function (data) {
-          if (!data || typeof data !== "object" || Array.isArray(data)) return null;
-          return data;
+          return normalizeParagraphs(data);
         })
         .catch(function () {
           return null;
@@ -128,10 +161,7 @@
     var title = modal.querySelector(".pa-cite-modal__title");
     var body = modal.querySelector(".pa-cite-modal__body");
     title.textContent = id ? ("¶ " + id) : "Citation";
-    var text = null;
-    if (paragraphs && id && Object.prototype.hasOwnProperty.call(paragraphs, id)) {
-      text = paragraphs[id];
-    }
+    var text = lookupParagraph(paragraphs, id);
     if (text != null && String(text).trim() !== "") {
       body.innerHTML = "<p>" + esc(text) + "</p>";
     } else {
@@ -140,7 +170,9 @@
         html +=
           '<p><a class="pa-cite-modal__pdf" href="' +
           esc(pdfUrl) +
-          '" target="_blank" rel="noopener">Open numbered transcript PDF</a></p>';
+          '" target="_blank" rel="noopener">Open numbered transcript PDF (search for ¶ ' +
+          esc(id) +
+          ")</a></p>";
       }
       body.innerHTML = html;
     }
@@ -406,7 +438,7 @@
     clearTimers();
     closeCiteModal();
     var quiz = normalizeQuiz(rawQuiz);
-    var paragraphs = opts.paragraphs && typeof opts.paragraphs === "object" ? opts.paragraphs : null;
+    var paragraphs = normalizeParagraphs(opts.paragraphs);
     var pdfUrl = opts.transcriptPdfUrl || "";
     var questions = quiz.questions;
     if (!root) return;
