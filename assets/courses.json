@@ -59,7 +59,6 @@
     "paUrl": "https://petersonacademy.com/courses/logic?referral_code=293XVS",
     "slides": "/assets/courses/PHIL-102/slides",
     "video": "/assets/courses/PHIL-102/overview.mp4",
-    "audio": "/assets/courses/PHIL-102/deep-dive.m4a",
     "studyAidsDemo": true,
     "slidesCount": 13,
     "tests": "menu",
@@ -515,7 +514,8 @@
     ],
     "video": "/assets/courses/MATH-101/overview.mp4",
     "slides": "/assets/courses/MATH-101/slides",
-    "slidesCount": 12
+    "slidesCount": 12,
+    "audio": "/assets/courses/MATH-101/deep-dive.m4a"
   },
   {
     "sequence": "10",
