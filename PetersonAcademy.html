@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- deploy 2026-09-15-icon-tooltips -->
+<!-- deploy 2026-09-15-final-no-back -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -8,6 +8,8 @@
 <meta name="description" content="Full Peterson Academy course catalog.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/courses/PHIL-102/quiz.css?v=read-top">
+<script src="/assets/courses/PHIL-102/quiz-player.js?v=read-top" defer></script>
 <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
 <style>
   /* Parchment catalog — looser spacing + Tabulator skin */
@@ -164,6 +166,24 @@
     border: 0;
   }
 
+  /* Quiz overlay: usable in portrait on narrow phones */
+  body.pa-quiz-open .media-modal {
+    z-index: 120;
+  }
+  @media (orientation: portrait) and (max-width: 900px) {
+    body.pa-quiz-open .media-modal {
+      padding: 0.5rem;
+      align-items: stretch;
+    }
+    body.pa-quiz-open .media-modal__panel {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100vh;
+      border-radius: 0.75rem;
+    }
+  }
+
+
   #course-catalog .transcript-link {
     display: inline-flex;
     align-items: center;
@@ -237,6 +257,261 @@
     background: transparent;
   }
 
+  /* Kill residual Tabulator collapse / ellipsis chrome near icon columns */
+  #course-catalog .tabulator-responsive-collapse-toggle,
+  #course-catalog .tabulator-responsive-collapse {
+    display: none !important;
+  }
+  #course-catalog .col-transcript .tabulator-col-content,
+  #course-catalog .col-pa .tabulator-col-content,
+  #course-catalog .tabulator-cell.col-transcript,
+  #course-catalog .tabulator-cell.col-pa {
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+  #course-catalog .tabulator-cell.col-transcript,
+  #course-catalog .tabulator-cell.col-pa {
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+  }
+  /* Hide empty header labels that some Tabulator builds render as … */
+  #course-catalog .tabulator-col.col-transcript .tabulator-col-title,
+  #course-catalog .tabulator-col.col-pa .tabulator-col-title {
+    display: none !important;
+  }
+
+
+
+
+  #course-catalog .study-aids {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+  #course-catalog .study-aid-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    transition: background 0.15s ease, opacity 0.15s ease;
+  }
+  #course-catalog .study-aid-link:hover {
+    background: rgba(44, 36, 22, 0.1);
+  }
+  #course-catalog .study-aid-link:focus-visible {
+    outline: 2px solid rgba(44, 36, 22, 0.3);
+    outline-offset: 2px;
+  }
+  #course-catalog .study-aid-link.is-unavailable {
+    opacity: 0.35;
+    cursor: default;
+  }
+  #course-catalog .study-aid-link.is-unavailable:hover {
+    background: transparent;
+  }
+  #course-catalog .study-aid-link svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    display: block;
+  }
+  #course-catalog .study-aid-link.slides { color: #8b6914; }
+  #course-catalog .study-aid-link.video { color: #2f5d3a; }
+  #course-catalog .study-aid-link.audio { color: #3d4a6b; }
+  #course-catalog .study-aid-link.tests { color: #6b3d3d; }
+
+  .media-modal[hidden] { display: none !important; }
+  .media-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .media-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(28, 22, 14, 0.55);
+    border: none;
+    cursor: pointer;
+  }
+  .media-modal__panel {
+    position: relative;
+    z-index: 1;
+    width: min(720px, 100%);
+    max-height: min(92vh, 900px);
+    overflow: auto;
+    background: #f4ecd8;
+    color: #2c2416;
+    border-radius: 0.875rem;
+    border: 1px solid rgba(44, 36, 22, 0.18);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+    padding: 1rem 1rem 1.25rem;
+  }
+  .media-modal__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .media-modal__header h2 {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.35rem;
+    margin: 0;
+  }
+  .media-modal__header p {
+    margin: 0.2rem 0 0;
+    color: rgba(44, 36, 22, 0.7);
+    font-size: 0.9rem;
+  }
+  .media-modal__close {
+    border: 1px solid rgba(44, 36, 22, 0.25);
+    background: rgba(255,255,255,0.45);
+    color: #2c2416;
+    border-radius: 999px;
+    width: 2.25rem;
+    height: 2.25rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .media-modal__stage {
+    background: #111;
+    border-radius: 0.65rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .media-modal__stage img,
+  .media-modal__stage video {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    background: #000;
+  }
+  .media-modal__audio {
+    padding: 1.25rem 1rem;
+    background: rgba(255,255,255,0.4);
+    border-radius: 0.65rem;
+    border: 1px solid rgba(44, 36, 22, 0.12);
+  }
+  .media-modal__audio audio {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+  .media-modal__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 999px;
+    background: rgba(244, 236, 216, 0.92);
+    color: #2c2416;
+    font-size: 1.35rem;
+    cursor: pointer;
+  }
+  .media-modal__nav.prev { left: 0.65rem; }
+  .media-modal__nav.next { right: 0.65rem; }
+  .media-modal__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+    color: rgba(44, 36, 22, 0.7);
+    font-size: 0.9rem;
+  }
+  .media-modal__thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+  .media-modal__thumbs button {
+    border: 2px solid transparent;
+    border-radius: 0.35rem;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .media-modal__thumbs button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.85;
+  }
+  .media-modal__thumbs button[aria-current="true"] {
+    border-color: rgba(44, 36, 22, 0.55);
+  }
+  .media-modal__thumbs button[aria-current="true"] img,
+  .media-modal__thumbs button:hover img { opacity: 1; }
+
+
+  .media-modal__lecture-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(44, 36, 22, 0.15);
+    border-radius: 0.65rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .media-modal__lecture-menu li {
+    border-bottom: 1px solid rgba(44, 36, 22, 0.1);
+  }
+  .media-modal__lecture-menu li:last-child {
+    border-bottom: none;
+  }
+  .media-modal__lecture-menu button {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    color: #2c2416;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    font: inherit;
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+  .media-modal__lecture-menu button:hover:not(:disabled) {
+    background: rgba(44, 36, 22, 0.08);
+  }
+  .media-modal__lecture-menu button:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  .media-modal__lecture-menu .lec-num {
+    font-variant-numeric: tabular-nums;
+    color: rgba(44, 36, 22, 0.55);
+    min-width: 4.5rem;
+    flex: 0 0 auto;
+  }
+  .media-modal__lecture-menu .lec-title {
+    flex: 1 1 auto;
+  }
+  .media-modal__lecture-menu .lec-status {
+    font-size: 0.8rem;
+    color: rgba(44, 36, 22, 0.5);
+    flex: 0 0 auto;
+  }
+
   #catalog-status {
     font-size: 0.875rem;
     color: rgba(44, 36, 22, 0.6);
@@ -294,6 +569,13 @@
 </div>
 </div>
 
+<script>
+(function () {
+  window.__paSetQuizPortraitOk = function (on) {
+    document.body.classList.toggle("pa-quiz-open", !!on);
+  };
+})();
+</script>
 <script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
 <script>
 (function () {
@@ -431,6 +713,70 @@
       { title: "Instructor", field: "instructor", minWidth: 180, headerSort: !!sortable },
       {
         title: "",
+        field: "studyAids",
+        width: 136,
+        minWidth: 120,
+        hozAlign: "center",
+        headerSort: false,
+        responsive: 0,
+        cssClass: "col-study-aids",
+        formatter: function (cell) {
+          var v = cell.getValue() || {};
+          var demo = !!v.demo;
+          var slides = v.slides || "";
+          var slidesCount = v.slidesCount || 0;
+          var video = v.video || "";
+          var audio = v.audio || "";
+          var tests = v.tests || "";
+          var testLectures = v.testLectures || [];
+          var title = v.title || "";
+          var code = v.code || "";
+          if (!demo && !slides && !video && !audio && !tests && !testLectures.length) return "";
+          function slidesIcon() {
+            return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 19h8"/><path d="M12 17v2"/></svg>';
+          }
+          function videoIcon() {
+            return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 9h18"/><path d="M10 12.5v3l4-1.5-4-1.5z" fill="currentColor" stroke="none"/></svg>';
+          }
+          function audioIcon() {
+            return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4"/><path d="M8 8v8"/><path d="M12 6v12"/><path d="M16 9v6"/><path d="M20 11v2"/></svg>';
+          }
+          function testsIcon() {
+            return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6"/><path d="M9 16h4"/><path d="M8 12h.01"/><path d="M8 16h.01"/></svg>';
+          }
+          function esc(s) {
+            return String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+          }
+          function item(kind, tip, attrs, iconHtml) {
+            if (attrs) {
+              return '<button type="button" class="study-aid-link ' + kind + '" data-media-kind="' + kind + '" ' + attrs + ' data-media-title="' + esc(title) + '" data-media-code="' + esc(code) + '" title="' + tip + '" aria-label="' + tip + '">' + iconHtml + '</button>';
+            }
+            if (demo) {
+              return '<span class="study-aid-link ' + kind + ' is-unavailable" title="' + tip + '" aria-label="' + tip + ' (not available yet)">' + iconHtml + '</span>';
+            }
+            return "";
+          }
+          var slidesAttrs = (slides && slidesCount)
+            ? ('data-slides-dir="' + esc(slides) + '" data-slides-count="' + esc(String(slidesCount)) + '"')
+            : "";
+          var videoAttrs = video ? ('data-media-src="' + esc(video) + '"') : "";
+          var audioAttrs = audio ? ('data-media-src="' + esc(audio) + '"') : "";
+          var hasTestsMenu = !!(tests || (testLectures && testLectures.length));
+          var testsAttrs = hasTestsMenu ? 'data-has-tests="1"' : "";
+          if (hasTestsMenu && code) {
+            window.__paTestLectures = window.__paTestLectures || {};
+            window.__paTestLectures[code] = testLectures || [];
+          }
+          return '<span class="study-aids">'
+            + item("video", "cinematic-video", videoAttrs, videoIcon())
+            + item("audio", "deep-dive-audio", audioAttrs, audioIcon())
+            + item("slides", "slide-deck", slidesAttrs, slidesIcon())
+            + item("tests", "practice-tests", testsAttrs, testsIcon())
+            + "</span>";
+        }
+      },
+      {
+        title: "",
         field: "transcript",
         width: 64,
         minWidth: 56,
@@ -519,7 +865,18 @@
           title: c.title || "",
           instructor: c.instructor || "",
           transcript: c.transcript || "",
-          paUrl: c.paUrl || ""
+          paUrl: c.paUrl || "",
+          studyAids: {
+            demo: !!c.studyAidsDemo,
+            slides: c.slides || "",
+            slidesCount: c.slidesCount || 0,
+            video: c.video || "",
+            audio: c.audio || "",
+            tests: c.tests || "",
+            testLectures: c.testLectures || [],
+            title: c.title || "",
+            code: c.code || ""
+          }
         };
       });
 
@@ -558,5 +915,252 @@
 })();
 </script>
 
+
+<div id="media-modal" class="media-modal" hidden>
+  <button type="button" class="media-modal__backdrop" data-media-close aria-label="Close"></button>
+  <div class="media-modal__panel" role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
+    <div class="media-modal__header">
+      <div>
+        <h2 id="media-modal-title">Study aid</h2>
+        <p id="media-modal-sub"></p>
+      </div>
+      <button type="button" class="media-modal__close" data-media-close aria-label="Close">×</button>
+    </div>
+    <div id="media-modal-body"></div>
+  </div>
+</div>
+
+<script>
+
+  // In-page media reader/player (slides / video / audio) — stays on catalog
+  (function setupMediaModal() {
+    var modal = document.getElementById("media-modal");
+    if (!modal) return;
+    var titleEl = document.getElementById("media-modal-title");
+    var subEl = document.getElementById("media-modal-sub");
+    var bodyEl = document.getElementById("media-modal-body");
+    var slideIndex = 1;
+    var slideCount = 0;
+    var slideDir = "";
+    var lastFocus = null;
+
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function slideSrc(n) { return slideDir.replace(/\/$/, "") + "/slide-" + pad(n) + ".jpg"; }
+
+    function stopMedia() {
+      Array.prototype.forEach.call(bodyEl.querySelectorAll("audio,video"), function (el) {
+        try { el.pause(); el.removeAttribute("src"); el.load(); } catch (e) {}
+      });
+    }
+
+    function closeModal() {
+      stopMedia();
+      modal.hidden = true;
+      document.body.style.overflow = "";
+      if (window.__paSetQuizPortraitOk) window.__paSetQuizPortraitOk(false);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    function openModal() {
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function renderSlides(dir, count, meta) {
+      slideDir = dir;
+      slideCount = count;
+      slideIndex = 1;
+      titleEl.textContent = (meta.code ? meta.code + " — " : "") + (meta.title || "Slides");
+      subEl.textContent = "Slide deck";
+      bodyEl.innerHTML =
+        '<div class="media-modal__stage" id="media-slide-stage">' +
+          '<img id="media-slide-img" src="' + slideSrc(1) + '" alt="Slide 1" width="1280" height="720">' +
+          '<button type="button" class="media-modal__nav prev" id="media-slide-prev" aria-label="Previous slide">‹</button>' +
+          '<button type="button" class="media-modal__nav next" id="media-slide-next" aria-label="Next slide">›</button>' +
+        '</div>' +
+        '<div class="media-modal__footer"><span id="media-slide-counter">Slide 1 of ' + slideCount + '</span><span>Arrow keys to navigate</span></div>' +
+        '<div class="media-modal__thumbs" id="media-slide-thumbs"></div>';
+      var thumbs = document.getElementById("media-slide-thumbs");
+      for (var i = 1; i <= slideCount; i++) {
+        (function (n) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Go to slide " + n);
+          b.innerHTML = '<img src="' + slideSrc(n) + '" alt="" loading="lazy" width="120" height="68">';
+          b.addEventListener("click", function () { showSlide(n); });
+          thumbs.appendChild(b);
+        })(i);
+      }
+      document.getElementById("media-slide-prev").addEventListener("click", function () { showSlide(slideIndex - 1); });
+      document.getElementById("media-slide-next").addEventListener("click", function () { showSlide(slideIndex + 1); });
+      showSlide(1);
+      openModal();
+    }
+
+    function showSlide(n) {
+      slideIndex = Math.max(1, Math.min(slideCount, n));
+      var img = document.getElementById("media-slide-img");
+      var counter = document.getElementById("media-slide-counter");
+      if (!img) return;
+      img.src = slideSrc(slideIndex);
+      img.alt = "Slide " + slideIndex;
+      if (counter) counter.textContent = "Slide " + slideIndex + " of " + slideCount;
+      Array.prototype.forEach.call(document.querySelectorAll("#media-slide-thumbs button"), function (b, idx) {
+        b.setAttribute("aria-current", idx + 1 === slideIndex ? "true" : "false");
+      });
+    }
+
+    function renderVideo(url, meta) {
+      titleEl.textContent = (meta.code ? meta.code + " — " : "") + (meta.title || "Video");
+      subEl.textContent = "Cinematic video";
+      bodyEl.innerHTML =
+        '<div class="media-modal__stage">' +
+          '<video controls playsinline preload="metadata" src="' + url + '"></video>' +
+        '</div>';
+      openModal();
+    }
+
+    function renderAudio(url, meta) {
+      titleEl.textContent = (meta.code ? meta.code + " — " : "") + (meta.title || "Audio");
+      subEl.textContent = "Deep dive podcast";
+      bodyEl.innerHTML =
+        '<div class="media-modal__audio">' +
+          '<p style="margin:0;color:rgba(44,36,22,.75)">Play in place — nothing downloads.</p>' +
+          '<audio controls preload="metadata" src="' + url + '"></audio>' +
+        '</div>';
+      openModal();
+    }
+
+    function openQuiz(url, meta, lectureLabel) {
+      titleEl.textContent = (meta.code ? meta.code + " — " : "") + (meta.title || "Tests");
+      subEl.textContent = lectureLabel || "Practice quiz";
+      var isFinalExam = /final\.json(\?|$)/i.test(String(url || "")) || /final exam/i.test(String(lectureLabel || ""));
+      window.__paFinalLock = !!isFinalExam;
+      bodyEl.innerHTML = '<div id="pa-quiz-root"></div>'
+        + '<div class="media-modal__footer">'
+        + '<button type="button" id="media-tests-back" style="border:1px solid rgba(44,36,22,.25);background:rgba(255,255,255,.45);border-radius:.5rem;padding:.4rem .75rem;cursor:pointer;color:#2c2416">← All lectures</button>'
+        + '<span id="media-tests-lock-note" style="color:rgba(44,36,22,.65);font-size:.85rem"></span></div>';
+      openModal();
+      if (window.__paSetQuizPortraitOk) window.__paSetQuizPortraitOk(true);
+      var back = document.getElementById("media-tests-back");
+      var lockNote = document.getElementById("media-tests-lock-note");
+      if (back) {
+        if (isFinalExam) {
+          back.hidden = true;
+          if (lockNote) lockNote.textContent = "Final exam in progress — no return to lecture quizzes until you finish.";
+        }
+        back.addEventListener("click", function () {
+          renderTests("", meta);
+        });
+      }
+      var root = document.getElementById("pa-quiz-root");
+      if (window.PaQuiz && root) {
+        if (window.PaQuiz.unlockAudio) window.PaQuiz.unlockAudio();
+        window.PaQuiz.fetchAndRender(root, url, {
+          onDone: function () {
+            window.__paFinalLock = false;
+            if (isFinalExam && back) {
+              back.hidden = false;
+              if (lockNote) lockNote.textContent = "Finished — you can return to the lecture list.";
+            }
+          }
+        });
+      } else if (root) {
+        root.innerHTML = '<p class="pa-quiz__error">Quiz player failed to load.</p>';
+      }
+    }
+
+    function renderTests(url, meta) {
+      if (window.__paSetQuizPortraitOk) window.__paSetQuizPortraitOk(false);
+      titleEl.textContent = (meta.code ? meta.code + " — " : "") + (meta.title || "Tests");
+      subEl.textContent = "Practice quizzes by lecture";
+      var lectures = (window.__paTestLectures && meta.code && window.__paTestLectures[meta.code]) || [];
+      if ((!lectures || !lectures.length) && url) {
+        openQuiz(url, meta, "Practice tests");
+        return;
+      }
+      if (!lectures || !lectures.length) {
+        bodyEl.innerHTML = '<div class="media-modal__audio"><p style="margin:0;color:rgba(44,36,22,.75)">Practice quizzes will appear here by lecture.</p></div>';
+        openModal();
+        return;
+      }
+      var html = '<ul class="media-modal__lecture-menu">';
+      lectures.forEach(function (lec) {
+        var n = lec.lecture || lec.n || "";
+        var t = lec.title || ("Lecture " + n);
+        var u = lec.url || "";
+        var isFinal = String(n).toLowerCase() === "final" || /final exam/i.test(String(t));
+        var label = isFinal ? "Final" : ("Lecture " + n);
+        if (u) {
+          html += '<li><button type="button" data-quiz-url="' + String(u).replace(/"/g, "&quot;") + '" data-quiz-label="' + String(label + ": " + t).replace(/"/g, "&quot;") + '">'
+            + '<span class="lec-num">' + label + '</span>'
+            + '<span class="lec-title">' + String(t).replace(/</g, "&lt;") + '</span>'
+            + '<span class="lec-status">Open</span></button></li>';
+        } else {
+          html += '<li><button type="button" disabled title="Quiz coming soon">'
+            + '<span class="lec-num">' + label + '</span>'
+            + '<span class="lec-title">' + String(t).replace(/</g, "&lt;") + '</span>'
+            + '<span class="lec-status">Soon</span></button></li>';
+        }
+      });
+      html += '</ul>';
+      bodyEl.innerHTML = html;
+      Array.prototype.forEach.call(bodyEl.querySelectorAll("[data-quiz-url]"), function (b) {
+        b.addEventListener("click", function () {
+          openQuiz(b.getAttribute("data-quiz-url"), meta, b.getAttribute("data-quiz-label"));
+        });
+      });
+      openModal();
+    }
+
+    document.addEventListener("click", function (e) {
+      var el = e.target;
+      if (el && el.nodeType === 3) el = el.parentElement;
+      var btn = el && el.closest ? el.closest("[data-media-kind]") : null;
+      if (!btn || btn.classList.contains("is-unavailable")) return;
+      e.preventDefault();
+      e.stopPropagation();
+      lastFocus = btn;
+      var kind = btn.getAttribute("data-media-kind");
+      var meta = {
+        title: btn.getAttribute("data-media-title") || "",
+        code: btn.getAttribute("data-media-code") || ""
+      };
+      stopMedia();
+      try {
+        if (kind === "slides") {
+          renderSlides(btn.getAttribute("data-slides-dir") || "", parseInt(btn.getAttribute("data-slides-count") || "0", 10), meta);
+        } else if (kind === "video") {
+          renderVideo(btn.getAttribute("data-media-src") || "", meta);
+        } else if (kind === "audio") {
+          renderAudio(btn.getAttribute("data-media-src") || "", meta);
+        } else if (kind === "tests") {
+          renderTests(btn.getAttribute("data-media-src") || "", meta);
+        }
+      } catch (err) {
+        console.error("media modal failed", err);
+      }
+    }, true);
+
+    window.__paFinalLock = false;
+    modal.addEventListener("click", function (e) {
+      if (e.target.hasAttribute("data-media-close")) {
+        if (window.__paFinalLock) return;
+        closeModal();
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (modal.hidden) return;
+      if (e.key === "Escape") {
+        if (window.__paFinalLock) return;
+        closeModal();
+      }
+      if (!document.getElementById("media-slide-img")) return;
+      if (e.key === "ArrowLeft") showSlide(slideIndex - 1);
+      if (e.key === "ArrowRight") showSlide(slideIndex + 1);
+    });
+  })();
+
+</script>
 </body>
 </html>
