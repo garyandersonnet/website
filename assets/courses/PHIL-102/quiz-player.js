@@ -162,10 +162,6 @@
     }
   }
 
-  function letter(i) {
-    return String.fromCharCode(65 + i);
-  }
-
   function choiceText(choices, idx) {
     if (idx == null || idx < 0 || !choices || !choices[idx]) return "(none)";
     return String(choices[idx]);
@@ -377,7 +373,6 @@
       q.choices.forEach(function (ch, i) {
         html +=
           '<button type="button" class="pa-quiz__choice" data-choice="' + i + '">' +
-            '<span class="pa-quiz__letter">' + letter(i) + "</span>" +
             '<span class="pa-quiz__choice-text">' + esc(ch) + "</span>" +
           "</button>";
       });

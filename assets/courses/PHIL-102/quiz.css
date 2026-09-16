@@ -130,13 +130,6 @@
   background: rgba(122, 46, 46, 0.12);
 }
 
-.pa-quiz__letter {
-  flex: 0 0 auto;
-  width: 1.5rem;
-  font-weight: 600;
-  color: rgba(44, 36, 22, 0.55);
-}
-
 .pa-quiz__feedback {
   margin: 0.85rem 0 0;
   padding: 0.7rem 0.8rem;
