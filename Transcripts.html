@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- deploy 2026-09-15-transcripts-separate-page -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make your own course transcript — Publius Nakamoto</title>
+<meta name="description" content="How to hand-copy Peterson Academy lecture transcripts and clean them with Publius Nakamoto skills for study and AI use.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .skill-pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    tab-size: 2;
+    max-height: none;
+    user-select: text;
+  }
+</style>
+</head>
+<body class="bg-[#f4ecd8] text-[#2c2416]">
+<header class="border-b border-[#3a2f22]/15 bg-[#f4ecd8]/90 backdrop-blur-sm sticky top-0 z-10">
+<div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+<a class="font-serif text-lg tracking-wide text-[#2c2416]" href="/">Publius Nakamoto</a>
+<nav class="flex items-center gap-6 text-sm text-[#2c2416]/80">
+<a href="/development" class="hover:text-[#2c2416] transition-colors">Development</a>
+<a href="/" class="hover:text-[#2c2416] transition-colors">Home</a>
+<a href="/PetersonAcademy" class="hover:text-[#2c2416] transition-colors">Peterson Academy</a>
+<a href="/projects" class="hover:text-[#2c2416] transition-colors">Projects</a>
+<a href="/about" class="hover:text-[#2c2416] transition-colors">About</a>
+<a href="/contact" class="hover:text-[#2c2416] transition-colors">Contact</a>
+</nav>
+</div>
+</header>
+<div class="min-h-screen">
+<div class="max-w-3xl mx-auto px-4 py-12 space-y-8">
+<div>
+<h1 class="font-serif text-4xl mb-3">Make your own course transcript</h1>
+<p class="text-[#2c2416]/80 leading-relaxed">Build clean, numbered transcripts from <em>your</em> Peterson Academy enrollment. We don’t host PA copies here. The skill blocks below are the full skill files — select and copy/paste into Cursor (or a similar agent); you don’t need to open a separate .md.</p>
+</div>
+
+<div class="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border py-6 shadow-sm">
+<div class="px-6 font-semibold text-xl">Why we don’t share PA materials here</div>
+<div class="px-6 text-[#2c2416]/80 leading-relaxed space-y-3">
+<pre class="skill-pre bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto m-0"># Peterson Academy course materials — ownership
+
+Peterson Academy and/or its instructors own and have moral rights to the course materials — lectures, videos, readings, quizzes, and the transcript text that appears inside the platform.
+
+Their terms give students a license to *use* the academy (the Services), not to republish that content elsewhere.
+
+**Publius Nakamoto** does not host or redistribute Peterson Academy transcripts, videos, quiz banks, or other direct copies of their materials.
+
+What this site may share instead:
+
+- Study craft: how to make clean, numbered transcripts from *your own* enrollment for personal study and AI tools
+- Original work products (overviews, podcasts, guides) created from courses we have paid for
+
+This note is not legal advice. It states our access and republication posture for this site.
+</pre>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border py-6 shadow-sm">
+<div class="px-6 font-semibold text-xl">1. Hand-copy from Peterson Academy into Google Docs</div>
+<div class="px-6 space-y-3 text-[#2c2416]/80 leading-relaxed">
+<p>Open the course and its lectures on <a href="https://petersonacademy.com/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">petersonacademy.com</a> with your own enrollment.</p>
+<p>For each lecture, copy the on-screen transcript text into a Google Doc. One doc per course is fine.</p>
+<p>Keep lecture titles as headings. Don’t rewrite the words — just get the text across accurately.</p>
+<p>When you’re done, use <strong>File → Download → Microsoft Word (.docx)</strong> so you have a file to attach in the next step.</p>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border py-6 shadow-sm">
+<div class="px-6 font-semibold text-xl">2. Clean &amp; number — full skill (copy/paste)</div>
+<div class="px-6 space-y-3 text-[#2c2416]/80 leading-relaxed">
+<p class="text-sm">Attach your <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code>, then paste this entire skill into your agent and run it.</p>
+<pre class="skill-pre bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto m-0">---
+name: clean-course-transcript
+description: "Create a new Word copy of the attached course transcript with automatic paragraph numbering organized by lecture."
+---
+
+# Skill: clean-course-transcript
+
+Create a new Word copy of the attached course transcript with automatic paragraph numbering organized by lecture. The deliverable is a Word (.docx) document only — do not produce a PDF.
+
+## Requirements
+
+- Add an "at a glance" paragraph at the start of each lecture: a boxed, under-100-word overview of the lecture.
+- Highlight any key vocabulary or characters distinct to that course.
+- Preserve the original document unchanged other than correcting obvious transcription errors.
+- Keep the output as a .docx Word document.
+- Do not insert paragraph numbers as text — use Word's automatic numbering formatting.
+- Number transcript paragraphs using the lecture number followed by the paragraph number:
+  - Lecture 1: 1.1, 1.2, 1.3…
+  - Lecture 2: 2.1, 2.2, 2.3…
+  - Continue the same pattern for every lecture.
+- Restart the paragraph count at 1 at the beginning of each lecture.
+- Do not number:
+  - The cover page
+  - The table of contents
+  - Lecture headings
+  - Lesson-overview / "at a glance" boxes
+  - Blank paragraphs
+  - Remove any single stray lines (e.g. "slides", "exam") that weren't part of the transcript.
+- Style lecture titles as Heading 1.
+- Style the course title as Title style.
+- Place numbers in a narrow left gutter with a hanging indent so wrapped text aligns beneath the paragraph text, not beneath the number. If any paragraph number in the document reaches 3 digits (e.g. "8.100"), use a gutter wide enough (~0.45in) that it won't collide with the paragraph text — check this before finalizing, not after.
+- Use restrained blue, bold formatting for the paragraph numbers.
+- Do not alter, rewrite, summarize, remove, or add any transcript wording.
+- Begin with the table-of-contents page and course title.
+- Save the result in the same directory as the original source transcript file, as a separate file named: `[Original filename] - Numbered Paragraphs.docx`.
+- Verify structurally that the transcript text in the finished copy is identical to the source transcript text except for intentional changes.
+- Render and visually spot-check the .docx before delivery (see "Verification" below) — cover, TOC, first lecture opening, a lecture-boundary page (confirm the number restarts at X.1), a page with the highest paragraph numbers in the doc (confirm the gutter doesn't clip 2- or 3-digit numbers), and the last page. Fix any clipping, overlap, awkward indentation, broken numbering, stale contents-page references, or poor page breaks found.
+- Deliver the .docx to the user.
+
+## PDF — not part of this skill for now
+
+Do not produce a PDF. The deliverable is the validated .docx only. Skipping PDF conversion is intentional — it keeps this step fast and low-cost. If a PDF is ever needed (e.g. for printing, where Word's automatic numbering may not render reliably), it is a separate, on-demand step run later by converting the final validated .docx (see the numbered-transcripts-to-pdf skill) — never rebuilt independently with reportlab or a from-scratch PDF renderer, which can silently drift out of sync with the Word file.
+
+## Verification — proportional, not exhaustive
+
+Spot-check the handful of pages listed above (cover, TOC, first lecture, a lecture boundary, the densest-numbering page, the last page) and run one structural text diff of transcript body text (source vs. output, normalized whitespace) to confirm nothing was added, dropped, or reworded beyond the intentional typo fixes. That's sufficient. Re-rendering and re-diffing the entire document repeatedly, or re-verifying after every micro-edit, burns a large share of the budget for no real gain in output quality — do it once, near the end, after the docx is otherwise finished.
+
+## Running this for multiple courses at once
+
+When asked to run this across several courses in one go (e.g. "do this for every course in Semester 1"), the biggest cost driver is spawning one heavyweight, fully-independent agent per course in parallel — each one re-extracts, re-builds, and re-verifies from scratch, and duplicate/overlapping agents on the same course (e.g. resuming one that looks slow, while the original is actually still working) can silently overwrite each other's output and double the cost for zero benefit. To keep this efficient and within rate/usage limits:
+
+- Batch courses in small groups (2-3 at a time), not all at once. Confirm each batch's output exists on disk (`ls` the target files) before starting the next batch.
+- Each agent builds and validates the **.docx only** — text extraction, lecture/paragraph parsing, numbering, highlighting, at-a-glance boxes, and the spot-check verification above.
+- If an agent seems slow or stalled, check whether its output files already exist on disk before concluding it failed and launching a replacement. If you do need to prod a stalled agent, resume the *same* agent (it has context on what it already did) rather than launching a fresh duplicate on the same file.
+- If an agent reports it "launched a background agent" or "handed this off" to do the actual work, that's not a real capability it has — it must do every step itself with its own tool calls. Treat such a report as a stall, not a completion, and check disk state before believing it.
+</pre>
+</div>
+</div>
+
+<div class="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border py-6 shadow-sm">
+<div class="px-6 font-semibold text-xl">3. Optional — PDF — full skill (copy/paste)</div>
+<div class="px-6 space-y-3 text-[#2c2416]/80 leading-relaxed">
+<p class="text-sm">Use only after step 2. Paste this entire skill into your agent and run it on the numbered <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code>.</p>
+<pre class="skill-pre bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto m-0">---
+name: numbered-transcripts-to-pdf
+description: "Convert finished numbered-paragraph transcript Word files (.docx) into printable PDFs, one or many at a time, by converting the actual .docx (never rebuilding from scratch)."
+---
+
+# Skill: numbered-transcripts-to-pdf
+
+Convert already-finished numbered transcript Word documents (the `[... ] - Numbered Paragraphs.docx` files produced by the clean-course-transcript skill) into printable PDFs. Use this as a separate, on-demand step — for printing, or when a search tool cites paragraph numbers incorrectly from the .docx.
+
+The PDF must be produced by converting the actual validated .docx. Never render an independent PDF from scratch (e.g. with reportlab, weasyprint, or any from-scratch renderer) — a separately-built PDF can silently drift out of sync with the Word file's numbering, at-a-glance boxes, and layout.
+
+## Inputs
+
+- A single .docx path, a list of them, or a folder to convert. When given a folder, convert every `*.docx` whose name ends in `- Numbered Paragraphs.docx` (skip other .docx such as study guides unless the user says otherwise).
+- If the user is vague ("convert the numbered transcripts"), confirm the target folder first, then list what you'll convert before starting.
+
+## Conversion command
+
+Convert with LibreOffice headless. Each PDF is written next to its source .docx unless the user asks for a different output folder.
+
+macOS (LibreOffice is often NOT on PATH even when installed — use the full path, don't conclude it's missing):
+```
+/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to pdf --outdir "OUTPUT_DIR" "path/to/file - Numbered Paragraphs.docx"
+```
+
+Linux / cloud:
+```
+soffice --headless --convert-to pdf --outdir "OUTPUT_DIR" "path/to/file - Numbered Paragraphs.docx"
+```
+
+Notes:
+- `--outdir` defaults to the source file's own directory. The output filename is the source basename with `.pdf`.
+- Do NOT use Pages, Numbers, `textutil`, or AppleScript/`osascript` to convert — driving another app via Automation triggers a macOS permission prompt and isn't a reliable substitute.
+- If LibreOffice genuinely isn't installed, say so and ask the user to install it — do not silently fall back to a from-scratch PDF renderer.
+- Run one `soffice` invocation at a time. Converting many files in a single directory: loop over them, or pass multiple file paths to one invocation, but don't launch several concurrent `soffice` processes — they can collide on the shared user profile and fail.
+
+## Batch handling
+
+- For a folder or long list, convert in small groups and confirm each PDF exists on disk (`ls` the target) before moving on.
+- Skip a file if an up-to-date PDF already exists (same basename, newer than the .docx), unless the user asks to re-convert.
+- Report a short summary at the end: how many converted, skipped, and any that failed.
+
+## Verification
+
+- After converting, confirm each expected `.pdf` exists and is non-empty.
+- Spot-check one PDF per batch by opening/rendering a couple of pages — the cover/TOC, a lecture-boundary page, and the densest-numbering page — to confirm the paragraph numbers, at-a-glance boxes, and gutter survived the conversion (Word's automatic numbering can render differently in PDF). If numbers are missing or clipped, flag it to the user rather than silently delivering — the fix is in the source .docx, not the PDF.
+- Do not re-verify exhaustively; a spot-check per batch is enough.
+
+## Delivery
+
+- Deliver the resulting PDF(s) to the user, saved alongside the source transcripts (or in the requested output folder).
+</pre>
+</div>
+</div>
+
+<p class="text-[#2c2416]/80"><a href="/PetersonAcademy" class="underline hover:text-[#2c2416]">← Back to Peterson Academy</a></p>
+</div>
+</div>
+</body>
+</html>
