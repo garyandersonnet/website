@@ -16,6 +16,7 @@
 <a class="text-[#2c2416] font-semibold" href="/development" aria-current="page">Development</a>
 <a href="/" class="hover:text-[#2c2416] transition-colors">Home</a>
 <a href="/PetersonAcademy" class="hover:text-[#2c2416] transition-colors">Peterson Academy</a>
+<a href="/Transcripts" class="hover:text-[#2c2416] transition-colors">Transcripts</a>
 <a href="/projects" class="hover:text-[#2c2416] transition-colors">Projects</a>
 <a href="/about" class="hover:text-[#2c2416] transition-colors">About</a>
 <a href="/contact" class="hover:text-[#2c2416] transition-colors">Contact</a>
@@ -53,6 +54,7 @@ claude</pre>
 <li>Build out the Projects page with real content.</li>
 <li>Keep Copilot/ChatGPT changes reviewed before or right after they land — see the review-workflow note in CLAUDE.md.</li>
 <li>Take this Development page down (or gate it) once the site is ready to go fully public.</li>
+<li>If hosting any private PA-derived demos: Netlify Identity (invite-only + Google) + role redirects + unguessable path — see Access control section below.</li>
 </ul>
 <p class="text-xs text-[#2c2416]/50 mt-2">This list is meant to be a living note — add to it as new goals come up, whether you're Claude, ChatGPT, Copilot, Grok, or a human.</p>
 
@@ -85,8 +87,77 @@ claude</pre>
 <li>Workflow: show diffs and wait for explicit approval before pushing to main (requested 2026-09-08). Exception: this suggestions block was approved for immediate push.</li>
 </ul>
 
+
+<h2 class="font-serif text-2xl mt-10 mb-3">Access control — transcripts &amp; private resources</h2>
+<p class="text-sm text-[#2c2416]/70 mb-3">Research note (2026-09-15, Grok). Goal: only people we invite (e.g. Gary) can open sensitive paths; everyone else is blocked. Public catalog + DIY <a href="/Transcripts" class="underline hover:text-[#2c2416]">/Transcripts</a> stay open. This is planning, not yet implemented.</p>
+
+<p class="text-sm font-medium mt-4 mb-1">Why “secret” URLs alone are not enough</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>An unguessable path (long random segment) stops casual browsing and search indexing of links we never publish — useful as <em>defense in depth</em>.</li>
+<li>It is <strong>not</strong> real access control. Anyone who gets the URL (leak, referrer log, browser history, guess from a pattern like <code class="bg-[#2c2416]/5 px-1 rounded">/assets/transcripts/PSYC-100_…</code>) can open the file with no login.</li>
+<li>Rule for this site: never put PA-derived verbatim materials on a public path. If we host a private vault at all, gate it with authentication <em>and</em> use a non-guessable prefix.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Option A — Netlify Password / Private (site perimeter)</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li><strong>Where:</strong> Netlify dashboard → Project configuration → Visitor access / Password Protection (UI names vary by plan).</li>
+<li><strong>Password:</strong> one shared secret for production and/or Deploy Previews (Pro). Simple, no Google accounts.</li>
+<li><strong>Private / team login:</strong> only Netlify team members (and invitees) using their Netlify login — not end-user Google Identity.</li>
+<li><strong>Scope:</strong> typically the whole deploy (or previews), not “only <code class="bg-[#2c2416]/5 px-1 rounded">/vault/*</code> while Home stays public.”</li>
+<li><strong>Fit for us:</strong> good for locking the entire site before launch, or locking Deploy Previews. Poor fit for “public site + private transcript folder + Google login for Gary only.”</li>
+<li>Docs: <a href="https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">Password Protection</a>, <a href="https://www.netlify.com/knowledge-base/how-to-password-protect-a-netlify-site-or-deploy-previews/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">KB overview</a>.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Option B — Netlify Identity + Google OAuth + path roles (recommended for a private vault)</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li><strong>What it is:</strong> app-level login for site visitors (separate from Netlify team login). Identity stayed supported after a Feb 2026 reversal of an earlier deprecation notice; new code should use <code class="bg-[#2c2416]/5 px-1 rounded">@netlify/identity</code>, not the old widget.</li>
+<li><strong>Google:</strong> enable Google under Identity → Registration → External providers, then <code class="bg-[#2c2416]/5 px-1 rounded">oauthLogin('google')</code>.</li>
+<li><strong>Invite only:</strong> turn registration to Invite only so random Google users cannot self-register. Invite Gary’s Google address (and any other allowed emails) from the Netlify Identity UI.</li>
+<li><strong>Roles:</strong> set <code class="bg-[#2c2416]/5 px-1 rounded">app_metadata.roles</code> (e.g. <code class="bg-[#2c2416]/5 px-1 rounded">["vault"]</code>) on invited users.</li>
+<li><strong>CDN gate (example <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code>):</strong></li>
+</ul>
+<pre class="bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto my-3"># Allow only the vault role; everyone else → login
+/private-vault-XXXXXXXX/*  /private-vault-XXXXXXXX/:splat  200!  Role=vault
+/private-vault-XXXXXXXX/*  /login  401!</pre>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>Enforced at the CDN edge with the <code class="bg-[#2c2416]/5 px-1 rounded">nf_jwt</code> cookie — not a client-side “hide the link” trick.</li>
+<li>Keep <code class="bg-[#2c2416]/5 px-1 rounded">/login</code> (and Home, catalog, DIY Transcripts) <em>outside</em> the gated prefix.</li>
+<li>Docs: <a href="https://docs.netlify.com/manage/security/secure-access-to-sites/identity/get-started/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">Identity get started</a>, <a href="https://docs.netlify.com/manage/security/secure-access-to-sites/identity/registration-login/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">Google / invite registration</a>, <a href="https://docs.netlify.com/manage/security/secure-access-to-sites/role-based-access-control/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">Role-based access control</a>.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Option C — Auth0 (or other JWT) + same role redirects</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>Netlify’s Auth0 extension (or any JWT provider that can put roles in the token) can drive the same <code class="bg-[#2c2416]/5 px-1 rounded">Role=…</code> redirect rules.</li>
+<li>Use when we need MFA, richer Google Workspace controls, or enterprise SSO. Heavier than Identity for a one-person vault.</li>
+<li>Do not run Netlify Identity and a third-party JWT provider on the same project at once (Netlify: pick one).</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Option D — Basic auth on a path (HTTP headers)</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>Netlify custom headers can put HTTP Basic Auth on one folder. Multiple passwords possible; no Google identity, shared secrets, awkward UX on mobile.</li>
+<li>Acceptable for a quick private staging folder; weaker than invite-only Google Identity for long-term transcript vaults.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Unguessable path names (use with Option B/C, never alone)</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>Host private files under something like <code class="bg-[#2c2416]/5 px-1 rounded">/p/a7f3c9e2…/</code> or <code class="bg-[#2c2416]/5 px-1 rounded">/private-vault-&lt;random&gt;/</code> — not <code class="bg-[#2c2416]/5 px-1 rounded">/transcripts/</code> or course-code filenames that are easy to enumerate.</li>
+<li>Do not link that path from public nav. Share the URL only with authorized people (or after login).</li>
+<li>Still require Role=… redirects: obscurity + auth, not obscurity instead of auth.</li>
+<li>Optional extras: <code class="bg-[#2c2416]/5 px-1 rounded">noindex</code> on vault pages, omit from sitemaps, keep git deploys from publishing vault binaries to a public history if we can avoid it.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Suggested plan for PubliusNakamoto</p>
+<ol class="list-decimal pl-5 space-y-2 text-sm text-[#2c2416]/80 leading-relaxed">
+<li>Keep public: Home, Peterson Academy catalog, DIY <code class="bg-[#2c2416]/5 px-1 rounded">/Transcripts</code> how-to (no hosted PA copies).</li>
+<li>If we ever need a private demo vault: Netlify Identity, <strong>Invite only</strong>, Google provider, role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code>, unguessable folder, <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code> Role gate + login fallback.</li>
+<li>Use dashboard Password / Private only if we want the <em>whole</em> site or previews locked before advertising — not as a substitute for per-path Google invites.</li>
+<li>Do not stack site-wide Password Protection on top of Identity unless we accept double login (perimeter session ≠ Identity session).</li>
+</ol>
+<p class="text-xs text-[#2c2416]/50 mt-2">Not legal advice; auth choice is about access control. IP policy for PA content stays: no public redistribution of verbatim transcripts/videos.</p>
+
 <h2 class="font-serif text-2xl mt-10 mb-3">Change Log</h2>
 <ul class="text-sm space-y-1 text-[#2c2416]/80">
+<li><span class="text-[#2c2416]/50">2026-09-15</span> — Documented Netlify Password vs Identity+Google path gating (unguessable URLs are not enough) for private transcript vaults (via Grok)</li>
 <li><span class="text-[#2c2416]/50">2026-09-08 18:18</span> — Added Suggestions from Grok for team review (via Grok / GitHub connector)</li>
 <li><span class="text-[#2c2416]/50">2026-09-08 18:02</span> — Added Development link to nav on all pages (via Grok)</li>
 <li><span class="text-[#2c2416]/50">2026-09-08 15:42</span> — Refined homepage title color from orange to forest green (via ChatGPT on the laptop)</li>
