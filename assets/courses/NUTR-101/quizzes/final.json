@@ -1,0 +1,528 @@
+{
+  "id": "nutr-101-final",
+  "course": "NUTR 101",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Lugavere's course prioritizes:",
+      "choices": [
+        "A Only abstract theory.",
+        "B Practical, actionable nutrition for health and performance.",
+        "C Restaurant criticism only.",
+        "D Eliminating culinary literacy."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "Practical focus over pure deep weeds."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "Essential nutrients are those:",
+      "choices": [
+        "A Trendy on social media.",
+        "B Required to avoid deficiency disease if absent.",
+        "C Only carbohydrates.",
+        "D Optional for survival."
+      ],
+      "answer": 1,
+      "cite": "1.31",
+      "explain": "Essential = needed to survive without deficiency disease."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Processing spectrum example with an apple:",
+      "choices": [
+        "A Slicing or juicing cannot be processing.",
+        "B Even slicing begins processing; juicing processes further.",
+        "C Only canning counts.",
+        "D Whole apples are ultra-processed."
+      ],
+      "answer": 1,
+      "cite": "1.21",
+      "explain": "Processing begins even with cutting; juice is further processed."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "Collagen is noted as:",
+      "choices": [
+        "A The least abundant body protein.",
+        "B The most abundant body protein; not framed as an essential dietary protein because we produce it.",
+        "C A carbohydrate.",
+        "D Useless as a supplement topic."
+      ],
+      "answer": 1,
+      "cite": "1.71",
+      "explain": "Collagen is most abundant; the body produces it."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "Food-as-medicine framing:",
+      "choices": [
+        "A Chronic diseases never respond to food.",
+        "B Many chronic diseases respond to food; food is information/medicine-like.",
+        "C Only surgery matters.",
+        "D Body composition is irrelevant."
+      ],
+      "answer": 1,
+      "cite": "1.81",
+      "explain": "CVD, cancer, dementia can respond to food."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "Healthy dietary patterns tend to be:",
+      "choices": [
+        "A Ultra-processed-food heavy.",
+        "B Very low in ultra-processed foods.",
+        "C Defined only by one macro.",
+        "D Identical for all ages."
+      ],
+      "answer": 1,
+      "cite": "2.6",
+      "explain": "Pattern-level: low UPF."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "Most satiating macronutrient:",
+      "choices": [
+        "A Alcohol.",
+        "B Protein.",
+        "C Refined sugar.",
+        "D Seed oil."
+      ],
+      "answer": 1,
+      "cite": "2.53",
+      "explain": "Protein wins satiety among macros."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "A calorie from fries versus eggs:",
+      "choices": [
+        "A Identical in every biological effect.",
+        "B Same energy unit, different value and effects on biology.",
+        "C Eggs provide no energy.",
+        "D Only fries are food."
+      ],
+      "answer": 1,
+      "cite": "2.9",
+      "explain": "Equal kcal units, unequal biological packages."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Fat-soluble vitamins to pair with dietary fat:",
+      "choices": [
+        "A B1–B12 only.",
+        "B A, D, E, and K.",
+        "C Vitamin C alone.",
+        "D None exist."
+      ],
+      "answer": 1,
+      "cite": "2.41",
+      "explain": "A, D, E, K with fat/food."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Fiber's benefits include associations with:",
+      "choices": [
+        "A Higher inflammation only.",
+        "B Lower inflammation and trapping compounds such as cholesterol/estrogen.",
+        "C Immediate need to become a ruminant.",
+        "D Zero role for gut bacteria."
+      ],
+      "answer": 1,
+      "cite": "2.66",
+      "explain": "Fiber linked to lower inflammation and binding certain compounds."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "Standard American Diet links to:",
+      "choices": [
+        "A Only elite athletic performance.",
+        "B Obesity, type 2 diabetes, heart disease, certain cancers, and dementia risk contexts.",
+        "C Guaranteed longevity.",
+        "D Zero ultra-processed foods."
+      ],
+      "answer": 1,
+      "cite": "3.7",
+      "explain": "SAD linked to major chronic diseases."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "NOVA-related discussion helps define:",
+      "choices": [
+        "A Only organic labels.",
+        "B Ultra-processed foods as a category in nutrient profiling debates.",
+        "C Blood type diets.",
+        "D Shoe sizes."
+      ],
+      "answer": 1,
+      "cite": "3.13",
+      "explain": "NOVA nutrient profiling system defines UPFs."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "Added sugar's problem is partly:",
+      "choices": [
+        "A That it is never in the food supply.",
+        "B Its insidious ubiquity in the SAD milieu along with refined grains and unhealthy fats.",
+        "C That it is the only nutrient that exists.",
+        "D That it always raises HDL beneficially."
+      ],
+      "answer": 1,
+      "cite": "3.33",
+      "explain": "Added sugar's insidious presence in the modern diet."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "Recognizability heuristic for real food:",
+      "choices": [
+        "A Longest possible ingredient list.",
+        "B Can you recognize the ingredients—real foods are the ingredients?",
+        "C Only barcode scanning.",
+        "D Prefer mystery powders."
+      ],
+      "answer": 1,
+      "cite": "3.57",
+      "explain": "Real foods do not need extensive lists; they are the ingredients."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "Big wins he summarizes include:",
+      "choices": [
+        "A Maximizing empty calories.",
+        "B Healthy body composition and satiety per calorie from whole, satiating foods.",
+        "C Ignoring protein.",
+        "D Only juice cleanses."
+      ],
+      "answer": 1,
+      "cite": "3.62",
+      "explain": "Body composition and satiety-per-calorie from better foods."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "Upon waking, circadian advice stresses:",
+      "choices": [
+        "A Darkness only.",
+        "B Getting bright light through the eyes.",
+        "C Immediate late-night leftovers.",
+        "D Avoiding all peripheral clocks."
+      ],
+      "answer": 1,
+      "cite": "4.7",
+      "explain": "Morning bright light is crucial for circadian setting."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Late-night eating has been associated with:",
+      "choices": [
+        "A Lower next-day hunger always.",
+        "B Higher subsequent-day hunger and a small metabolic-rate decrease next day.",
+        "C Mandatory muscle gain.",
+        "D No circadian relevance."
+      ],
+      "answer": 1,
+      "cite": "4.19",
+      "explain": "Late eating can raise next-day hunger and slightly lower metabolic rate."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "RDA protein (0.8 g/kg) is discussed as:",
+      "choices": [
+        "A Always the optimal athlete target.",
+        "B A baseline figure; goals and dieting change needs upward for many.",
+        "C Toxic if exceeded by 0.1 g.",
+        "D Only for cats."
+      ],
+      "answer": 1,
+      "cite": "4.40",
+      "explain": "0.8 g/kg RDA is a reference; goals may require more."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "Hormesis example with exercise/fasting:",
+      "choices": [
+        "A All stress is purely harmful always.",
+        "B A measured bad-for-you stimulus can yield adaptive benefit if dosed well.",
+        "C Only marathon doping counts.",
+        "D Hormesis forbids food forever."
+      ],
+      "answer": 1,
+      "cite": "4.28",
+      "explain": "Exercise illustrates hormetic stress; fasting can too."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "Protein before bed caveat with circadian biologist Satchin Panda:",
+      "choices": [
+        "A Protein never has thermic effect.",
+        "B Thermic effect might impair the body's need to cool for sleep.",
+        "C Pre-bed protein always ruins muscle.",
+        "D Never eat protein any day."
+      ],
+      "answer": 1,
+      "cite": "4.47",
+      "explain": "Thermogenesis from protein may conflict with sleep cooling."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "DASH diet expands to:",
+      "choices": [
+        "A Donuts And Soft drinks Habit.",
+        "B Dietary Approach to Stop Hypertension.",
+        "C Daily Animal Steak Hierarchy.",
+        "D Diabetes Autoimmune Sugar Hunt."
+      ],
+      "answer": 1,
+      "cite": "5.13",
+      "explain": "DASH = Dietary Approach to Stop Hypertension."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "MIND diet is described as:",
+      "choices": [
+        "A Only carnivore.",
+        "B A hybrid of Mediterranean and DASH ideas.",
+        "C A juice-only protocol.",
+        "D Identical to keto always."
+      ],
+      "answer": 1,
+      "cite": "5.13",
+      "explain": "MIND blends Mediterranean and DASH."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "Leaner dieters and protein:",
+      "choices": [
+        "A Need less protein as they get leaner.",
+        "B Often need more protein to sustain lean mass when very lean.",
+        "C Can drop all protein.",
+        "D Only need carbs."
+      ],
+      "answer": 1,
+      "cite": "5.29",
+      "explain": "Leaner athletes often raise protein to protect lean mass."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "Normal-weight obesity warning:",
+      "choices": [
+        "A Muscle never matters if scale weight is normal.",
+        "B A sizable share of people can be normal weight yet under-muscled—fat loss is not everything.",
+        "C All normal-weight people are metabolically perfect.",
+        "D Women always bulk excessively."
+      ],
+      "answer": 1,
+      "cite": "5.59",
+      "explain": "Maintain muscle; normal-weight obesity exists."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "Women and lifting bulk myth:",
+      "choices": [
+        "A Women inevitably become bodybuilder-huge from normal lifting.",
+        "B Getting too bulky is very hard—he has lifted 20 years without that problem.",
+        "C Women must avoid all resistance training.",
+        "D Only machines cause bulk."
+      ],
+      "answer": 1,
+      "cite": "5.60",
+      "explain": "Excess bulk from ordinary lifting is unlikely for most women."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "Correlation versus causation smartphone example shows:",
+      "choices": [
+        "A Smartphones proven to cause obesity experimentally in the slide.",
+        "B Rising smartphones and obesity can correlate without proving direction or a third variable.",
+        "C Causation needs no experiments ever.",
+        "D Epidemiology forbids all hypotheses."
+      ],
+      "answer": 1,
+      "cite": "6.4",
+      "explain": "Correlation is not causation; third variables possible."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "When interpreting studies, look at:",
+      "choices": [
+        "A Only the press release headline.",
+        "B Year, methodology, population size, and statistical significance—among other quality factors.",
+        "C Author's zodiac sign only.",
+        "D Whether influencers liked it."
+      ],
+      "answer": 1,
+      "cite": "6.28",
+      "explain": "Study quality checklist includes year, methods, N, significance."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "Vegan B12 discussion:",
+      "choices": [
+        "A Plants always supply adequate B12.",
+        "B B12 is a known essential nutrient from animal foods that vegans must address (often via supplement).",
+        "C B12 is irrelevant.",
+        "D Only carnivores lack B12."
+      ],
+      "answer": 1,
+      "cite": "6.31",
+      "explain": "B12 from animal foods is a classic vegan gap unless supplemented."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "Anthocyanins appear where you see:",
+      "choices": [
+        "A Only beige foods.",
+        "B Reds and purples in produce (berries, red onions, purple potatoes).",
+        "C Only animal fats.",
+        "D Clear sodas."
+      ],
+      "answer": 1,
+      "cite": "6.46",
+      "explain": "Red/purple pigments track anthocyanins."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "Obesity versus advanced CVD undoability:",
+      "choices": [
+        "A Obesity never responds to choices.",
+        "B Obesity is highly responsive to choices; established CVD is harder to reverse.",
+        "C Genes alone fix obesity overnight.",
+        "D Diet never matters after diagnosis."
+      ],
+      "answer": 1,
+      "cite": "6.51",
+      "explain": "Obesity highly responsive; other conditions harder once set."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Metabolic syndrome features tend to:",
+      "choices": [
+        "A Never co-occur.",
+        "B Ride together as a constellation raising diabetes/CVD risk.",
+        "C Protect against COVID severity always.",
+        "D Equal perfect health."
+      ],
+      "answer": 1,
+      "cite": "7.4",
+      "explain": "Features cluster; poor metabolic health worsened COVID outcomes discussions."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "HDL modern framing:",
+      "choices": [
+        "A Raising HDL by any means always prevents death.",
+        "B High HDL is more a marker reflecting good health than a simple causal dial to force up.",
+        "C HDL is only bad cholesterol.",
+        "D Ignore lipoproteins entirely."
+      ],
+      "answer": 1,
+      "cite": "7.8",
+      "explain": "HDL reflects health; forcing it up was oversold."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "Endothelium is:",
+      "choices": [
+        "A bone marrow hormone.",
+        "B A one-cell-thick lining of blood vessels improved by exercise.",
+        "C Only lung tissue.",
+        "D Irrelevant to cardio health."
+      ],
+      "answer": 1,
+      "cite": "7.21",
+      "explain": "Exercise improves endothelial function."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "Almonds as genius-food detail:",
+      "choices": [
+        "A Provide no minerals.",
+        "B A handful can supply about 20% of daily magnesium needs.",
+        "C Are pure sugar.",
+        "D Must be avoided always."
+      ],
+      "answer": 1,
+      "cite": "7.33",
+      "explain": "Almonds are a notable magnesium source."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "Kale pigment note:",
+      "choices": [
+        "A Contains no lutein/zeaxanthin.",
+        "B Top source of lutein/zeaxanthin; a cup cooked can exceed daily eye-health doses discussed.",
+        "C Only protein.",
+        "D Causes metabolic syndrome."
+      ],
+      "answer": 1,
+      "cite": "7.41",
+      "explain": "Kale rich in macular pigments lutein and zeaxanthin."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "Microbiome means:",
+      "choices": [
+        "A Only one bacterium species.",
+        "B The universe of microorganisms (bacteria, viruses, etc.) living on/in us—not only gut.",
+        "C Only skin cream brands.",
+        "D Sterile human tissues everywhere."
+      ],
+      "answer": 1,
+      "cite": "8.2",
+      "explain": "Microbiome is body-wide microbial universe."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "Stomach vs colon microbial friendliness:",
+      "choices": [
+        "A Stomach is the chill bacterial resort.",
+        "B Acidic stomach is hostile; colon is where microbes thrive.",
+        "C Small intestine holds nearly all microbes exclusively.",
+        "D No microbes exist below the mouth."
+      ],
+      "answer": 1,
+      "cite": "8.6",
+      "explain": "Stomach acid is unfriendly; microbes flourish further south."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "Skin microbiome rule of thumb:",
+      "choices": [
+        "A Put anything on skin regardless of ingestibility.",
+        "B Generally avoid putting on skin what you would not consider ingesting.",
+        "C Skin microbes do not exist.",
+        "D Only bleach daily."
+      ],
+      "answer": 1,
+      "cite": "8.13",
+      "explain": "Do not put on skin what you would not ingest."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "Soluble fiber's microbial role:",
+      "choices": [
+        "A Never fermented.",
+        "B Generally the type gut bacteria ferment.",
+        "C Only scrapes intestines mechanically with no fermentation.",
+        "D Identical to sugar alcohols always."
+      ],
+      "answer": 1,
+      "cite": "8.31",
+      "explain": "Soluble fiber is what microbes ferment."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "Eating on the go often causes:",
+      "choices": [
+        "A Perfect assimilation always.",
+        "B Digestive issues—bloating/diarrhea—and poorer nutrient extraction; slow chewing and calm help.",
+        "C Mandatory weight loss.",
+        "D Zero autonomic involvement."
+      ],
+      "answer": 1,
+      "cite": "8.43",
+      "explain": "Rushed eating impairs digestion; calm and chewing matter."
+    }
+  ]
+}
