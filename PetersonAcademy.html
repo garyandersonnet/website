@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- deploy 2026-09-15-transcript-psyc100 -->
+<!-- deploy 2026-09-15-transcripts-note-on-pa -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -152,36 +152,6 @@
     letter-spacing: 0.01em;
     white-space: nowrap;
   }
-  #course-catalog .transcript-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.45rem;
-    color: #2c2416;
-    text-decoration: none;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-  #course-catalog .transcript-link:hover {
-    background: rgba(44, 36, 22, 0.1);
-    color: #1a140c;
-  }
-  #course-catalog .transcript-link:focus-visible {
-    outline: 2px solid rgba(44, 36, 22, 0.3);
-    outline-offset: 2px;
-  }
-  #course-catalog .transcript-link svg {
-    width: 1.15rem;
-    height: 1.15rem;
-    display: block;
-  }
-  #course-catalog .transcript-empty {
-    display: inline-block;
-    width: 1.15rem;
-    height: 1.15rem;
-    opacity: 0.2;
-  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -282,7 +252,32 @@
 <div class="min-h-screen page-main">
 <div class="max-w-5xl mx-auto px-4 py-12">
 <h1 class="font-serif text-4xl mb-2">Peterson Academy</h1>
-<p class="text-[#2c2416]/75 mb-8">The full Peterson Academy course catalog.</p>
+<p class="text-[#2c2416]/75 mb-2">The full Peterson Academy course catalog.</p>
+<div id="transcripts" class="mb-8 rounded-xl border border-[#3a2f22]/15 bg-[#3a2f22]/5 px-4 py-4 text-[#2c2416]/80 leading-relaxed space-y-3">
+<p class="font-semibold text-[#2c2416]">Course transcripts</p>
+<p>Peterson Academy and/or its instructors own and have moral rights to the course materials — lectures, videos, readings, quizzes, and the transcript text that appears inside the platform. Their terms give students a license to <em>use</em> the academy (the Services), not to republish that content elsewhere. This site does not host or redistribute PA transcripts, videos, quiz banks, or other direct copies.</p>
+<p>Full text (public markdown, open to anyone): <a href="/assets/peterson-academy-ownership.md" class="underline hover:text-[#2c2416]">peterson-academy-ownership.md</a>.</p>
+<p>What we <em>do</em> share is the study craft: how to turn <em>your</em> enrollment into clean, numbered transcripts for AI and study tools — and, elsewhere on this site, original overviews, podcasts, and guides built from courses we’ve paid for. Enroll at <a href="https://petersonacademy.com/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">Peterson Academy</a> if you need access.</p>
+<p class="font-medium text-[#2c2416] pt-1">Make your own</p>
+<ol class="list-decimal pl-5 space-y-2 text-sm">
+<li>Hand-copy from Peterson Academy into Google Docs: open the course on <a href="https://petersonacademy.com/" class="underline hover:text-[#2c2416]" rel="noopener noreferrer">petersonacademy.com</a> with your own enrollment. For each lecture, copy the on-screen transcript into a Google Doc (one doc per course is fine). Keep lecture titles as headings; don’t rewrite the words. Then <strong>File → Download → Microsoft Word (.docx)</strong>.</li>
+<li>Clean and number with the skill: in Cursor (or a similar agent tool), install or paste the skill from <a href="/assets/skills/clean-course-transcript-skill.md" class="underline hover:text-[#2c2416]">clean-course-transcript-skill.md</a> (public link). Attach the <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code> (or paste the Google Doc export) and run the skill. You’ll get a file named like <code class="bg-[#2c2416]/5 px-1 rounded">[Original] - Numbered Paragraphs.docx</code>, with lecture-scoped paragraph numbers (1.1, 1.2, …).</li>
+<li><strong>Optional — PDF</strong> (full skill: <a href="/assets/skills/numbered-transcripts-to-pdf-skill.md" class="underline hover:text-[#2c2416]">numbered-transcripts-to-pdf-skill.md</a> — public, open to anyone). Convert finished numbered-paragraph transcript Word files (<code class="bg-[#2c2416]/5 px-1 rounded">[…] - Numbered Paragraphs.docx</code> from step 2) into printable PDFs, one or many at a time, by converting the actual <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code>. Never rebuild a PDF from scratch (reportlab, weasyprint, etc.) — a separately built PDF can drift out of sync with numbering, at-a-glance boxes, and layout.
+<ul class="list-disc pl-5 mt-2 space-y-1">
+<li><strong>Inputs:</strong> a single <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code> path, a list, or a folder. For a folder, convert every <code class="bg-[#2c2416]/5 px-1 rounded">*.docx</code> whose name ends in <code class="bg-[#2c2416]/5 px-1 rounded">- Numbered Paragraphs.docx</code> (skip other docs unless asked).</li>
+<li><strong>Conversion (LibreOffice headless)</strong> — write each PDF next to its source unless another output folder is requested.<br>
+macOS (LibreOffice is often not on <code class="bg-[#2c2416]/5 px-1 rounded">PATH</code> — use the full path):
+<pre class="bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-3 font-mono text-xs overflow-x-auto my-2">/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to pdf --outdir "OUTPUT_DIR" "path/to/file - Numbered Paragraphs.docx"</pre>
+Linux / cloud:
+<pre class="bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-3 font-mono text-xs overflow-x-auto my-2">soffice --headless --convert-to pdf --outdir "OUTPUT_DIR" "path/to/file - Numbered Paragraphs.docx"</pre>
+Do not use Pages, Numbers, <code class="bg-[#2c2416]/5 px-1 rounded">textutil</code>, or AppleScript. If LibreOffice isn’t installed, say so — don’t fall back to a from-scratch PDF renderer. Run one <code class="bg-[#2c2416]/5 px-1 rounded">soffice</code> invocation at a time (concurrent processes can collide on the shared profile).</li>
+<li><strong>Batch:</strong> convert in small groups; confirm each PDF exists before moving on; skip an up-to-date PDF unless asked to re-convert; summarize converted / skipped / failed.</li>
+<li><strong>Verify:</strong> each expected <code class="bg-[#2c2416]/5 px-1 rounded">.pdf</code> exists and is non-empty; spot-check cover/TOC, a lecture-boundary page, and a dense-numbering page. If numbers are missing or clipped, flag it — the fix is in the source <code class="bg-[#2c2416]/5 px-1 rounded">.docx</code>, not the PDF.</li>
+<li><strong>Deliver:</strong> save PDFs alongside the source transcripts (or in the requested folder).</li>
+</ul>
+</li>
+</ol>
+</div>
 
 <section class="catalog-wrap">
 <div class="catalog-toolbar">
@@ -462,24 +457,7 @@
         }
       },
       { title: "Title", field: "title", minWidth: 220, headerSort: !!sortable },
-      { title: "Instructor", field: "instructor", minWidth: 180, headerSort: !!sortable },
-      {
-        title: "",
-        field: "transcript",
-        width: 64,
-        minWidth: 56,
-        hozAlign: "center",
-        headerSort: false,
-        cssClass: "col-transcript",
-        formatter: function (cell) {
-          var url = cell.getValue();
-          if (!url) {
-            return '<span class="transcript-empty" aria-hidden="true"></span>';
-          }
-          var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg>';
-          return '<a class="transcript-link" href="' + url + '" target="_blank" rel="noopener" title="Course transcript" aria-label="Open course transcript">' + icon + '</a>';
-        }
-      }
+      { title: "Instructor", field: "instructor", minWidth: 180, headerSort: !!sortable }
     ];
   }
 
@@ -530,8 +508,7 @@
           type: dash(c.type),
           code: c.code || "",
           title: c.title || "",
-          instructor: c.instructor || "",
-          transcript: c.transcript || ""
+          instructor: c.instructor || ""
         };
       });
 
