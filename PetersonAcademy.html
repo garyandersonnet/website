@@ -816,23 +816,13 @@
     ];
   }
 
-  var sortEnabled = null;
-
-  function setColumnSorting(enabled) {
-    if (!table) return;
-    enabled = !!enabled;
-    if (sortEnabled === enabled) return;
-    sortEnabled = enabled;
-    table.setColumns(catalogColumns(enabled));
-    if (!enabled) {
-      try { table.clearSort(); } catch (e) {}
-    }
-  }
-
   function applyView() {
     var rows = filteredRows();
-    // Sorting only when viewing All — rebuild columns when mode changes.
-    setColumnSorting(activeSem === "all");
+    // Do not rebuild columns with setColumns when switching semester
+    // filters — that destroy/recreate cycle blanks the table body.
+    if (table && activeSem !== "all") {
+      try { table.clearSort(); } catch (e) {}
+    }
     table.replaceData(rows);
     var semLabel = activeSem === "all" ? "all semesters" : (activeSem === "—" ? "unassigned" : "semester " + activeSem);
     var semTotal = activeSem === "all"
