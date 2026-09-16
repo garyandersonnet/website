@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-6",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "Metabolic Mechanisms",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "Ultimate origin of the energy animating our bodies, in his framing:",
+      "choices": [
+        "A Only geothermal vents for humans.",
+        "B The sun—captured into carbon bonds via plants, then eaten.",
+        "C Human mitochondria invent energy from nothing.",
+        "D Only dietary supplements."
+      ],
+      "answer": 1,
+      "cite": "6.4",
+      "explain": "Solar energy → plant carbon bonds → animal nutrition."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "Metabolism is presented as a balance of:",
+      "choices": [
+        "A Only sleeping and waking.",
+        "B Two processes (anabolic/catabolic balance)—not a single buzzword.",
+        "C Only protein shakes.",
+        "D Zero chemical reactions."
+      ],
+      "answer": 1,
+      "cite": "6.6",
+      "explain": "Metabolism balances opposing process classes people often ignore."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "Beta-oxidation refers to:",
+      "choices": [
+        "A Only sugar storage.",
+        "B A key pathway of fat burning/breaking down fatty acids.",
+        "C DNA transcription only.",
+        "D Cellulose wall building."
+      ],
+      "answer": 1,
+      "cite": "6.67",
+      "explain": "Beta-oxidation is central fat-burning terminology."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "Acetyl-CoA fates include:",
+      "choices": [
+        "A Only immediate excretion as urea always.",
+        "B Entering burning pathways or turning into new lipid via lipogenesis (opposite of lipolysis).",
+        "C Becoming cellulose in animals.",
+        "D Replacing oxygen in air."
+      ],
+      "answer": 1,
+      "cite": "6.78",
+      "explain": "Acetyl-CoA can feed oxidation or lipogenesis."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "Electron transport pumps protons into:",
+      "choices": [
+        "A The nucleus nucleolus only.",
+        "B The intermembrane space of mitochondria, enabling ATP synthase work.",
+        "C Outer skin pores exclusively.",
+        "D Chloroplasts of animal muscle."
+      ],
+      "answer": 1,
+      "cite": "6.100",
+      "explain": "Protons trapped in intermembrane space on the inner membrane system."
+    }
+  ]
+}
