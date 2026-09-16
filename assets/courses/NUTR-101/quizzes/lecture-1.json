@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-1",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "Nutritional Fundamentals",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "How does Lugavere frame the course's practical aim?",
+      "choices": [
+        "A Deepest possible PhD-level biochemistry only.",
+        "B Actionable nutrition and lifestyle for performance, health, and longevity—not only weed-deep science.",
+        "C Calorie-counting apps as the sole curriculum.",
+        "D Outsourcing all food decisions to specialists forever."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "He prioritizes practical harnessing of nutrition and lifestyle over a pure deep-dive academic tour."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "His working definition of nutrition emphasizes:",
+      "choices": [
+        "A Only social-media trends.",
+        "B Providing or obtaining the food necessary for health and growth.",
+        "C Fashion and packaging design.",
+        "D Eliminating all pleasure from eating."
+      ],
+      "answer": 1,
+      "cite": "1.11",
+      "explain": "Nutrition is obtaining food necessary for health and growth."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "Regarding essential nutrients, he notes especially that:",
+      "choices": [
+        "A Carbohydrate is an essential nutrient class humans must eat or die of deficiency disease.",
+        "B Essential means we need them to survive (deficiency disease otherwise); there is no essential carbohydrate.",
+        "C Only fiber is essential.",
+        "D No fats are ever essential."
+      ],
+      "answer": 1,
+      "cite": "1.31",
+      "explain": "Essential = needed to avoid deficiency disease; there is no essential carbohydrate."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "Chemically, saturated vs unsaturated fat differs by:",
+      "choices": [
+        "A Color of the food only.",
+        "B Saturated fats have no double bonds; unsaturated have one or more double bonds.",
+        "C Unsaturated fats never exist in nature.",
+        "D Saturated always means industrial trans fat."
+      ],
+      "answer": 1,
+      "cite": "1.51",
+      "explain": "No double bonds = saturated; double bond(s) = unsaturated (mono or poly)."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "Beyond calories, food is described as information because:",
+      "choices": [
+        "A It has no biological effect.",
+        "B It has epigenetic capacity—can change gene expression—and relates to chronic disease and body composition.",
+        "C Only supplements count as information.",
+        "D Food never affects performance."
+      ],
+      "answer": 1,
+      "cite": "1.80",
+      "explain": "Food can change gene expression (epigenetic capacity)."
+    }
+  ]
+}
