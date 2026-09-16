@@ -50,6 +50,7 @@ claude</pre>
 <h2 class="font-serif text-2xl mt-10 mb-3">Goals</h2>
 <ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
 <li>Publish an overview video, slide deck, deep-dive podcast, and study guide for each Peterson Academy course.</li>
+<li>Add practice quizzes (5 per lecture + 40-question final with transcript cites) using the Development prompt below — PHIL 102 is the reference.</li>
 <li>Build out the Projects page with real content.</li>
 <li>Keep Copilot/ChatGPT changes reviewed before or right after they land — see the review-workflow note in CLAUDE.md.</li>
 <li>Take this Development page down (or gate it) once the site is ready to go fully public.</li>
@@ -88,7 +89,30 @@ claude</pre>
 
 
 <h2 class="font-serif text-2xl mt-10 mb-3">Access control — transcripts &amp; private resources</h2>
-<p class="text-sm text-[#2c2416]/70 mb-3">Research note (2026-09-15, Grok). Goal: only people we invite (e.g. Gary) can open sensitive paths; everyone else is blocked. Public catalog + DIY transcript note on Peterson Academy stay open. This is planning, not yet implemented.</p>
+<p class="text-sm text-[#2c2416]/70 mb-3">Research note (2026-09-15–16, Grok). Goal: only people we invite (e.g. Gary) can open sensitive paths; everyone else is blocked. Public catalog + DIY <a href="/Transcripts" class="underline hover:text-[#2c2416]">/Transcripts</a> how-to stay open. <strong>Planning only — not implemented yet.</strong> Decision pending Gary’s review.</p>
+
+<p class="text-sm font-medium mt-4 mb-1">Decision needed soon — catalog icon → PDF</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li><strong>Desired UX:</strong> user clicks the far-right transcript icon on <a href="/PetersonAcademy" class="underline hover:text-[#2c2416]">Peterson Academy</a>. If <em>authorized</em>, open the PDF. If <em>not</em>, send them to a login (or “not authorized”) page instead of the file.</li>
+<li><strong>Current (development only):</strong> icons + <code class="bg-[#2c2416]/5 px-1 rounded">/assets/transcripts/*.pdf</code> are live and <em>unguarded</em> so we can finish content work. Do not treat this as the public posture.</li>
+<li><strong>Recommended approach:</strong> Option B below (Netlify Identity + Google, invite-only, role gate). No better lightweight Netlify-native alternative for “public catalog + private PDF folder + Google accounts we invite.”</li>
+<li><strong>Why not site-wide Password Protection alone:</strong> it locks the whole site (or previews), not “catalog public / PDFs private,” and it is a shared password, not per-person Google identity.</li>
+<li><strong>Why not client-side only:</strong> hiding the icon in JavaScript does not protect the PDF URL. The gate must be CDN <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code> Role rules (or equivalent JWT) so unauthorized requests never receive the file.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Proposed click flow (Option B)</p>
+<ol class="list-decimal pl-5 space-y-2 text-sm text-[#2c2416]/80 leading-relaxed">
+<li>Catalog stays public; icon still points at a transcript URL under a gated prefix (today <code class="bg-[#2c2416]/5 px-1 rounded">/assets/transcripts/…</code>; preferably later an unguessable folder).</li>
+<li>Visitor without a valid Identity JWT / without role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code> hits the Role rule → Netlify returns <code class="bg-[#2c2416]/5 px-1 rounded">401</code> and redirects to <code class="bg-[#2c2416]/5 px-1 rounded">/login</code> (page we add: “Sign in with Google” via Identity; invite-only so strangers cannot register).</li>
+<li>After Google sign-in, if that Identity user has role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code>, they can open the same PDF URL (browser has <code class="bg-[#2c2416]/5 px-1 rounded">nf_jwt</code>). Optional: after login, send them back to the PDF they clicked (<code class="bg-[#2c2416]/5 px-1 rounded">?redirect=…</code>).</li>
+<li>Users we never invite never get a role → always land on login / denied, even if they guess the PDF path.</li>
+</ol>
+
+<p class="text-sm font-medium mt-4 mb-1">Example gate for today’s transcript folder</p>
+<pre class="bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto my-3"># Authorized (role vault) → serve file; everyone else → login
+/assets/transcripts/*  /assets/transcripts/:splat  200!  Role=vault
+/assets/transcripts/*  /login  401!</pre>
+<p class="text-sm text-[#2c2416]/70 mb-3">Prefer moving files to an unguessable prefix before advertising the site; keep the same Role pattern. DIY <code class="bg-[#2c2416]/5 px-1 rounded">/Transcripts</code> (how-to + skills) stays <em>outside</em> the gate.</p>
 
 <p class="text-sm font-medium mt-4 mb-1">Why “secret” URLs alone are not enough</p>
 <ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
@@ -147,15 +171,117 @@ claude</pre>
 
 <p class="text-sm font-medium mt-4 mb-1">Suggested plan for PubliusNakamoto</p>
 <ol class="list-decimal pl-5 space-y-2 text-sm text-[#2c2416]/80 leading-relaxed">
-<li>Keep public: Home, Peterson Academy catalog, DIY transcript note on Peterson Academy (no hosted PA copies).</li>
-<li>If we ever need a private demo vault: Netlify Identity, <strong>Invite only</strong>, Google provider, role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code>, unguessable folder, <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code> Role gate + login fallback.</li>
-<li>Use dashboard Password / Private only if we want the <em>whole</em> site or previews locked before advertising — not as a substitute for per-path Google invites.</li>
+<li>Keep public: Home, Peterson Academy <em>catalog UI</em>, DIY <a href="/Transcripts" class="underline hover:text-[#2c2416]">/Transcripts</a> how-to (skills + sample image). Do not leave verbatim PA PDFs on an ungated path once the site is advertised.</li>
+<li>When Gary decides to gate: enable Netlify Identity, <strong>Invite only</strong>, Google provider; assign role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code> to invited emails; add <code class="bg-[#2c2416]/5 px-1 rounded">/login</code>; apply <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code> Role rules on the transcript PDF prefix (see above). Catalog icons keep working for authorized users; others get login.</li>
+<li>Optional hardening: move PDFs under an unguessable folder; keep binaries off the public GitHub repo (Netlify deploy only), as we already prefer for large/IP-sensitive files.</li>
+<li>Use dashboard Password / Private only if we want the <em>whole</em> site or previews locked — not as a substitute for per-path Google invites on transcript icons.</li>
 <li>Do not stack site-wide Password Protection on top of Identity unless we accept double login (perimeter session ≠ Identity session).</li>
 </ol>
+<p class="text-sm text-[#2c2416]/70 mb-2"><strong>Waiting on:</strong> Gary’s go/no-go (and any change to invite list or role name). No auth build until then.</p>
 <p class="text-xs text-[#2c2416]/50 mt-2">Not legal advice; auth choice is about access control. IP policy for PA content stays: no public redistribution of verbatim transcripts/videos.</p>
+
+
+<h2 class="font-serif text-2xl mt-10 mb-3">Practice quizzes from numbered transcripts</h2>
+<p class="text-sm text-[#2c2416]/70 mb-3">Reference implementation: <strong>PHIL 102</strong> on <a href="/PetersonAcademy" class="underline hover:text-[#2c2416]">Peterson Academy</a> (practice-tests icon → lecture menu → overlay quiz). Reuse this prompt with another agent/session when adding quizzes for other courses.</p>
+
+<p class="text-sm font-medium mt-4 mb-1">What “done” looks like</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>Per lecture: <strong>5</strong> multiple-choice questions, <strong>4</strong> answers each.</li>
+<li>Final exam: <strong>40</strong> questions (about five per lecture), same format.</li>
+<li>Every question has a transcript cite like <code class="bg-[#2c2416]/5 px-1 rounded">2.3</code> (lecture 2, paragraph 3) that actually supports the correct answer.</li>
+<li>Lecture quizzes: show the citation <em>with the question</em>. Final: show the citation only <em>with the feedback after answering</em>.</li>
+<li>Instant feedback; running score in the header; final uses a <strong>1 minute (1:00) per question</strong> countdown that ends the question when it expires, then advances.</li>
+<li>Final exam is <strong>forward-only</strong>: no return to previous final questions; no “All lectures” / Esc / backdrop close until the exam finishes (then return to the lecture menu is allowed).</li>
+<li>Brass-style correct/wrong sounds (triumphant fanfare / descending trombone wa-wa-wa) with a mute toggle (<strong>sound off by default</strong>). Scores stored in browser <code class="bg-[#2c2416]/5 px-1 rounded">localStorage</code>.</li>
+<li>Catalog: practice-tests icon opens a dropdown/menu of lectures + Final Exam; each item opens the on-page quiz overlay (same pattern as video/podcast/slides). Icon order: video → podcast → slides → practice-tests.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Inputs you must have</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>A <strong>numbered</strong> course transcript (PDF or text) with paragraph ids <code class="bg-[#2c2416]/5 px-1 rounded">L.P</code> per lecture (same style as cleaned PA transcripts).</li>
+<li>Official lecture titles / order for the course.</li>
+<li>Course code (e.g. <code class="bg-[#2c2416]/5 px-1 rounded">PHIL 102</code>) and where catalog study-aids already live (or will live) under <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/…</code>.</li>
+</ul>
+
+
+<p class="text-sm font-medium mt-4 mb-1">After each assessment — tutor remaster report</p>
+<ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
+<li>When a lecture quiz or final ends, show a <strong>Tutor remaster report</strong> in the overlay.</li>
+<li>List every missed / timed-out question with: prompt, student answer (or time expired), correct answer, source cite <code class="bg-[#2c2416]/5 px-1 rounded">¶ L.P</code>, short why, and a tutor ask to re-teach that paragraph.</li>
+<li>Include a citation list and a suggested paste-prompt for an AI or human tutor + the numbered transcript.</li>
+<li>Provide <strong>Copy for tutor</strong> so the learner can paste into NotebookLM / Claude / a human tutor.</li>
+</ul>
+
+<p class="text-sm font-medium mt-4 mb-1">Copy-paste prompt</p>
+<pre class="bg-[#2c2416]/5 border border-[#2c2416]/15 rounded-md p-4 font-mono text-xs overflow-x-auto my-3 whitespace-pre-wrap">Generate practice quizzes for Peterson Academy course {COURSE_CODE} — {COURSE_TITLE} from its numbered transcript.
+
+Reference UX (already live for PHIL 102):
+- Catalog study-aid icon “practice-tests” opens a lecture menu (all lectures + Final Exam).
+- Selecting an item opens an on-page overlay quiz (do not navigate away; do not force a download).
+- Reuse / adapt assets from PHIL 102: quiz-player.js, quiz.css, and the catalog modal wiring on PetersonAcademy.html.
+
+Content requirements:
+1) One quiz per lecture: exactly 5 questions, 4 choices each, answer index 0–3.
+2) One Final Exam: exactly 40 questions spanning all lectures (~5 per lecture), rephrased vs the lecture quizzes (same topics OK, not verbatim copies).
+3) Each question MUST include:
+   - prompt, choices[4], answer (0–3), cite (e.g. "3.12"), explain (short, tied to the cite).
+4) cite must be a real paragraph id from the numbered transcript for that lecture. Verify every cite exists before shipping.
+5) Questions should test understanding of the instructor’s points, not trivia about wording. Distractors = plausible misunderstandings.
+
+Citation / UX rules:
+- Lecture quizzes: show “Citation: ¶ {cite}” with the question; also include cite in post-answer feedback.
+- Final exam: do NOT show cite on the question; reveal cite only with the answer feedback.
+- Final exam: one question at a time; 60-second (1 minute) countdown per question in the header; when time expires, mark wrong / time’s up, show feedback+cite, then advance.
+- Final exam: forward-only — no previous-question control; hide/disable return to the lecture menu (and Esc/backdrop dismiss) until the final completes; restore “All lectures” after finish.
+- Both: running score in the header; instant feedback; mute toggle (sound OFF by default); triumphant brass fanfare on correct; descending trombone wa-wa-wa on wrong (original Web Audio — not copyrighted show clips).
+- After finish: generate a Tutor remaster report of every missed/timed-out question with prompt, student vs correct answer, ¶ cite, explanation, citation list, and a suggested tutor prompt; include a Copy for tutor button.
+- Persist scores in localStorage on this device; show best score when reopening.
+
+Files to write (mirror PHIL 102 layout):
+- /assets/courses/{COURSE_CODE}/quizzes/lecture-1.json … lecture-N.json
+- /assets/courses/{COURSE_CODE}/quizzes/final.json
+- /assets/courses/{COURSE_CODE}/quizzes/index.json
+JSON shape (lecture example):
+{
+  "id": "{course-slug}-lecture-1",
+  "course": "{COURSE_CODE}",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "{Lecture title}",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "...",
+      "choices": ["A ...", "B ...", "C ...", "D ..."],
+      "answer": 0,
+      "cite": "1.3",
+      "explain": "..."
+    }
+  ]
+}
+Final uses "kind": "final" and no lecture number (or lecture: "Final").
+
+Catalog wiring:
+- On the course row in courses.json, set studyAidsDemo / tests menu fields:
+  testLectures: [ { "lecture": 1, "title": "...", "url": "/assets/courses/{COURSE_CODE}/quizzes/lecture-1.json" }, …,
+                  { "lecture": "Final", "title": "Final Exam", "url": "/assets/courses/{COURSE_CODE}/quizzes/final.json" } ]
+- Ensure the practice-tests icon appears with tooltip “practice-tests” after slides in the study-aid icon order: video → podcast → slides → practice-tests.
+- Wire menu clicks to the existing on-page quiz player (PaQuiz.fetchAndRender), not to a new URL page.
+
+Process:
+1) Extract/split the numbered transcript into per-lecture paragraph lists {id, text}.
+2) Author all quiz JSON from those paragraphs; run a verifier that every cite id exists; fix misses.
+3) Deploy via Netlify CLI (site builds from GitHub are often stopped — CLI prod deploy is authoritative).
+4) Smoke-test: lecture quiz shows cite on question + sounds; final hides cite until answer, timer expires and advances, score HUD updates, mute works.
+
+IP / posture: quizzes are original study aids derived from the student’s own numbered transcript workflow — do not republish verbatim PA transcript text inside the quiz JSON beyond short paraphrases needed for questions.</pre>
+
+<p class="text-sm text-[#2c2416]/70 mb-3">PHIL 102 files live under <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/PHIL-102/quizzes/</code> with shared player <code class="bg-[#2c2416]/5 px-1 rounded">quiz-player.js</code> / <code class="bg-[#2c2416]/5 px-1 rounded">quiz.css</code>. For the next course, either reuse those player files globally or copy them beside the new course’s quiz JSON.</p>
 
 <h2 class="font-serif text-2xl mt-10 mb-3">Change Log</h2>
 <ul class="text-sm space-y-1 text-[#2c2416]/80">
+<li><span class="text-[#2c2416]/50">2026-09-16</span> — Added MATH 101 practice assessments (8×5 lecture quizzes + 40-question final with cites, tutor remaster report, same player as PHIL 102). Catalog shows practice-tests only until other media arrives (via Grok Bot)</li>
+<li><span class="text-[#2c2416]/50">2026-09-16</span> — Expanded access-control notes for catalog icon → PDF (authorized open / else login); Option B still recommended; awaiting Gary decision (via Grok)</li>
 <li><span class="text-[#2c2416]/50">2026-09-15</span> — Documented Netlify Password vs Identity+Google path gating (unguessable URLs are not enough) for private transcript vaults (via Grok)</li>
 <li><span class="text-[#2c2416]/50">2026-09-08 18:18</span> — Added Suggestions from Grok for team review (via Grok / GitHub connector)</li>
 <li><span class="text-[#2c2416]/50">2026-09-08 18:02</span> — Added Development link to nav on all pages (via Grok)</li>
