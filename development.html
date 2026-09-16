@@ -189,7 +189,7 @@ claude</pre>
 <li>Per lecture: <strong>5</strong> multiple-choice questions, <strong>4</strong> answers each.</li>
 <li>Final exam: <strong>40</strong> questions (about five per lecture), same format.</li>
 <li>Every question has a transcript cite like <code class="bg-[#2c2416]/5 px-1 rounded">2.3</code> (lecture 2, paragraph 3) that actually supports the correct answer.</li>
-<li>Lecture quizzes: show the citation <em>with the question</em>. Final: show the citation only <em>with the feedback after answering</em>.</li>
+<li>Lecture quizzes: show the citation <em>with the question</em>. Final: show the citation only <em>with the feedback after answering</em>. Whenever a cite is shown, it is a clickable <code class="bg-[#2c2416]/5 px-1 rounded">¶ L.P</code> control that opens a window with that numbered-transcript paragraph.</li>
 <li>Instant feedback; running score in the header; final uses a <strong>1 minute (1:00) per question</strong> countdown that ends the question when it expires, then advances.</li>
 <li>Final exam is <strong>forward-only</strong>: no return to previous final questions; no “All lectures” / Esc / backdrop close until the exam finishes (then return to the lecture menu is allowed).</li>
 <li>Brass-style correct/wrong sounds (triumphant fanfare / descending trombone wa-wa-wa) with a mute toggle (<strong>sound off by default</strong>). Scores stored in browser <code class="bg-[#2c2416]/5 px-1 rounded">localStorage</code>.</li>
@@ -231,6 +231,7 @@ Content requirements:
 Citation / UX rules:
 - Lecture quizzes: show “Citation: ¶ {cite}” with the question; also include cite in post-answer feedback.
 - Final exam: do NOT show cite on the question; reveal cite only with the answer feedback.
+- Whenever a cite is shown, it is a clickable ¶ {cite} control. Click opens a lightweight modal titled with that id; body is the matching paragraph from paragraphs.json (HTML-escaped). If the paragraph is missing, show “Paragraph not found in paragraphs.json” and optionally link the course transcript PDF.
 - Final exam: one question at a time; 60-second (1 minute) countdown per question in the header; when time expires, mark wrong / time’s up, show feedback+cite, then advance.
 - Final exam: forward-only — no previous-question control; hide/disable return to the lecture menu (and Esc/backdrop dismiss) until the final completes; restore “All lectures” after finish.
 - Both: running score in the header; instant feedback; mute toggle (sound OFF by default); triumphant brass fanfare on correct; descending trombone wa-wa-wa on wrong (original Web Audio — not copyrighted show clips).
@@ -238,6 +239,7 @@ Citation / UX rules:
 - Persist scores in localStorage on this device; show best score when reopening.
 
 Files to write (mirror PHIL 102 layout):
+- /assets/courses/{COURSE_CODE}/paragraphs.json — flat map of cite id → paragraph text, e.g. { "1.1": "…", "1.2": "…" }. Keep long verbatim transcript text here, not in quiz JSON.
 - /assets/courses/{COURSE_CODE}/quizzes/lecture-1.json … lecture-N.json
 - /assets/courses/{COURSE_CODE}/quizzes/final.json
 - /assets/courses/{COURSE_CODE}/quizzes/index.json
@@ -269,17 +271,19 @@ Catalog wiring:
 - Wire menu clicks to the existing on-page quiz player (PaQuiz.fetchAndRender), not to a new URL page.
 
 Process:
-1) Extract/split the numbered transcript into per-lecture paragraph lists {id, text}.
-2) Author all quiz JSON from those paragraphs; run a verifier that every cite id exists; fix misses.
+1) Extract/split the numbered transcript into a flat paragraphs.json map (cite id → paragraph text). The shared player loads this from the quiz URL: …/courses/CODE/quizzes/… → …/courses/CODE/paragraphs.json (cached once per session).
+2) Author all quiz JSON from those paragraphs; run a verifier that every cite id exists; fix misses. Do not dump paragraph text into the quiz JSON.
 3) Deploy via Netlify CLI (site builds from GitHub are often stopped — CLI prod deploy is authoritative).
-4) Smoke-test: lecture quiz shows cite on question + sounds; final hides cite until answer, timer expires and advances, score HUD updates, mute works.
+4) Smoke-test: lecture quiz shows a clickable cite on the question that opens the real ¶ text; final hides cite until answer, then the cite is clickable; courses without paragraphs.json still run and show “Paragraph not found…”; timer, score HUD, mute still work.
 
 IP / posture: quizzes are original study aids derived from the student’s own numbered transcript workflow — do not republish verbatim PA transcript text inside the quiz JSON beyond short paraphrases needed for questions.</pre>
 
 <p class="text-sm text-[#2c2416]/70 mb-3">Quiz JSON stays per-course under <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/{CODE}/quizzes/</code>. Shared player logic/UI lives at <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz-player.js</code> and <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz.css</code> — do not nest those under a single course.</p>
+<p class="text-sm text-[#2c2416]/70 mb-3"><strong>Cite links:</strong> shown citations are <code class="bg-[#2c2416]/5 px-1 rounded">¶ L.P</code> buttons. The player derives <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/{CODE}/paragraphs.json</code> from the quiz path (<code class="bg-[#2c2416]/5 px-1 rounded">…/courses/CODE/quizzes/…</code> → <code class="bg-[#2c2416]/5 px-1 rounded">…/courses/CODE/paragraphs.json</code>), loads it once per session, and opens a modal with that paragraph’s text. If the file or id is missing, the modal says “Paragraph not found in paragraphs.json” and may link <code class="bg-[#2c2416]/5 px-1 rounded">/assets/transcripts/{CODE}_transcript.pdf</code>. PHIL 102 ships paragraphs.json first; other courses degrade until theirs is added. Keep verbatim transcript dumps out of quiz JSON.</p>
 
 <h2 class="font-serif text-2xl mt-10 mb-3">Change Log</h2>
 <ul class="text-sm space-y-1 text-[#2c2416]/80">
+<li><span class="text-[#2c2416]/50">2026-09-16</span> — Quiz citations are clickable <code class="bg-[#2c2416]/5 px-1 rounded">¶ L.P</code> controls that open the source numbered-transcript paragraph from <code class="bg-[#2c2416]/5 px-1 rounded">assets/courses/{CODE}/paragraphs.json</code> (PHIL 102 shipped first; other courses degrade if the file is missing) (via Grok Bot / Cursor)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Moved shared quiz player from <code class="bg-[#2c2416]/5 px-1 rounded">/assets/courses/PHIL-102/</code> to site-level <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz-player.js</code> and <code class="bg-[#2c2416]/5 px-1 rounded">/assets/quiz.css</code>; catalog now loads those paths (via Grok Bot / Cursor)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Restored the missing Peterson Academy catalog course-link icon at <code class="bg-[#2c2416]/5 px-1 rounded">/assets/pa-logo.png</code> (plus SVG source); the HTML already pointed at that path but the file was never in git (via Grok Bot / Cursor)</li>
 <li><span class="text-[#2c2416]/50">2026-09-16</span> — Assembled the full Peterson Academy catalog into <code class="bg-[#2c2416]/5 px-1 rounded">assets/courses.json</code> (115 courses: semesters 1–6 plus unassigned) from <code class="bg-[#2c2416]/5 px-1 rounded">assets/courses/parts/</code>, keeping semester-1 quiz wiring intact; semester filter bubbles no longer blank the table (via Grok Bot)</li>
