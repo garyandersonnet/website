@@ -15,6 +15,10 @@
   var audioCtx = null;
   var activeTimer = null;
   var activeAdvance = null;
+  var paragraphLoads = {};
+  var citeModal = null;
+  var citeModalLastFocus = null;
+  var citeModalOpen = false;
 
   function $(el, sel) {
     return el.querySelector(sel);
@@ -26,6 +30,139 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function courseCodeFromQuizUrl(url, fallback) {
+    var m = String(url || "").match(/\/courses\/([^/]+)\/quizzes\//);
+    if (m) return decodeURIComponent(m[1]);
+    if (fallback) return String(fallback).replace(/\s+/g, "-");
+    return "";
+  }
+
+  function paragraphsUrlFromQuizUrl(url, fallbackCode) {
+    var m = String(url || "").match(/^(.*\/courses\/[^/]+)\/quizzes\//);
+    if (m) return m[1] + "/paragraphs.json";
+    var code = courseCodeFromQuizUrl("", fallbackCode);
+    if (code) return "/assets/courses/" + code + "/paragraphs.json";
+    return "";
+  }
+
+  function transcriptPdfUrlFromCode(code) {
+    if (!code) return "";
+    return "/assets/transcripts/" + code + "_transcript.pdf";
+  }
+
+  function loadParagraphs(url) {
+    if (!url) return Promise.resolve(null);
+    if (!Object.prototype.hasOwnProperty.call(paragraphLoads, url)) {
+      paragraphLoads[url] = fetch(url, { credentials: "same-origin" })
+        .then(function (r) {
+          if (!r.ok) return null;
+          return r.json();
+        })
+        .then(function (data) {
+          if (!data || typeof data !== "object" || Array.isArray(data)) return null;
+          return data;
+        })
+        .catch(function () {
+          return null;
+        });
+    }
+    return paragraphLoads[url];
+  }
+
+  function citeControl(cite) {
+    var id = String(cite || "").trim();
+    if (!id) return "";
+    return (
+      '<button type="button" class="pa-quiz__cite-link" data-cite="' +
+      esc(id) +
+      '" aria-haspopup="dialog">¶ ' +
+      esc(id) +
+      "</button>"
+    );
+  }
+
+  function ensureCiteModal() {
+    if (citeModal && document.body.contains(citeModal)) return citeModal;
+    var el = document.createElement("div");
+    el.className = "pa-cite-modal";
+    el.hidden = true;
+    el.innerHTML =
+      '<button type="button" class="pa-cite-modal__backdrop" data-cite-close aria-label="Close citation"></button>' +
+      '<div class="pa-cite-modal__panel" role="dialog" aria-modal="true" aria-labelledby="pa-cite-modal-title">' +
+        '<div class="pa-cite-modal__header">' +
+          '<h3 id="pa-cite-modal-title" class="pa-cite-modal__title"></h3>' +
+          '<button type="button" class="pa-cite-modal__close" data-cite-close aria-label="Close">×</button>' +
+        "</div>" +
+        '<div class="pa-cite-modal__body"></div>' +
+      "</div>";
+    document.body.appendChild(el);
+    el.addEventListener("click", function (e) {
+      var t = e.target;
+      if (t && t.nodeType === 3) t = t.parentElement;
+      if (t && t.closest && t.closest("[data-cite-close]")) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeCiteModal();
+      }
+    });
+    citeModal = el;
+    return el;
+  }
+
+  function closeCiteModal() {
+    if (!citeModalOpen) return;
+    citeModalOpen = false;
+    if (citeModal) citeModal.hidden = true;
+    var back = citeModalLastFocus;
+    citeModalLastFocus = null;
+    if (back && back.focus) {
+      try { back.focus(); } catch (e) {}
+    }
+  }
+
+  function openCiteModal(cite, paragraphs, pdfUrl, fromEl) {
+    var modal = ensureCiteModal();
+    var id = String(cite || "").trim();
+    var title = modal.querySelector(".pa-cite-modal__title");
+    var body = modal.querySelector(".pa-cite-modal__body");
+    title.textContent = id ? ("¶ " + id) : "Citation";
+    var text = null;
+    if (paragraphs && id && Object.prototype.hasOwnProperty.call(paragraphs, id)) {
+      text = paragraphs[id];
+    }
+    if (text != null && String(text).trim() !== "") {
+      body.innerHTML = "<p>" + esc(text) + "</p>";
+    } else {
+      var html = "<p>Paragraph not found in paragraphs.json</p>";
+      if (pdfUrl) {
+        html +=
+          '<p><a class="pa-cite-modal__pdf" href="' +
+          esc(pdfUrl) +
+          '" target="_blank" rel="noopener">Open numbered transcript PDF</a></p>';
+      }
+      body.innerHTML = html;
+    }
+    citeModalLastFocus = fromEl || document.activeElement;
+    citeModalOpen = true;
+    modal.hidden = false;
+    var closeBtn = modal.querySelector(".pa-cite-modal__close");
+    if (closeBtn && closeBtn.focus) closeBtn.focus();
+  }
+
+  function onCiteKeydown(e) {
+    if (!citeModalOpen) return;
+    if (e.key === "Escape" || e.key === "Esc") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+      closeCiteModal();
+    }
+  }
+
+  if (global.document) {
+    document.addEventListener("keydown", onCiteKeydown, true);
   }
 
   function isFinalQuiz(quiz) {
@@ -267,7 +404,10 @@
   function render(root, rawQuiz, opts) {
     opts = opts || {};
     clearTimers();
+    closeCiteModal();
     var quiz = normalizeQuiz(rawQuiz);
+    var paragraphs = opts.paragraphs && typeof opts.paragraphs === "object" ? opts.paragraphs : null;
+    var pdfUrl = opts.transcriptPdfUrl || "";
     var questions = quiz.questions;
     if (!root) return;
     if (!questions.length) {
@@ -323,6 +463,16 @@
     });
     paintMute();
 
+    wrap.addEventListener("click", function (e) {
+      var t = e.target;
+      if (t && t.nodeType === 3) t = t.parentElement;
+      var btn = t && t.closest ? t.closest(".pa-quiz__cite-link") : null;
+      if (!btn || !wrap.contains(btn)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      openCiteModal(btn.getAttribute("data-cite"), paragraphs, pdfUrl, btn);
+    });
+
     function paintHud() {
       progressEl.textContent = "Q " + (Math.min(idx, questions.length - 1) + 1) + " / " + questions.length;
       scoreEl.textContent = "Score " + correctCount + "/" + questions.length;
@@ -367,11 +517,12 @@
       answered = false;
       clearTimeout(activeAdvance);
       activeAdvance = null;
+      closeCiteModal();
       var q = questions[idx];
       var citeOnQuestion = !finalExam && q.cite;
       var html = "";
       if (citeOnQuestion) {
-        html += '<p class="pa-quiz__cite">Citation: ¶ ' + esc(q.cite) + "</p>";
+        html += '<p class="pa-quiz__cite">Citation: ' + citeControl(q.cite) + "</p>";
       }
       html += '<p class="pa-quiz__prompt">' + esc(q.prompt) + "</p>";
       html += '<div class="pa-quiz__choices" role="group" aria-label="Answer choices">';
@@ -431,7 +582,7 @@
       else if (ok) bits.push("<strong>Correct.</strong>");
       else bits.push("<strong>Incorrect.</strong>");
       bits.push("Answer: " + esc(choiceText(q.choices, q.answer)));
-      if (q.cite) bits.push("Citation: ¶ " + esc(q.cite));
+      if (q.cite) bits.push("Citation: " + citeControl(q.cite));
       if (q.explain) bits.push(esc(q.explain));
       fb.hidden = false;
       fb.className = "pa-quiz__feedback " + (ok ? "is-ok" : "is-bad");
@@ -444,7 +595,7 @@
 
       if (finalExam) {
         activeAdvance = setTimeout(function () {
-          if (answered) goNext();
+          if (answered && !citeModalOpen) goNext();
         }, FEEDBACK_ADVANCE_MS);
       }
     }
@@ -452,6 +603,7 @@
     function goNext() {
       clearTimeout(activeAdvance);
       activeAdvance = null;
+      closeCiteModal();
       if (!answered) return;
       if (idx >= questions.length - 1) {
         finish();
@@ -487,7 +639,7 @@
           html += "<p class=\"pa-quiz__miss-prompt\">" + esc(q.prompt) + "</p>";
           html += "<p>Your answer: " + esc(r.timedOut ? "Time expired" : choiceText(q.choices, r.picked)) + "</p>";
           html += "<p>Correct: " + esc(choiceText(q.choices, q.answer)) + "</p>";
-          html += "<p>Source cite: ¶ " + esc(q.cite || "?") + "</p>";
+          html += "<p>Source cite: " + (q.cite ? citeControl(q.cite) : "¶ ?") + "</p>";
           html += "<p>" + esc(q.explain || "") + "</p>";
           html += "<p class=\"pa-quiz__tutor-ask\">Tutor ask: please re-teach paragraph " + esc(q.cite || "?") + ".</p>";
           html += "</li>";
@@ -498,7 +650,7 @@
           if (r.question.cite && cites.indexOf(r.question.cite) < 0) cites.push(r.question.cite);
         });
         html += "<p class=\"pa-quiz__cite-list\"><strong>Citation list:</strong> " +
-          cites.map(function (c) { return "¶ " + esc(c); }).join(", ") + "</p>";
+          cites.map(function (c) { return citeControl(c); }).join(", ") + "</p>";
       }
       html += "<p class=\"pa-quiz__prompt-hint\">Suggested paste-prompt for an AI or human tutor plus the numbered transcript is included when you copy.</p>";
       html += '<button type="button" class="pa-quiz__copy">Copy for tutor</button>';
@@ -524,15 +676,24 @@
     opts = opts || {};
     if (!root) return Promise.reject(new Error("PaQuiz: missing root"));
     clearTimers();
+    closeCiteModal();
     root.innerHTML = '<p class="pa-quiz__loading">Loading quiz…</p>';
+    var code = courseCodeFromQuizUrl(url, opts.courseCode);
+    var pUrl = opts.paragraphsUrl || paragraphsUrlFromQuizUrl(url, opts.courseCode);
+    var pdfUrl = opts.transcriptPdfUrl || transcriptPdfUrlFromCode(code);
     return fetch(url, { credentials: "same-origin" })
       .then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
         return r.json();
       })
       .then(function (quiz) {
-        render(root, quiz, opts);
-        return quiz;
+        return loadParagraphs(pUrl).then(function (paras) {
+          render(root, quiz, Object.assign({}, opts, {
+            paragraphs: paras,
+            transcriptPdfUrl: pdfUrl
+          }));
+          return quiz;
+        });
       })
       .catch(function (err) {
         console.error("PaQuiz.fetchAndRender failed", err);
