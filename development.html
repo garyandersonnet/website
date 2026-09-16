@@ -16,7 +16,6 @@
 <a class="text-[#2c2416] font-semibold" href="/development" aria-current="page">Development</a>
 <a href="/" class="hover:text-[#2c2416] transition-colors">Home</a>
 <a href="/PetersonAcademy" class="hover:text-[#2c2416] transition-colors">Peterson Academy</a>
-<a href="/Transcripts" class="hover:text-[#2c2416] transition-colors">Transcripts</a>
 <a href="/projects" class="hover:text-[#2c2416] transition-colors">Projects</a>
 <a href="/about" class="hover:text-[#2c2416] transition-colors">About</a>
 <a href="/contact" class="hover:text-[#2c2416] transition-colors">Contact</a>
@@ -89,7 +88,7 @@ claude</pre>
 
 
 <h2 class="font-serif text-2xl mt-10 mb-3">Access control — transcripts &amp; private resources</h2>
-<p class="text-sm text-[#2c2416]/70 mb-3">Research note (2026-09-15, Grok). Goal: only people we invite (e.g. Gary) can open sensitive paths; everyone else is blocked. Public catalog + DIY <a href="/Transcripts" class="underline hover:text-[#2c2416]">/Transcripts</a> stay open. This is planning, not yet implemented.</p>
+<p class="text-sm text-[#2c2416]/70 mb-3">Research note (2026-09-15, Grok). Goal: only people we invite (e.g. Gary) can open sensitive paths; everyone else is blocked. Public catalog + DIY transcript note on Peterson Academy stay open. This is planning, not yet implemented.</p>
 
 <p class="text-sm font-medium mt-4 mb-1">Why “secret” URLs alone are not enough</p>
 <ul class="list-disc pl-5 space-y-1 text-sm text-[#2c2416]/80">
@@ -148,7 +147,7 @@ claude</pre>
 
 <p class="text-sm font-medium mt-4 mb-1">Suggested plan for PubliusNakamoto</p>
 <ol class="list-decimal pl-5 space-y-2 text-sm text-[#2c2416]/80 leading-relaxed">
-<li>Keep public: Home, Peterson Academy catalog, DIY <code class="bg-[#2c2416]/5 px-1 rounded">/Transcripts</code> how-to (no hosted PA copies).</li>
+<li>Keep public: Home, Peterson Academy catalog, DIY transcript note on Peterson Academy (no hosted PA copies).</li>
 <li>If we ever need a private demo vault: Netlify Identity, <strong>Invite only</strong>, Google provider, role <code class="bg-[#2c2416]/5 px-1 rounded">vault</code>, unguessable folder, <code class="bg-[#2c2416]/5 px-1 rounded">_redirects</code> Role gate + login fallback.</li>
 <li>Use dashboard Password / Private only if we want the <em>whole</em> site or previews locked before advertising — not as a substitute for per-path Google invites.</li>
 <li>Do not stack site-wide Password Protection on top of Identity unless we accept double login (perimeter session ≠ Identity session).</li>
