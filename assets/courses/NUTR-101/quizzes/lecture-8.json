@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-8",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 8,
+  "title": "Microbiome Mastery",
+  "questions": [
+    {
+      "id": "l8-q1",
+      "prompt": "Where do gut microbes mainly reside in his GI tour?",
+      "choices": [
+        "A Mostly in the acid-filled stomach.",
+        "B Primarily in the large intestine/colon—the chill habitat.",
+        "C Only on tooth enamel.",
+        "D Never in humans."
+      ],
+      "answer": 1,
+      "cite": "8.7",
+      "explain": "Large intestine/colon is where bacteria love to set up."
+    },
+    {
+      "id": "l8-q2",
+      "prompt": "He argues the gut is special for immunity because:",
+      "choices": [
+        "A Skin is always a larger environmental interface.",
+        "B The gut is our largest interface with the environment—immune system heavily focused there.",
+        "C Immune cells ignore the gut.",
+        "D Only lungs matter."
+      ],
+      "answer": 1,
+      "cite": "8.10",
+      "explain": "Gut dwarfs skin as environmental interface; immunity surveys it."
+    },
+    {
+      "id": "l8-q3",
+      "prompt": "Frequent antiseptic mouthwash is linked in cited work to:",
+      "choices": [
+        "A Guaranteed immortality.",
+        "B Higher hypertension risk and increased type 2 diabetes risk associations.",
+        "C Only fresher breath with no tradeoffs.",
+        "D Improved nitrate conversion always."
+      ],
+      "answer": 1,
+      "cite": "8.16",
+      "explain": "Studies associate frequent antiseptic mouthwash with hypertension and T2D risk increases."
+    },
+    {
+      "id": "l8-q4",
+      "prompt": "Fermented foods he endorses include:",
+      "choices": [
+        "A Only soda.",
+        "B Fermented dairy, sauerkraut, pickles, kimchi, natto—even dark chocolate as fermented.",
+        "C Only sterile juice.",
+        "D Ultra-processed emulsifiers."
+      ],
+      "answer": 1,
+      "cite": "8.25",
+      "explain": "Fermented foods from dairy to kimchi/natto; dark chocolate is fermented."
+    },
+    {
+      "id": "l8-q5",
+      "prompt": "Resistant starch tip he highlights:",
+      "choices": [
+        "A Never cool cooked starches.",
+        "B White potatoes (and cooled rice, etc.) can form resistant starch beneficial to microbes.",
+        "C Only candy yields resistant starch.",
+        "D Fiber should be increased overnight aggressively."
+      ],
+      "answer": 1,
+      "cite": "8.37",
+      "explain": "White potatoes are a top resistant-starch source; cooling starches helps."
+    }
+  ]
+}
