@@ -1,0 +1,69 @@
+{
+  "course": "NUTR 101",
+  "title": "Intro to Nutrition",
+  "quizzes": [
+    {
+      "id": "nutr-101-lecture-1",
+      "lecture": 1,
+      "title": "Nutritional Fundamentals",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-2",
+      "lecture": 2,
+      "title": "Satiety Superstars",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-3",
+      "lecture": 3,
+      "title": "Nutrition Standards",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-4",
+      "lecture": 4,
+      "title": "Circadian Nutrition",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-5",
+      "lecture": 5,
+      "title": "Body Composition",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-6",
+      "lecture": 6,
+      "title": "Science Literacy",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-7",
+      "lecture": 7,
+      "title": "Genius Foods",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-7.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-lecture-8",
+      "lecture": 8,
+      "title": "Microbiome Mastery",
+      "path": "/assets/courses/NUTR-101/quizzes/lecture-8.json",
+      "questions": 5
+    },
+    {
+      "id": "nutr-101-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/NUTR-101/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}
