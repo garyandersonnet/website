@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-3",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Desire and Discipline",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "How should hunger best be understood, in Peterson's account?",
+      "choices": [
+        "A As a blind deterministic drive that removes all choice.",
+        "B As a sophisticated subpersonality/story that sets a goal (find food) and grips vision.",
+        "C As proof that free will does not exist.",
+        "D As identical to already having eaten."
+      ],
+      "answer": 1,
+      "cite": "3.8",
+      "explain": "Hunger isn't a mere deterministic drive; it's a sophisticated subpersonality/story that orients you toward food."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "What is socialization doing with basic biological motivations (e.g., toilet training)?",
+      "choices": [
+        "A Eliminating all biological needs forever.",
+        "B Integrating them into socially acceptable patterns so broader games can be played.",
+        "C Replacing hunger with shame only.",
+        "D Teaching children that needs don't exist."
+      ],
+      "answer": 1,
+      "cite": "3.18",
+      "explain": "Basic motivations must be integrated into socially acceptable behavior so other acceptable solutions can be implemented."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "Against a simple Freudian 'superego vs id' force model, what is he trying to offer children?",
+      "choices": [
+        "A Only punishment until instincts vanish.",
+        "B A better game—integration of lower-order motivations into a sophisticated personality.",
+        "C Total freedom with zero structure.",
+        "D Medical sedation as first-line parenting."
+      ],
+      "answer": 1,
+      "cite": "3.27",
+      "explain": "You're teaching sophisticated games that meet needs over the longest span—not mere inhibition of id by force."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "When is positive emotion (enthusiasm/hope) primarily experienced, relative to goals?",
+      "choices": [
+        "A Only after the goal is fully accomplished.",
+        "B In relationship to a goal—while moving toward it—not merely as a consequence of attainment.",
+        "C Only when you abandon all goals.",
+        "D Only during sleep."
+      ],
+      "answer": 1,
+      "cite": "3.86",
+      "explain": "Incentive reward/positive emotion fills life in relation to a goal, not just after accomplishment—so have a goal and steps."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "When training (a child or employee) hits an obstacle, what hierarchical move does he describe?",
+      "choices": [
+        "A Abandon the whole enterprise immediately.",
+        "B Decompose down the hierarchy to the minimal error, fix/practice it, then sequence back up.",
+        "C Yell the abstract command louder.",
+        "D Replace identity with a new name."
+      ],
+      "answer": 1,
+      "cite": "3.108",
+      "explain": "Hit an obstacle, decompose to the minimal error, rectify and practice, then reassemble upward while aiming up."
+    }
+  ]
+}
