@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-1",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "The Cell: Life's Basic Unit",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "Bikman defines biology as:",
+      "choices": [
+        "A Only the study of rocks and minerals.",
+        "B The study of life and living organisms, spanning cells to organisms.",
+        "C Exclusively computer science.",
+        "D Astrology applied to medicine."
+      ],
+      "answer": 1,
+      "cite": "1.2",
+      "explain": "Biology is the study of life and living organisms across levels."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "First criterion he lists for something being alive:",
+      "choices": [
+        "A It must cast a shadow.",
+        "B It must have at least one cell.",
+        "C It must be visible without a microscope.",
+        "D It must never metabolize."
+      ],
+      "answer": 1,
+      "cite": "1.8",
+      "explain": "Living things have one or more cells among the criteria of life."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "The nucleus's function he stresses is:",
+      "choices": [
+        "A Only making ATP directly.",
+        "B Containing DNA that stores genetic code, with roles in replication beginnings.",
+        "C Digesting food exclusively.",
+        "D Building cellulose walls in animals."
+      ],
+      "answer": 1,
+      "cite": "1.43",
+      "explain": "Nucleus contains DNA storing genetic code."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "Amphipathic phospholipids matter for membranes because:",
+      "choices": [
+        "A They dissolve only in air.",
+        "B They have dual water-loving/water-fearing character suited to bilayer membranes.",
+        "C They are pure carbohydrates.",
+        "D They cannot form barriers."
+      ],
+      "answer": 1,
+      "cite": "1.64",
+      "explain": "Amphipathic = regions with different affinities enabling membrane structure."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "Plant cells differ from animal cells partly by:",
+      "choices": [
+        "A Lacking eukaryotic status.",
+        "B A rigid cellulose wall wrapping a still semi-permeable cell—more rigid than a blobby animal cell.",
+        "C Having no DNA.",
+        "D Never using membranes."
+      ],
+      "answer": 1,
+      "cite": "1.92",
+      "explain": "Plant cells are eukaryotic but rigidified by cellulose."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-2",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Crossing the Cell Wall",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "Solvent versus solute:",
+      "choices": [
+        "A Solute is always the liquid; solvent is the dissolved particle.",
+        "B Solvent is the liquid doing the dissolving; solute is the dissolved molecule.",
+        "C They are identical terms.",
+        "D Only gases can be solvents."
+      ],
+      "answer": 1,
+      "cite": "2.3",
+      "explain": "Solvent dissolves; solute is dissolved."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "Along a concentration gradient, molecules tend to:",
+      "choices": [
+        "A Always move toward higher concentration spontaneously.",
+        "B Move down the gradient from higher to lower concentration.",
+        "C Refuse all motion.",
+        "D Only move if labeled radioactive."
+      ],
+      "answer": 1,
+      "cite": "2.5",
+      "explain": "Things move down their concentration gradient."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "Isotonic solution relative to a cell means:",
+      "choices": [
+        "A Outside always hyper-concentrated.",
+        "B Matched concentrations—no net osmosis; cell stays normal/round.",
+        "C Guaranteed lysis.",
+        "D Zero water permeability forever."
+      ],
+      "answer": 1,
+      "cite": "2.36",
+      "explain": "Iso- = equal tonicity; matched outside/inside."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "SGLT transporters in the intestine are:",
+      "choices": [
+        "A Only water channels.",
+        "B Sodium-glucose symporters moving glucose with sodium.",
+        "C Exclusive to the brain only.",
+        "D Destroyers of all glucose."
+      ],
+      "answer": 1,
+      "cite": "2.57",
+      "explain": "SGLT = sodium-glucose symports along intestinal lining."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "Phagocytosis refers to:",
+      "choices": [
+        "A Exporting only ions passively.",
+        "B A cell engulfing/eating something (phage = eating)—a form of endocytosis.",
+        "C DNA replication forks.",
+        "D Plant cellulose synthesis only."
+      ],
+      "answer": 1,
+      "cite": "2.78",
+      "explain": "Phagocytosis: cell encompasses material to take it in."
+    }
+  ]
+}

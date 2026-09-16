@@ -1,0 +1,54 @@
+{
+  "course": "BIO 101",
+  "quizzes": [
+    {
+      "id": "bio-101-lecture-1",
+      "lecture": 1,
+      "title": "The Cell: Life's Basic Unit",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-lecture-2",
+      "lecture": 2,
+      "title": "Crossing the Cell Wall",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-lecture-3",
+      "lecture": 3,
+      "title": "Biomolecules as Building Blocks",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-lecture-4",
+      "lecture": 4,
+      "title": "The Central Dogma",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-lecture-5",
+      "lecture": 5,
+      "title": "The Cell Cycle",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-lecture-6",
+      "lecture": 6,
+      "title": "Metabolic Mechanisms",
+      "path": "/assets/courses/BIO-101/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "bio-101-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/BIO-101/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}
