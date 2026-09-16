@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-2",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Mental Models and Sense-Making",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "Humans do not work like a perfect recording device because:",
+      "choices": [
+        "A We see ultraviolet and hear all dog frequencies.",
+        "B We sample limited sensations and construct perception—we don't see everything.",
+        "C Attention captures 100% of inputs always.",
+        "D Smell is unused."
+      ],
+      "answer": 1,
+      "cite": "2.4",
+      "explain": "Limited senses and selective attention; not a full recording."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "Sensation versus perception:",
+      "choices": [
+        "A Identical terms.",
+        "B Sensation is input via sensory apparatus; perception is the reintegrated experience we 'see.'",
+        "C Perception precedes all sensation always.",
+        "D Only ears do perception."
+      ],
+      "answer": 1,
+      "cite": "2.5",
+      "explain": "Sensation in; perception after neural reintegration."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "Pareidolia illustrates:",
+      "choices": [
+        "A Perfect accuracy on ambiguous objects.",
+        "B Seeing meaningful patterns (e.g., faces) in ambiguous stimuli.",
+        "C That dual-process theory is false.",
+        "D Only color blindness."
+      ],
+      "answer": 1,
+      "cite": "2.6",
+      "explain": "Ambiguous objects get meaningful interpretations—pareidolia."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "Availability-style jellyfish risk thinking shows:",
+      "choices": [
+        "A Media exposure never biases probability estimates.",
+        "B Vivid examples can warp odds judgments (dual-process/heuristic sense-making).",
+        "C Only System 2 ever runs.",
+        "D Sharks are irrelevant to realism talks."
+      ],
+      "answer": 1,
+      "cite": "2.31",
+      "explain": "Jellyfish movie vividness vs actual odds—heuristic distortion."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "Cognitive dissonance smoking classroom classic:",
+      "choices": [
+        "A Beliefs and behaviors never conflict.",
+        "B Holding conflicting cognitions (I smoke / smoking is bad) creates pressure to resolve.",
+        "C Only applies to earthquakes.",
+        "D Festinger studied only golf swings."
+      ],
+      "answer": 1,
+      "cite": "2.71",
+      "explain": "Smoking example of dissonance between knowledge and behavior."
+    }
+  ]
+}

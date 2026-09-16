@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-1",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "Roots of Psychology",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "Etymologically, psychology is:",
+      "choices": [
+        "A The study of only rodent mazes.",
+        "B Psyche (soul) + logos (rational study)—rational inquiry into the soul/human condition.",
+        "C A synonym for astrology.",
+        "D Only pharmaceutical sales."
+      ],
+      "answer": 1,
+      "cite": "1.2",
+      "explain": "Psyche + logos: rational study of the soul."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "Modern psychology's roots, he says, come primarily from:",
+      "choices": [
+        "A Only computer science and marketing.",
+        "B Medicine, physiology, and philosophy.",
+        "C Pure theology with no physiology.",
+        "D Sports coaching alone."
+      ],
+      "answer": 1,
+      "cite": "1.5",
+      "explain": "Roots in medicine, physiology, and philosophy."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "Plato's cave allegory is used to show:",
+      "choices": [
+        "A That shadows are the final truth forever.",
+        "B Moving from shadows to deeper reality—a metaphor for waking from limited models of the world.",
+        "C That philosophy forbids psychology.",
+        "D Only optical illusions in malls."
+      ],
+      "answer": 1,
+      "cite": "1.10",
+      "explain": "Turning from shadows to puppets/fire/sun models expanding knowledge."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "Who often gets credit for starting modern experimental psychology in his telling?",
+      "choices": [
+        "A Only Freud.",
+        "B Wilhelm Wundt—even if not Campbell's favorite.",
+        "C Skinner alone in 1990.",
+        "D Darwin as the first lab psychologist."
+      ],
+      "answer": 1,
+      "cite": "1.28",
+      "explain": "Wundt commonly credited with starting the ball rolling."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "His closing encouragement about science literacy:",
+      "choices": [
+        "A Only professionals may read papers.",
+        "B You can learn the science—read original research yourself; non-pros mainly lack liar-detection craft.",
+        "C Never read primary sources.",
+        "D Google Scholar is illegal."
+      ],
+      "answer": 1,
+      "cite": "1.113",
+      "explain": "Go read the original research and books yourself."
+    }
+  ]
+}

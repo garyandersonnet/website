@@ -1,0 +1,68 @@
+{
+  "course": "PSYC 101",
+  "quizzes": [
+    {
+      "id": "psyc-101-lecture-1",
+      "lecture": 1,
+      "title": "Roots of Psychology",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-2",
+      "lecture": 2,
+      "title": "Mental Models and Sense-Making",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-3",
+      "lecture": 3,
+      "title": "Psychology Throughout Life",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-4",
+      "lecture": 4,
+      "title": "Motivation and Maslow",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-5",
+      "lecture": 5,
+      "title": "The Self",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-6",
+      "lecture": 6,
+      "title": "Love and Attraction",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-7",
+      "lecture": 7,
+      "title": "Mental Health",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-7.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-lecture-8",
+      "lecture": 8,
+      "title": "Social Navigation",
+      "path": "/assets/courses/PSYC-101/quizzes/lecture-8.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-101-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/PSYC-101/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}
