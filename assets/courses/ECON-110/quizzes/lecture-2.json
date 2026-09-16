@@ -1,0 +1,74 @@
+{
+  "id": "econ-110-lecture-2",
+  "course": "ECON 110",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Lecture 2",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "Pillar six states every action has:",
+      "choices": [
+        "A Only intended effects.",
+        "B Unintended consequences—you can never do just one thing.",
+        "C No effects on others.",
+        "D Only benefits."
+      ],
+      "answer": 1,
+      "cite": "2.1",
+      "explain": "Unintended consequences."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "The English rat-bounty story illustrates that:",
+      "choices": [
+        "A Rats vanish instantly with no side effects.",
+        "B Incentives can backfire (people may breed/turn in rats for bounties).",
+        "C Markets always fail.",
+        "D Government never uses incentives."
+      ],
+      "answer": 1,
+      "cite": "2.2",
+      "explain": "Perverse bounty incentives."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "On Exxon Valdez-type liability changes, firms may respond by:",
+      "choices": [
+        "A Ignoring incentives entirely.",
+        "B Reassigning titles/parking ownership with outside parties to limit exposure.",
+        "C Increasing spills deliberately.",
+        "D Ending all shipping."
+      ],
+      "answer": 1,
+      "cite": "2.4",
+      "explain": "Legal incentives reshape ownership."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "On AI displacing jobs, his historical stance is workers will:",
+      "choices": [
+        "A Permanently face 100% unemployment.",
+        "B Find other work—history shows labor-force shifts even if future jobs aren’t named now.",
+        "C Never adapt.",
+        "D Only farm forever."
+      ],
+      "answer": 1,
+      "cite": "2.39",
+      "explain": "New work emerges historically."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "Southwest/PSA examples support the theme that airline competition:",
+      "choices": [
+        "A Requires monopoly to lower prices.",
+        "B Low-price carriers between cities show competitive entry disciplining markets.",
+        "C Proves regulation always raises output.",
+        "D Shows prices never fall."
+      ],
+      "answer": 1,
+      "cite": "2.49",
+      "explain": "Low-cost carrier competition."
+    }
+  ]
+}
