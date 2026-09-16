@@ -1,0 +1,528 @@
+{
+  "id": "phil-102-final",
+  "course": "PHIL 102",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Hicks’s motivational thesis at the start of Logic is best captured by which claim?",
+      "choices": [
+        "A Logic is impractical except as a puzzle game.",
+        "B For humans, mastering logic is the most practical mastery available.",
+        "C Physical speed matters more than mental method.",
+        "D Aristotle forbade calling logic a tool."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "He calls logic the most practical thing one can master."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "“Organon” in this course refers to:",
+      "choices": [
+        "A Plato’s dialogues about love.",
+        "B Aristotle’s logic books, named with the Greek for tool.",
+        "C A medieval tax on monks.",
+        "D The Asch visual-acuity apparatus."
+      ],
+      "answer": 1,
+      "cite": "1.8",
+      "explain": "Collectively Aristotle’s logic writings: tools of thinking."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Non-contradiction, in the formulation Hicks quotes, forbids:",
+      "choices": [
+        "A Using more than one premise.",
+        "B The same attribute belonging and not belonging to the same subject at once in the same respect.",
+        "C Hypothetical syllogisms.",
+        "D Counting speckles."
+      ],
+      "answer": 1,
+      "cite": "1.14",
+      "explain": "Metaphysics: not both F and not-F of the same subject, same time, same respect."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "Logicians, unlike a shouting match, require an argument to include:",
+      "choices": [
+        "A A conclusion plus premise(s) as reasons.",
+        "B Only insults ranked by volume.",
+        "C A majority vote.",
+        "D An electrical switch."
+      ],
+      "answer": 0,
+      "cite": "1.107",
+      "explain": "Conclusion = what to believe; premises = why."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "If premises match the facts but the inference is a non sequitur, Hicks would say the argument fails on:",
+      "choices": [
+        "A Truth of the components only.",
+        "B Validity (form), even if some statements are true.",
+        "C Latin pronunciation.",
+        "D Perceptual integration."
+      ],
+      "answer": 1,
+      "cite": "1.146",
+      "explain": "True bits can still be invalidly combined; validity is structural."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "Hicks quotes Voltaire on long arguments among the enlightened to highlight:",
+      "choices": [
+        "A That wit replaces conceptual clarity.",
+        "B The risk that the question itself is unclear.",
+        "C That sensations are already theories.",
+        "D That children cannot form percepts."
+      ],
+      "answer": 1,
+      "cite": "2.1",
+      "explain": "Fuzzy questions and equivocal words are an occupational hazard."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "Percepts stand in the hierarchy as:",
+      "choices": [
+        "A Integrations of sensations into object-awareness.",
+        "B The same thing as axioms of logic.",
+        "C Informal fallacies.",
+        "D Binary computer bits."
+      ],
+      "answer": 0,
+      "cite": "2.9",
+      "explain": "Sensations are bundled into percepts of objects."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "A toddler saying “dog” of several different animals is, for Hicks, using:",
+      "choices": [
+        "A A proper name.",
+        "B A class concept.",
+        "C A disjunctive syllogism.",
+        "D An appeal to force."
+      ],
+      "answer": 1,
+      "cite": "2.11",
+      "explain": "Not one percept’s name—an open class."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Counting a hen’s speckles illustrates that:",
+      "choices": [
+        "A Perception already includes exact cardinality.",
+        "B Number is a learned conceptual overlay, not a better look.",
+        "C Hens refute Aristotle.",
+        "D Concepts are innate at birth as full arithmetic."
+      ],
+      "answer": 1,
+      "cite": "2.14",
+      "explain": "You still see the hen the same; 872 is conceptual."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Before debating “Does God exist?” or “Is he a socialist?”, Hicks wants you first to:",
+      "choices": [
+        "A Take a majority poll.",
+        "B Clarify the concepts in play.",
+        "C Affirm the consequent.",
+        "D Shift the burden of proof."
+      ],
+      "answer": 1,
+      "cite": "2.37",
+      "explain": "Univocal concepts first, then arguments."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "Informal fallacies are “informal” here mainly because they:",
+      "choices": [
+        "A Cannot occur in induction.",
+        "B Crop up across many reasoning forms, not just one formal pattern.",
+        "C Are officially valid in the Organon.",
+        "D Require Latin names only."
+      ],
+      "answer": 1,
+      "cite": "3.2",
+      "explain": "Common bad patterns wherever you reason, not one specialized calculus."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "Turning up the car radio so you won’t hear a bad engine noise is Hicks’s comic case of:",
+      "choices": [
+        "A Modus ponens.",
+        "B Subjectivism: not wanting the problem, so treating it as absent.",
+        "C A sound syllogism.",
+        "D Constructive dilemma."
+      ],
+      "answer": 1,
+      "cite": "3.13",
+      "explain": "Policy of not wanting there to be engine trouble, so drowning the evidence."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "“Lots of people believe X, so X” is the fallacy of:",
+      "choices": [
+        "A Appeal to majority.",
+        "B Barbara.",
+        "C Enthymeme.",
+        "D Contraposition."
+      ],
+      "answer": 0,
+      "cite": "3.20",
+      "explain": "Others’ belief isn’t by itself your evidence."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "Dismissing Nietzsche’s arguments because “he went crazy” is offered as:",
+      "choices": [
+        "A A valid modus tollens.",
+        "B Ad hominem: attacking the person instead of the arguments.",
+        "C Begging the question by restatement.",
+        "D An inductive pasta test."
+      ],
+      "answer": 1,
+      "cite": "3.84",
+      "explain": "Later madness is treated as refuting earlier arguments that stand or fall on their own."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "Asch-style line experiments are brought in to illuminate why people fall for:",
+      "choices": [
+        "A Categorical Venn rules.",
+        "B Majority/conformity pressure even against what they can see.",
+        "C Hypothetical chain arguments.",
+        "D Semmelweis’s hospital wards."
+      ],
+      "answer": 1,
+      "cite": "3.36",
+      "explain": "Subjects often match the planted majority against visible differences."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "If your premise already contains the conclusion, Hicks’s name for the defect is:",
+      "choices": [
+        "A Affirming the consequent.",
+        "B Begging the question.",
+        "C Disjunctive syllogism.",
+        "D Speckled-hen perception."
+      ],
+      "answer": 1,
+      "cite": "4.5",
+      "explain": "You assumed what you set out to prove."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Redefining “Buddhist” as “whoever is virtuous,” then denying Singh is a Buddhist because he isn’t virtuous, is:",
+      "choices": [
+        "A A fair conceptual hierarchy.",
+        "B Question-begging by substituting a loaded definition.",
+        "C A pure hypothetical syllogism.",
+        "D Induction from a pasta pot."
+      ],
+      "answer": 1,
+      "cite": "4.18",
+      "explain": "Ordinary marks of being a Buddhist are replaced so the thesis can’t lose."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "You vouch for your friend who vouches for you to a banker. This models:",
+      "choices": [
+        "A Circular reasoning with no independent check.",
+        "B Soundness in Barbara.",
+        "C Modus ponens.",
+        "D Appeal to force."
+      ],
+      "answer": 0,
+      "cite": "4.26",
+      "explain": "Each supports the other; the officer has no outside verification."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "“Have you stopped beating your spouse?”-type traps are classified as:",
+      "choices": [
+        "A Complex (bundled) questions.",
+        "B Valid denying the consequent.",
+        "C Organon axioms.",
+        "D Percepts without sensations."
+      ],
+      "answer": 0,
+      "cite": "4.33",
+      "explain": "Yes and no each concede part of a smuggled pair of claims."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "“Prove that God does not exist, or my theism stands” is criticized as:",
+      "choices": [
+        "A Proper placement of the burden on the existence-claimant.",
+        "B Illegitimate burden-shifting / appeal to ignorance.",
+        "C A categorical I-proposition.",
+        "D A truth table with 16 rows."
+      ],
+      "answer": 1,
+      "cite": "4.143",
+      "explain": "The existence claim carries the initial evidential burden."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "How many premises does a syllogism have in this course’s usage?",
+      "choices": [
+        "A One.",
+        "B Two (plus a conclusion).",
+        "C Ten.",
+        "D Zero if it is sound."
+      ],
+      "answer": 1,
+      "cite": "5.3",
+      "explain": "Two premises and a conclusion; three families of syllogism."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "True premises plus a conclusion that does not follow yields:",
+      "choices": [
+        "A A sound argument.",
+        "B An unsound argument (invalid).",
+        "C An Organon.",
+        "D An Asch line."
+      ],
+      "answer": 1,
+      "cite": "5.23",
+      "explain": "Good information, botched reasoning: unsound."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "The medieval mnemonic Hicks mentions for the all-all-all valid mood is:",
+      "choices": [
+        "A Celarent.",
+        "B Barbara.",
+        "C Semmelweis.",
+        "D Voltaire."
+      ],
+      "answer": 1,
+      "cite": "5.17",
+      "explain": "That pattern is named Barbara—always valid as a form."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "Soundness requires:",
+      "choices": [
+        "A Popularity and Latin.",
+        "B True premises and valid form together.",
+        "C False premises and valid form only.",
+        "D Valid form regardless of truth, called “sound” anyway."
+      ],
+      "answer": 1,
+      "cite": "5.22",
+      "explain": "Neither virtue alone is enough; both make a sound argument."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "The middle term is the category that:",
+      "choices": [
+        "A Shows up in both premises as the link.",
+        "B Appears only after “therefore.”",
+        "C Must be “mammal.”",
+        "D Is the same as a consequent."
+      ],
+      "answer": 0,
+      "cite": "5.73",
+      "explain": "It is the term common to the two premises."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "The consequent of an if-then is:",
+      "choices": [
+        "A The clause after “then.”",
+        "B Always a middle term.",
+        "C Informal subjectivism.",
+        "D A pebble-count of goats."
+      ],
+      "answer": 0,
+      "cite": "6.5",
+      "explain": "After “then”; the if-clause is the antecedent."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "Modus ponens is another name for:",
+      "choices": [
+        "A Denying the antecedent.",
+        "B Affirming the antecedent.",
+        "C Affirming the consequent.",
+        "D Appeal to majority."
+      ],
+      "answer": 1,
+      "cite": "6.33",
+      "explain": "Valid mixed form: affirm the if-clause, draw the then-clause."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "“If you insult him he’ll be angry; he is angry; so you insulted him” is:",
+      "choices": [
+        "A Valid modus tollens.",
+        "B Invalid affirming the consequent.",
+        "C A sound Barbara.",
+        "D An enthymeme about umbrellas."
+      ],
+      "answer": 1,
+      "cite": "6.32",
+      "explain": "Anger has many causes; the consequent doesn’t uniquely prove the antecedent."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "No oxygen, therefore no fire—given “if fire then oxygen”—is:",
+      "choices": [
+        "A Denying the consequent (valid).",
+        "B Denying the antecedent (valid).",
+        "C Begging the question.",
+        "D A complex question."
+      ],
+      "answer": 0,
+      "cite": "6.30",
+      "explain": "Second premise denies the then-clause; fire is ruled out. Modus tollens."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "A pure hypothetical syllogism (“chain”) stays in if-then throughout and concludes by linking:",
+      "choices": [
+        "A The first antecedent to the last consequent.",
+        "B Two middle terms in predicate position.",
+        "C A celebrity to a product.",
+        "D Pasta to chlorophyll."
+      ],
+      "answer": 0,
+      "cite": "6.38",
+      "explain": "First if-clause chained through to the final then-clause."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Inclusive disjunction P v Q is true when:",
+      "choices": [
+        "A Both disjuncts are false.",
+        "B At least one disjunct is true.",
+        "C The argument is an ad hominem.",
+        "D Time has expired."
+      ],
+      "answer": 1,
+      "cite": "7.60",
+      "explain": "Fill the truth table: true if one or both sides hold."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "“If and only if” is unpacked as:",
+      "choices": [
+        "A Two hypotheticals: P→Q and Q→P.",
+        "B A single informal fallacy.",
+        "C Denying both antecedent and consequent.",
+        "D An inductive sample of 280."
+      ],
+      "answer": 0,
+      "cite": "7.30",
+      "explain": "Biconditional = both directions of if-then."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "Constructive dilemma combines an either-or with:",
+      "choices": [
+        "A Two affirming-the-antecedent (modus ponens) hypotheticals.",
+        "B Two ad hominems.",
+        "C A Venn diagram of three circles only.",
+        "D Wishful subjectivism."
+      ],
+      "answer": 0,
+      "cite": "7.92",
+      "explain": "Each disjunct has an if-then; you exit with a disjunction of consequents."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "Hicks connects propositional T/F to computing by noting that:",
+      "choices": [
+        "A Hegel already built the first chip.",
+        "B On/off switches can instantiate binary 1/0 as truth-values.",
+        "C Informal fallacies cannot be symbolized even in principle.",
+        "D Oxygen is a disjunction."
+      ],
+      "answer": 1,
+      "cite": "7.113",
+      "explain": "Electrical on/off maps onto the logical binary, enabling circuits."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "A short proof using MT then disjunctive syllogism (the Rochester/Toronto style reconstruction) shows that:",
+      "choices": [
+        "A Truth tables are the only legitimate method.",
+        "B Named valid patterns can extract hidden conclusions more economically than brute tables.",
+        "C Chain arguments are always invalid.",
+        "D Burden of proof always sits on the denier."
+      ],
+      "answer": 1,
+      "cite": "7.100",
+      "explain": "Modus tollens knocks out T; remaining disjunct R follows—creative use of stored valid forms."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "Induction, contrasted with the fuchsia/chlorophyll deduction, starts from:",
+      "choices": [
+        "A A universal already in hand.",
+        "B Particulars, then generalizes to a wider class.",
+        "C An insult to a speaker.",
+        "D A biconditional alone."
+      ],
+      "answer": 1,
+      "cite": "8.5",
+      "explain": "280 liars → claim about chronic liars as a class."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "Tasting one noodle and judging the pot is Hicks’s everyday picture of:",
+      "choices": [
+        "A Deductive certainty from “all.”",
+        "B Inductive generalization from a particular.",
+        "C Affirming the consequent.",
+        "D Complex questions."
+      ],
+      "answer": 1,
+      "cite": "8.10",
+      "explain": "You don’t test each piece; you generalize—then he warns about bad generalizations."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "Walking under a ladder then twisting an ankle is a cautionary case of:",
+      "choices": [
+        "A A well-controlled experiment.",
+        "B A reckless causal generalization.",
+        "C Barbara.",
+        "D Modus ponens."
+      ],
+      "answer": 1,
+      "cite": "8.15",
+      "explain": "One coincidence treated as cause—induction gone off the rails."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "Hicks’s methodological moral about inductive confidence is:",
+      "choices": [
+        "A Demand the same necessity you get in deduction, immediately.",
+        "B Allow cautious, increasing generalization rather than instant certainty.",
+        "C Never generalize from pasta.",
+        "D Treat all induction as informal fallacies."
+      ],
+      "answer": 1,
+      "cite": "8.30",
+      "explain": "Certainty isn’t the right immediate standard for all inductive work."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "Semmelweis noticing matching symptoms in a colleague is an example of:",
+      "choices": [
+        "A Closed deduction with no new observation.",
+        "B Discovery that feeds and revises an observational/conceptual scheme.",
+        "C Appeal to majority among priests.",
+        "D Shifting the burden of proof about God."
+      ],
+      "answer": 1,
+      "cite": "8.120",
+      "explain": "New observation (Kolletschka) inside categories already in play, opening the next hypothesis."
+    }
+  ]
+}

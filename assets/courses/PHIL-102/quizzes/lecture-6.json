@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-6",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "Deduction: Hypothetical & Disjunctive Syllogisms",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "In a hypothetical (if-then) proposition, the antecedent is:",
+      "choices": [
+        "A The part after “then.”",
+        "B The part between “if” and “then.”",
+        "C Always a disjunction.",
+        "D The Latin name for an invalid mood."
+      ],
+      "answer": 1,
+      "cite": "6.5",
+      "explain": "If–antecedent–then–consequent. Those labels also name the mixed argument forms."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "Affirming the antecedent (modus ponens) is the pattern:",
+      "choices": [
+        "A If P then Q; P; therefore Q — and it is valid.",
+        "B If P then Q; not P; therefore not Q — and it is valid.",
+        "C If P then Q; Q; therefore P — and it is valid.",
+        "D Either P or Q; P; therefore not Q always."
+      ],
+      "answer": 0,
+      "cite": "6.22",
+      "explain": "Second premise affirms the if-clause; you may draw the then-clause. Valid; later named modus ponens."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "Denying the antecedent is invalid because, in the Roberto example:",
+      "choices": [
+        "A Working hard is the only possible cause of tiredness.",
+        "B Not working hard does not rule out other ways of becoming tired.",
+        "C If-then sentences cannot be symbolized.",
+        "D It is identical to modus tollens."
+      ],
+      "answer": 1,
+      "cite": "6.26",
+      "explain": "Hard work is one route to tiredness; gym, sleeplessness, etc. can still make him tired."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "Denying the consequent (modus tollens) is illustrated by:",
+      "choices": [
+        "A If fire then oxygen; no oxygen; therefore no fire.",
+        "B If fire then oxygen; oxygen; therefore fire.",
+        "C If fire then oxygen; no fire; therefore no oxygen.",
+        "D Either fire or oxygen; fire; therefore oxygen."
+      ],
+      "answer": 0,
+      "cite": "6.28",
+      "explain": "If fire then oxygen; there is no oxygen; so there is no fire. Valid; called denying the consequent / modus tollens."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "Which mixed hypothetical forms receive Latin names here, and why does Hicks joke about the others?",
+      "choices": [
+        "A Only the invalid ones get Latin names because they are elite mistakes.",
+        "B Affirming the antecedent (modus ponens) and denying the consequent (modus tollens); the invalid pair are “so bad they don’t deserve a Latin name.”",
+        "C All six forms are called Barbara.",
+        "D Disjunctive syllogisms are all named modus ponens."
+      ],
+      "answer": 1,
+      "cite": "6.34",
+      "explain": "The two valid mixed forms get MP / MT; denying the antecedent and affirming the consequent do not get Latin honorifics."
+    }
+  ]
+}

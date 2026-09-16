@@ -1,0 +1,222 @@
+/* Shared practice-quiz overlay player (loaded from PHIL-102 for all courses). */
+
+.pa-quiz {
+  color: #2c2416;
+  padding: 0.15rem 0.15rem 0.35rem;
+}
+
+.pa-quiz__loading,
+.pa-quiz__error {
+  margin: 0.75rem 0.25rem;
+  color: rgba(44, 36, 22, 0.78);
+}
+
+.pa-quiz__error {
+  color: #7a2e2e;
+}
+
+.pa-quiz__hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem 0.85rem;
+  margin: 0 0 0.85rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(44, 36, 22, 0.16);
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.42);
+  font-size: 0.9rem;
+}
+
+.pa-quiz__hud-main,
+.pa-quiz__hud-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.85rem;
+}
+
+.pa-quiz__progress {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.pa-quiz__score,
+.pa-quiz__best {
+  color: rgba(44, 36, 22, 0.72);
+  font-variant-numeric: tabular-nums;
+}
+
+.pa-quiz__timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  min-width: 3.1rem;
+  text-align: center;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.4rem;
+  background: rgba(44, 36, 22, 0.08);
+}
+
+.pa-quiz__timer.is-low {
+  background: rgba(154, 42, 42, 0.16);
+  color: #7a2e2e;
+}
+
+.pa-quiz__mute {
+  border: 1px solid rgba(44, 36, 22, 0.25);
+  background: rgba(255, 255, 255, 0.5);
+  color: #2c2416;
+  border-radius: 0.45rem;
+  padding: 0.28rem 0.6rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.pa-quiz__mute:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.pa-quiz__cite {
+  margin: 0 0 0.65rem;
+  color: rgba(44, 36, 22, 0.68);
+  font-size: 0.88rem;
+}
+
+.pa-quiz__prompt {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.pa-quiz__choices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pa-quiz__choice {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(44, 36, 22, 0.18);
+  background: rgba(255, 255, 255, 0.48);
+  color: inherit;
+  border-radius: 0.55rem;
+  padding: 0.7rem 0.8rem;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1.4;
+}
+
+.pa-quiz__choice:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(44, 36, 22, 0.32);
+}
+
+.pa-quiz__choice:disabled {
+  cursor: default;
+}
+
+.pa-quiz__choice.is-correct {
+  border-color: rgba(47, 93, 58, 0.55);
+  background: rgba(47, 93, 58, 0.14);
+}
+
+.pa-quiz__choice.is-wrong {
+  border-color: rgba(122, 46, 46, 0.5);
+  background: rgba(122, 46, 46, 0.12);
+}
+
+.pa-quiz__letter {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  font-weight: 600;
+  color: rgba(44, 36, 22, 0.55);
+}
+
+.pa-quiz__feedback {
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(44, 36, 22, 0.14);
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.pa-quiz__feedback.is-ok {
+  border-color: rgba(47, 93, 58, 0.35);
+  background: rgba(47, 93, 58, 0.1);
+}
+
+.pa-quiz__feedback.is-bad {
+  border-color: rgba(122, 46, 46, 0.3);
+  background: rgba(122, 46, 46, 0.08);
+}
+
+.pa-quiz__nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.85rem;
+}
+
+.pa-quiz__next,
+.pa-quiz__copy {
+  border: 1px solid rgba(44, 36, 22, 0.25);
+  background: rgba(255, 255, 255, 0.5);
+  color: #2c2416;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.pa-quiz__next:hover,
+.pa-quiz__copy:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.pa-quiz__report h3 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.15rem;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.pa-quiz__final-score {
+  margin: 0 0 1rem;
+}
+
+.pa-quiz__misses {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.pa-quiz__misses li {
+  margin: 0 0 0.85rem;
+}
+
+.pa-quiz__misses p {
+  margin: 0.2rem 0;
+}
+
+.pa-quiz__miss-prompt {
+  font-weight: 600;
+}
+
+.pa-quiz__tutor-ask,
+.pa-quiz__cite-list,
+.pa-quiz__prompt-hint {
+  color: rgba(44, 36, 22, 0.75);
+}
+
+@media (max-width: 640px) {
+  .pa-quiz__hud {
+    font-size: 0.82rem;
+  }
+  .pa-quiz__choice {
+    padding: 0.6rem 0.65rem;
+  }
+}

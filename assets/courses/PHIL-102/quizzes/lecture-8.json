@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-8",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 8,
+  "title": "Induction & Open-Ended Discovery",
+  "questions": [
+    {
+      "id": "l8-q1",
+      "prompt": "The standard contrast Hicks draws at the opening of this session is between:",
+      "choices": [
+        "A Deductive reasoning and inductive reasoning.",
+        "B Ad hominem and modus ponens only.",
+        "C Geometry and music.",
+        "D Validity and Latin grammar."
+      ],
+      "answer": 0,
+      "cite": "8.1",
+      "explain": "The course so far focused on deduction; this lecture turns to induction as the usual contrast."
+    },
+    {
+      "id": "l8-q2",
+      "prompt": "In his chlorophyll vs. liars contrast, the inductive move is:",
+      "choices": [
+        "A From a universal (“all plants…”) down to a particular fuchsia.",
+        "B From a sample of particulars (e.g. 280 chronic liars) out to a broader class.",
+        "C From an if-then to denying the antecedent.",
+        "D From a conclusion back to a premise indicator."
+      ],
+      "answer": 1,
+      "cite": "8.5",
+      "explain": "Deduction here goes from all plants to this plant; induction goes from 280 individuals to the whole class of chronic liars."
+    },
+    {
+      "id": "l8-q3",
+      "prompt": "The pasta-pot example is meant to show that induction is powerful because:",
+      "choices": [
+        "A You must taste every piece to know the pot is done.",
+        "B Tasting one (cooled) piece licenses a generalization to the rest of the pot.",
+        "C Pasta proves modus tollens.",
+        "D Generalizations cannot be false."
+      ],
+      "answer": 1,
+      "cite": "8.10",
+      "explain": "You generalize from a particular tasting; you needn’t test each piece—then the caution is when such leaps go wrong."
+    },
+    {
+      "id": "l8-q4",
+      "prompt": "Unlike a typical deduction as Hicks describes it, inductive arguments:",
+      "choices": [
+        "A Always contain the conclusion fully in the premises with certainty.",
+        "B Often cannot expect immediate certainty; generalization can be cautious and then stronger.",
+        "C Are identical to sound Barbara syllogisms.",
+        "D Are informal fallacies by definition."
+      ],
+      "answer": 1,
+      "cite": "8.30",
+      "explain": "Don’t demand certainty in all inductive arguments; you may generalize more cautiously, then more securely as study continues."
+    },
+    {
+      "id": "l8-q5",
+      "prompt": "The Semmelweis episode is used as a case of:",
+      "choices": [
+        "A Pure categorical deduction with no observation.",
+        "B Open-ended discovery: noticing a priest, then a colleague’s matching symptoms, inside an observational/categorical scheme.",
+        "C Appeal to majority among hospital administrators.",
+        "D Affirming the consequent as a valid computer circuit."
+      ],
+      "answer": 1,
+      "cite": "8.120",
+      "explain": "He sees Kolletschka with the same symptoms as the dying women—an observation inside the categories he’s using, driving hypothesis revision."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-7",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 7,
+  "title": "Propositional Logic",
+  "questions": [
+    {
+      "id": "l7-q1",
+      "prompt": "A “pure hypothetical” / chain argument, as Hicks sets it up, links:",
+      "choices": [
+        "A Only categorical A/E/I/O sentences.",
+        "B If P then Q, if Q then R, therefore if P then R (as many consistent links as needed).",
+        "C A majority’s beliefs to a conclusion.",
+        "D An insult to a person with a claim."
+      ],
+      "answer": 1,
+      "cite": "7.5",
+      "explain": "All constituent propositions are hypotheticals; P links to Q, Q to R, so P to R."
+    },
+    {
+      "id": "l7-q2",
+      "prompt": "Hicks symbolizes inclusive either-or with a wedge (v). “If and only if” is explained as:",
+      "choices": [
+        "A A single atomic category with no structure.",
+        "B If P then Q and if Q then P—two hypotheticals combined.",
+        "C Always equivalent to denying the antecedent.",
+        "D A type of informal subjectivism."
+      ],
+      "answer": 1,
+      "cite": "7.30",
+      "explain": "P iff Q unpacks as (if P then Q) and (if Q then P)."
+    },
+    {
+      "id": "l7-q3",
+      "prompt": "In the truth-functional treatment of “and,” which situation makes “Peter and Quincy are coming” false?",
+      "choices": [
+        "A Only when both come.",
+        "B When Quincy shows and Peter does not (and likewise other failures of both conjuncts).",
+        "C Never—conjunctions cannot be false.",
+        "D Only when the sentence is in Latin."
+      ],
+      "answer": 1,
+      "cite": "7.40",
+      "explain": "If one comes and the other doesn’t, or neither comes, the conjunction is false."
+    },
+    {
+      "id": "l7-q4",
+      "prompt": "The constructive dilemma, as labeled here, is essentially:",
+      "choices": [
+        "A Two modus ponens steps packaged with an either-or.",
+        "B An ad hominem against both disjuncts.",
+        "C Begging the question in 25 pages.",
+        "D Induction from pasta to all pasta."
+      ],
+      "answer": 0,
+      "cite": "7.92",
+      "explain": "Either P or R; if P then Q; if R then S; therefore Q or S—two affirming-the-antecedent moves together."
+    },
+    {
+      "id": "l7-q5",
+      "prompt": "Why can mapping true/false onto 1/0 matter practically, on Hicks’s account?",
+      "choices": [
+        "A It proves Hegel was a universal logician.",
+        "B Binary can be instantiated in on/off electrical switches, so logic underwrites computing hardware.",
+        "C It shows informal fallacies cannot be named.",
+        "D It replaces modus tollens with majority vote."
+      ],
+      "answer": 1,
+      "cite": "7.113",
+      "explain": "T/F ↔ 1/0 maps onto electrical switches on/off; combinations of lines and switches machine-represent logical structure."
+    }
+  ]
+}

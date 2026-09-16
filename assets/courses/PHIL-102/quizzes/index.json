@@ -1,0 +1,69 @@
+{
+  "course": "PHIL 102",
+  "source": "assets/transcripts/PHIL-102_transcript.pdf",
+  "quizzes": [
+    {
+      "id": "phil-102-lecture-1",
+      "lecture": 1,
+      "title": "Why Logic Matters",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-2",
+      "lecture": 2,
+      "title": "Concepts & Our Cognitive Hierarchy",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-3",
+      "lecture": 3,
+      "title": "Logical Fallacies",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-4",
+      "lecture": 4,
+      "title": "Fallacies & Cognitive Biases",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-5",
+      "lecture": 5,
+      "title": "Deduction: Categorical Syllogisms",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-6",
+      "lecture": 6,
+      "title": "Deduction: Hypothetical & Disjunctive Syllogisms",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-7",
+      "lecture": 7,
+      "title": "Propositional Logic",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-7.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-lecture-8",
+      "lecture": 8,
+      "title": "Induction & Open-Ended Discovery",
+      "path": "/assets/courses/PHIL-102/quizzes/lecture-8.json",
+      "questions": 5
+    },
+    {
+      "id": "phil-102-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/PHIL-102/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}

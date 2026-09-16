@@ -1,0 +1,74 @@
+{
+  "id": "phil-102-lecture-4",
+  "course": "PHIL 102",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "Fallacies & Cognitive Biases",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "Begging the question, in the simple form Hicks starts with, means:",
+      "choices": [
+        "A Asking a polite question before arguing.",
+        "B Assuming in a premise the very thing you are trying to conclude.",
+        "C Using a timer on a final exam.",
+        "D Citing a majority as independent evidence."
+      ],
+      "answer": 1,
+      "cite": "4.5",
+      "explain": "You haven’t earned the conclusion; you assumed it in a premise, so the “argument” is too easy."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "“Capital punishment is justified because there are good reasons for putting people to death” is begging the question, on Hicks’s analysis, because:",
+      "choices": [
+        "A It uses a premise indicator incorrectly.",
+        "B “Capital punishment” and “putting people to death,” and “justified” and “good reasons,” restate the same content.",
+        "C It is a valid Barbara syllogism.",
+        "D It denies the antecedent."
+      ],
+      "answer": 1,
+      "cite": "4.10",
+      "explain": "The phrases pair as synonyms; the argument repeats itself rather than adding independent support."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "Circular reasoning, as distinguished here, fails because:",
+      "choices": [
+        "A Every chain of A→B→C→D is automatically valid.",
+        "B The support goes around a closed loop with no independent facts outside the circle.",
+        "C Bank officers are informal fallacies.",
+        "D It always uses the word “because.”"
+      ],
+      "answer": 1,
+      "cite": "4.20",
+      "explain": "A proves B … eventually D proves A, with nothing independent underwriting the whole circle."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "A complex question such as “Do you still gamble away your paycheck every Friday night?” is fallacious here because:",
+      "choices": [
+        "A It is a yes/no bundle of a past claim and a present claim you cannot fairly answer as one.",
+        "B It is a valid disjunctive syllogism.",
+        "C Gambling is a categorical proposition of type A.",
+        "D It quotes Voltaire."
+      ],
+      "answer": 0,
+      "cite": "4.33",
+      "explain": "Two questions (did you in the past? do you still?) are bundled; yes or no each smuggles an admission."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "Shifting the burden of proof by saying “God exists—now you prove God does not” is, on Hicks’s closing account:",
+      "choices": [
+        "A A legitimate appeal to ignorance.",
+        "B An illegitimate shift: the existence claim bears the initial burden of evidence.",
+        "C A sound categorical syllogism.",
+        "D Required by Asch’s conformity studies."
+      ],
+      "answer": 1,
+      "cite": "4.143",
+      "explain": "The person making the existence claim must put evidence up; demanding the other prove non-existence is an appeal to ignorance / burden shift."
+    }
+  ]
+}
