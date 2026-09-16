@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-5",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "Faith in Tragedy",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "In his reading of Job, what makes a tragedy more than 'bad things happen'?",
+      "choices": [
+        "A Comedy mixed with slapstick.",
+        "B Terrible things happening in an unjust way—especially worst things to the least deserving.",
+        "C Any inconvenience at an airport.",
+        "D Losing a game you deserved to lose."
+      ],
+      "answer": 1,
+      "cite": "5.4",
+      "explain": "Tragedy is unjust suffering; the ultimate tragedy is the worst happening to the least deserving."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "What does the book Ordinary Men illustrate about ordinary people and evil?",
+      "choices": [
+        "A Only lifelong sadists commit atrocities.",
+        "B Step by step, ordinary middle-aged policemen can become perpetrators of horrific acts.",
+        "C Propaganda never influences behavior.",
+        "D Leaving when ordered to stay is impossible for humans."
+      ],
+      "answer": 1,
+      "cite": "5.18",
+      "explain": "Ordinary Men shows ordinary policemen going along, step by step, until they become worst murderers—relevant to you."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "What Solzhenitsyn line does he cite about truth and totalitarianism?",
+      "choices": [
+        "A Lying more efficiently strengthens the state.",
+        "B One man who stops lying can bring down a totalitarian state.",
+        "C Truth is irrelevant under any government.",
+        "D Only armies, never individuals, matter."
+      ],
+      "answer": 1,
+      "cite": "5.24",
+      "explain": "He quotes Solzhenitsyn: one man who stops lying can bring down a totalitarian state—minor foolishnesses aren't trivial."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "In Cain and Abel, what contrast does he draw about sacrifice?",
+      "choices": [
+        "A Abel refuses all sacrifice; Cain invents capitalism.",
+        "B Abel represents proper sacrifice; Cain makes second-rate sacrifices (for reasons you must examine in yourself).",
+        "C Both brothers make identical offerings.",
+        "D Sacrifice is only about livestock prices."
+      ],
+      "answer": 1,
+      "cite": "5.30",
+      "explain": "Abel = proper sacrifice pattern; Cain = second-rate sacrifices—and you have your own reasons for cutting corners."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "What stance does Job take that Peterson presents as courageous rather than naive?",
+      "choices": [
+        "A Immediate nihilistic rejection of being.",
+        "B Refusing to lose faith in existence/God despite unjust misery—and assuming goodwill rather than bitter resentment.",
+        "C Celebrating injustice as a game.",
+        "D Pretending suffering never happened."
+      ],
+      "answer": 1,
+      "cite": "5.42",
+      "explain": "Job refuses the nihilistic conclusion despite unjust misery; the fitting attitude is courageous faith, not naive denial."
+    }
+  ]
+}
