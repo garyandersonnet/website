@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-2",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Satiety Superstars",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "What does he say is most important at the pattern level for health/longevity diets?",
+      "choices": [
+        "A Maximizing ultra-processed foods.",
+        "B Dietary pattern overall—healthy patterns are generally very low in ultra-processed foods.",
+        "C Only counting grams of salt.",
+        "D Eating identical macros for every person."
+      ],
+      "answer": 1,
+      "cite": "2.6",
+      "explain": "Dietary pattern is central; healthy longevity patterns are low in UPFs."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "On 'a calorie is a calorie,' his nuance is:",
+      "choices": [
+        "A Calories do not exist.",
+        "B Energy units are equal, but 100 kcal of fries is not the same biologically as 100 kcal of eggs.",
+        "C Only fries provide usable energy.",
+        "D Eggs have zero calories."
+      ],
+      "answer": 1,
+      "cite": "2.9",
+      "explain": "Calorie units match, but food matrix and effects differ."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "Which trio does he call the major satiety superstars?",
+      "choices": [
+        "A Sugar, alcohol, and salt.",
+        "B Protein, fiber, and water.",
+        "C Only fat and caffeine.",
+        "D Artificial colors and emulsifiers."
+      ],
+      "answer": 1,
+      "cite": "2.53",
+      "explain": "Protein, fiber, and water; protein is the most satiating macronutrient."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "Fat-soluble vitamins he flags to ingest with fat are:",
+      "choices": [
+        "A B vitamins only.",
+        "B A, E, D, and K.",
+        "C Vitamin C and folate only.",
+        "D None—fat blocks absorption."
+      ],
+      "answer": 1,
+      "cite": "2.41",
+      "explain": "A, E, D, and K should be taken with food/fat."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "Magnesium matters because:",
+      "choices": [
+        "A It is unused in human metabolism.",
+        "B It is a cofactor in hundreds (about 300+) of processes; many adults underconsume it.",
+        "C Only athletes need it once yearly.",
+        "D It replaces all protein needs."
+      ],
+      "answer": 1,
+      "cite": "2.33",
+      "explain": "Cofactor in hundreds of processes; about half of adults do not get enough."
+    }
+  ]
+}
