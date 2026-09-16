@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-3",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Biomolecules as Building Blocks",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "What do proteins, lipids, carbs, and nucleic acids share as organic biomolecules?",
+      "choices": [
+        "A They contain no carbon.",
+        "B They are built around carbon.",
+        "C They are only metals.",
+        "D They never polymerize."
+      ],
+      "answer": 1,
+      "cite": "3.4",
+      "explain": "Organic biomolecules are carbon-based."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "Carbohydrate name hints at composition:",
+      "choices": [
+        "A Only nitrogen and gold.",
+        "B Carbon plus hydrate (oxygen/hydrogen related to water).",
+        "C Pure lipid chains.",
+        "D Only phosphate."
+      ],
+      "answer": 1,
+      "cite": "3.7",
+      "explain": "Carbo + hydrate points to C with O/H water-related makeup."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "A protein is:",
+      "choices": [
+        "A single free glucose.",
+        "B A polymer/chain of amino acids.",
+        "C Only a triglyceride.",
+        "D A pure hydrocarbon gas."
+      ],
+      "answer": 1,
+      "cite": "3.31",
+      "explain": "Protein = polymer of amino acids."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "Enzymes primarily help reactions by:",
+      "choices": [
+        "A Raising activation energy to infinity.",
+        "B Lowering the energy demand to break/form bonds—catalyzing otherwise hard reactions.",
+        "C Removing all substrates permanently.",
+        "D Replacing DNA."
+      ],
+      "answer": 1,
+      "cite": "3.67",
+      "explain": "Enzymes bring energy demand down to facilitate bond changes."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "Product inhibition example with hexokinase-like logic:",
+      "choices": [
+        "A Products never affect enzymes.",
+        "B Build-up of product (e.g., glucose 6-phosphate) can reduce the enzyme's effective activity—feedback.",
+        "C Enzymes only work once ever.",
+        "D Competition never occurs."
+      ],
+      "answer": 1,
+      "cite": "3.79",
+      "explain": "Affinity for product can feedback-inhibit when product accumulates."
+    }
+  ]
+}

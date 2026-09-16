@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-4",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "The Central Dogma",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "Central dogma is essentially:",
+      "choices": [
+        "A Protein → RNA → DNA only, never reversed as the main flow he teaches.",
+        "B Flow of genetic information DNA → RNA → protein (who you are via proteins).",
+        "C Only lipid metabolism.",
+        "D Random mutation without information flow."
+      ],
+      "answer": 1,
+      "cite": "4.2",
+      "explain": "DNA to RNA to protein defines the dogma's information flow."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "Who proposed the central dogma (as he notes)?",
+      "choices": [
+        "A Darwin in 1859.",
+        "B Francis Crick in 1958, after DNA structure work.",
+        "C Mendel alone in the 1600s.",
+        "D Pasteur only."
+      ],
+      "answer": 1,
+      "cite": "4.3",
+      "explain": "Crick proposed the central dogma in 1958."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "Genotype versus phenotype analogy:",
+      "choices": [
+        "A Phenotype is only the DNA sequence.",
+        "B Genotype is the genetic blueprint; phenotype is the physical manifestation.",
+        "C They are unrelated to proteins.",
+        "D Phenotype never involves environment at all in his wording."
+      ],
+      "answer": 1,
+      "cite": "4.6",
+      "explain": "Blueprints vs built house: genotype vs phenotype."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "A gene is:",
+      "choices": [
+        "A Any random chromosome break.",
+        "B A DNA sequence that encodes a particular product.",
+        "C Only an entire genome.",
+        "D A lipid droplet."
+      ],
+      "answer": 1,
+      "cite": "4.9",
+      "explain": "Gene = DNA sequence encoding a product."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "Semi-conservative DNA replication means:",
+      "choices": [
+        "A Both strands are always brand-new with no parental DNA kept.",
+        "B Each new duplex keeps one original strand passed down as replication continues.",
+        "C RNA replaces DNA entirely each hour.",
+        "D No polymerase is involved."
+      ],
+      "answer": 1,
+      "cite": "4.25",
+      "explain": "Original strands persist through generations of replication in the semi-conservative model."
+    }
+  ]
+}

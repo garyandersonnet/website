@@ -1,0 +1,74 @@
+{
+  "id": "bio-101-lecture-5",
+  "course": "BIO 101",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "The Cell Cycle",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "Humans have how many matched homologous chromosome pairs (as he states)?",
+      "choices": [
+        "A 12 pairs only.",
+        "B 23 matched/homologous pairs (one of each from mother and father).",
+        "C 46 pairs of identical clones.",
+        "D 1 chromosome total."
+      ],
+      "answer": 1,
+      "cite": "5.5",
+      "explain": "23 homologous pairs."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "Growth of the body mainly combines:",
+      "choices": [
+        "A Only cell enlargement forever with no division.",
+        "B Cell growth/organelle preparation plus cell division (mitosis), among related processes.",
+        "C Only meiosis in skin.",
+        "D Zero chromosomal involvement."
+      ],
+      "answer": 1,
+      "cite": "5.11",
+      "explain": "Growth involves cells getting ready and dividing—not only size alone."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "Meiosis occurs in:",
+      "choices": [
+        "A All skin cells continuously.",
+        "B Gonads (testes/ovaries) in specialized cells for reproduction.",
+        "C Only plant leaves.",
+        "D Mitochondria exclusively."
+      ],
+      "answer": 1,
+      "cite": "5.41",
+      "explain": "Meiosis for reproduction in gonadal germline cells."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "Nondisjunction can yield:",
+      "choices": [
+        "A Only perfect 23 pairs always.",
+        "B Aneuploidy such as trisomy or monosomy depending on meiosis I/II errors.",
+        "C Guaranteed cancer only.",
+        "D Deletion of all DNA."
+      ],
+      "answer": 1,
+      "cite": "5.71",
+      "explain": "Nondisjunction → trisomy/monosomy aneuploidies."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "SRY on the Y chromosome:",
+      "choices": [
+        "A Encodes only hemoglobin.",
+        "B Is the sex-determining region that drives male developmental signals when present.",
+        "C Is found only on chromosome 21.",
+        "D Silences all hormones."
+      ],
+      "answer": 1,
+      "cite": "5.91",
+      "explain": "SRY = sex-determining region of Y."
+    }
+  ]
+}
