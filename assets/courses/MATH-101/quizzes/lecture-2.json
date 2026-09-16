@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-2",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 2,
+  "title": "Linear Equations",
+  "questions": [
+    {
+      "id": "l2-q1",
+      "prompt": "What form does Snellman give for a two-variable linear equation?",
+      "choices": [
+        "A Only y = x² + c.",
+        "B Something like ax + cy = d (numbers times two variables equal a number).",
+        "C Products of variables only, like xy = 1.",
+        "D Inequalities with three unknowns and no constants."
+      ],
+      "answer": 1,
+      "cite": "2.7",
+      "explain": "He writes two-variable linear equations as number×variable + number×variable = number (e.g., ax + cy = d)."
+    },
+    {
+      "id": "l2-q2",
+      "prompt": "Why does Snellman say the Cartesian coordinate system is named after Descartes?",
+      "choices": [
+        "A Descartes invented negative numbers.",
+        "B He married algebra with analytic geometry by graphing equations in a coordinate plane.",
+        "C He forbade graphing lines with slope.",
+        "D He replaced variables with Roman numerals."
+      ],
+      "answer": 1,
+      "cite": "2.13",
+      "explain": "Descartes connected algebra to analytic geometry via a coordinate system with origin and axes."
+    },
+    {
+      "id": "l2-q3",
+      "prompt": "How does Snellman instruct you to find the x-intercept of a linear equation?",
+      "choices": [
+        "A Set x = 0 and solve for y.",
+        "B Set y = 0 and solve for x.",
+        "C Always take the coefficient of x as the intercept.",
+        "D Intercepts cannot be found algebraically."
+      ],
+      "answer": 1,
+      "cite": "2.54",
+      "explain": "The x-intercept is where the graph meets the x-axis (y = 0), so set y = 0 and solve for x."
+    },
+    {
+      "id": "l2-q4",
+      "prompt": "How does Snellman characterize the slope of a line such as y = 2x − 4?",
+      "choices": [
+        "A Slope is always the constant term (−4).",
+        "B Slope is the tilt/rate of change, given as rise over run (here the coefficient 2).",
+        "C Slope is the product of the intercepts.",
+        "D Slope exists only for vertical lines."
+      ],
+      "answer": 1,
+      "cite": "2.60",
+      "explain": "He identifies slope with rise/run—change in y over change in x—and for y = 2x − 4 the slope is the coefficient of x."
+    },
+    {
+      "id": "l2-q5",
+      "prompt": "What is slope-intercept form, and why does Snellman say it is useful?",
+      "choices": [
+        "A ax + by + c = 0 only; it hides the slope.",
+        "B y = mx + b; it makes slope m and y-intercept b immediate for quick graphing.",
+        "C x = my + b; it forces horizontal lines only.",
+        "D Any equation without variables."
+      ],
+      "answer": 1,
+      "cite": "2.70",
+      "explain": "He presents slope-intercept form y = mx + b as a standard form that displays slope and intercept for easy graphing."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "course": "MATH 101",
+  "quizzes": [
+    {
+      "id": "math-101-lecture-1",
+      "lecture": 1,
+      "title": "Foundations of Algebra",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-2",
+      "lecture": 2,
+      "title": "Linear Equations",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-3",
+      "lecture": 3,
+      "title": "Rules of Exponents",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-4",
+      "lecture": 4,
+      "title": "Functions",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-5",
+      "lecture": 5,
+      "title": "Polynomials",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-6",
+      "lecture": 6,
+      "title": "Quadratics",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-7",
+      "lecture": 7,
+      "title": "Exponents & Logarithms",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-7.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-lecture-8",
+      "lecture": 8,
+      "title": "Linear Equation Systems",
+      "path": "/assets/courses/MATH-101/quizzes/lecture-8.json",
+      "questions": 5
+    },
+    {
+      "id": "math-101-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/MATH-101/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}

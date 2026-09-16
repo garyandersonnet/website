@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-5",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "Polynomials",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "How does Snellman define the degree of a polynomial?",
+      "choices": [
+        "A The number of terms, counting zeros.",
+        "B The highest power of x with a nonzero coefficient.",
+        "C Always equal to the constant term.",
+        "D The sum of all coefficients."
+      ],
+      "answer": 1,
+      "cite": "5.7",
+      "explain": "Degree = highest power of x that has a nonzero coefficient."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "What names does Snellman assign to degree 0, 1, 2, and 3 polynomials?",
+      "choices": [
+        "A Random, chaotic, spiral, fractal.",
+        "B Constants; linear; quadratics; cubics (then quartics, quintics, …).",
+        "C Only “lines” for every degree.",
+        "D Exponentials for degree 0 and logs for degree 3."
+      ],
+      "answer": 1,
+      "cite": "5.13",
+      "explain": "He names degree 0 constants, degree 1 linear, degree 2 quadratics, degree 3 cubics."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "Why must the leading coefficient of a claimed degree-2 polynomial be nonzero?",
+      "choices": [
+        "A Otherwise the polynomial becomes complex.",
+        "B If it is zero, the expression drops to lower degree (e.g., bx + c is degree 1).",
+        "C Leading coefficients are always imaginary.",
+        "D Degree ignores coefficients entirely."
+      ],
+      "answer": 1,
+      "cite": "5.12",
+      "explain": "If a = 0 in ax² + bx + c, you no longer have a genuine degree-2 polynomial."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "When multiplying polynomials, what underlying principle does Snellman say you are using?",
+      "choices": [
+        "A Only adding exponents of unlike bases.",
+        "B The distributive property—distribute each term into every term of the other factor.",
+        "C Canceling all middle terms automatically.",
+        "D Setting every coefficient to 1."
+      ],
+      "answer": 1,
+      "cite": "5.26",
+      "explain": "He stresses multiplication of polynomials rests on the distributive property."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "How does Snellman approach polynomial division conceptually?",
+      "choices": [
+        "A As unrelated to numerical long division.",
+        "B By abstracting the quotient/remainder ideas from ordinary arithmetic long division to polynomials.",
+        "C By always refusing remainders.",
+        "D By converting polynomials into logarithms first."
+      ],
+      "answer": 1,
+      "cite": "5.60",
+      "explain": "He explicitly takes arithmetic long-division principles and abstracts them to polynomials."
+    }
+  ]
+}

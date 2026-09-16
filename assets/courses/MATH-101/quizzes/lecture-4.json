@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-4",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "Functions",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "At root, how does Snellman describe a function?",
+      "choices": [
+        "A A process that may return many unrelated outputs for one input.",
+        "B A rule/machine that takes a valid input and produces an output.",
+        "C Any equation with two equals signs.",
+        "D A list of inequalities with no inputs."
+      ],
+      "answer": 1,
+      "cite": "4.5",
+      "explain": "He frames functions as take a valid input, do something, give an output."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "What is the domain of a function, in Snellman’s preferred wording?",
+      "choices": [
+        "A Always exactly the y-values on a graph.",
+        "B The entire set of valid inputs you are allowed to plug into f.",
+        "C Only the coefficient of x.",
+        "D The set of all undefined expressions."
+      ],
+      "answer": 1,
+      "cite": "4.24",
+      "explain": "Domain = entire set of valid inputs (“things you are allowed to plug into f”)."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "For g(x) = 1/x, what does Snellman conclude about the domain?",
+      "choices": [
+        "A All real numbers including 0.",
+        "B All nonzero real numbers (x ≠ 0).",
+        "C Only positive integers.",
+        "D Only x = 0."
+      ],
+      "answer": 1,
+      "cite": "4.28",
+      "explain": "Division by zero is invalid, so the domain excludes 0."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "For f(x) = x², what does Snellman say about the range?",
+      "choices": [
+        "A All real numbers, positive and negative.",
+        "B Outputs from 0 upward; you cannot get a negative by squaring a real.",
+        "C Only the single value 1.",
+        "D Exactly the same as the domain with no restriction."
+      ],
+      "answer": 1,
+      "cite": "4.40",
+      "explain": "Squaring reals cannot produce negatives; range is [0, ∞)."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "Which new arithmetic-like operation on functions does Snellman highlight beyond +, −, ×, ÷?",
+      "choices": [
+        "A Factorial of a function.",
+        "B Composition (feeding one function’s output into another).",
+        "C Matrix transposition of scalars.",
+        "D Taking absolute value of the domain only."
+      ],
+      "answer": 1,
+      "cite": "4.60",
+      "explain": "He introduces composition as a new operation not present in ordinary number arithmetic."
+    }
+  ]
+}

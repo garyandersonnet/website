@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-6",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "Quadratics",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "What caution does Snellman raise about claiming √1 = ±1 when solving x² = 1?",
+      "choices": [
+        "A Square root as a function must return one output; √1 = 1, while −1 is a separate algebraic solution of x² = 1.",
+        "B Negative solutions never exist for any equation.",
+        "C The square-root symbol always means both signs by definition of a function.",
+        "D You should discard the positive root."
+      ],
+      "answer": 0,
+      "cite": "6.22",
+      "explain": "Functions give one output for a valid input; √1 is 1. The equation x² = 1 still has two solutions via factoring/±."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "When factoring x² − 1 = 0, what structure does Snellman reverse-engineer?",
+      "choices": [
+        "A (x² − 1)(x² + 1) only.",
+        "B A product of linear factors (x − 1)(x + 1) whose product is zero.",
+        "C Three cubic factors.",
+        "D No factorization is possible."
+      ],
+      "answer": 1,
+      "cite": "6.26",
+      "explain": "He factors by seeking (x ± …)(x ± …) that multiply to the quadratic."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "What is “step zero/one” when Snellman outlines completing the square?",
+      "choices": [
+        "A Immediately take logarithms.",
+        "B Ensure the leading coefficient of x² is 1 (factor it out if needed), then work with b/2.",
+        "C Set b = 0 and ignore the linear term forever.",
+        "D Replace x with y without changing coefficients."
+      ],
+      "answer": 1,
+      "cite": "6.40",
+      "explain": "Make the x² coefficient 1, then compute b/2 as the start of completing the square."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "What does the quadratic formula allow, according to Snellman?",
+      "choices": [
+        "A Solving only degree-1 equations.",
+        "B Classifying/solving all solutions of ax² + bx + c = 0 (a ≠ 0).",
+        "C Finding domains of logarithms only.",
+        "D Eliminating the need for any algebraic check."
+      ],
+      "answer": 1,
+      "cite": "6.60",
+      "explain": "He presents the quadratic formula as the tool to solve general quadratic equations with a ≠ 0."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "How does Snellman push back on calling solutions with √(negative) merely “imaginary” nonsense?",
+      "choices": [
+        "A He agrees they have no real-world use.",
+        "B He notes applications (e.g., getting airplanes off the ground) show they are not mere fantasy.",
+        "C He bans them from the quadratic formula.",
+        "D He replaces them with Roman numerals."
+      ],
+      "answer": 1,
+      "cite": "6.75",
+      "explain": "He explains the historical label “imaginary” but stresses such numbers underpin real technology like flight."
+    }
+  ]
+}

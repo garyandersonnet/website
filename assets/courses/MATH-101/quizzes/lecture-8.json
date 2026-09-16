@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-8",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 8,
+  "title": "Linear Equation Systems",
+  "questions": [
+    {
+      "id": "l8-q1",
+      "prompt": "What is a solution to a system of equations, on Snellman’s definition?",
+      "choices": [
+        "A Any assignment that satisfies at least one equation.",
+        "B An assignment of the variables that satisfies every equation in the system simultaneously.",
+        "C The slope of the first equation only.",
+        "D A matrix with no entries."
+      ],
+      "answer": 1,
+      "cite": "8.23",
+      "explain": "A solution must satisfy all equations at once."
+    },
+    {
+      "id": "l8-q2",
+      "prompt": "For two lines in the plane, which solution types does Snellman say are possible?",
+      "choices": [
+        "A Exactly two distinct intersection points always.",
+        "B Unique intersection, infinitely many (same line), or none (parallel distinct lines).",
+        "C Only infinitely many, never unique.",
+        "D Exactly three solutions when slopes differ."
+      ],
+      "answer": 1,
+      "cite": "8.28",
+      "explain": "Two lines: one intersection, coincide everywhere, or parallel with no intersection."
+    },
+    {
+      "id": "l8-q3",
+      "prompt": "How do linear systems differ from quadratics in the number of solutions, per Snellman?",
+      "choices": [
+        "A Linear systems can have exactly two solutions like many quadratics.",
+        "B Linear systems only allow unique, none, or infinitely many—not “exactly two.”",
+        "C Quadratics never have solutions; linear systems always have five.",
+        "D Both always have exactly one solution."
+      ],
+      "answer": 1,
+      "cite": "8.31",
+      "explain": "He contrasts quadratics (which can have two roots) with linear systems’ trichotomy."
+    },
+    {
+      "id": "l8-q4",
+      "prompt": "What two solution methods does he demonstrate, and which does he call better for larger systems?",
+      "choices": [
+        "A Only graphing by hand; no algebra.",
+        "B Substitution first; then elimination (leading into matrices) as the better scalable method.",
+        "C Completing the square for every system.",
+        "D Taking logarithms of each coefficient."
+      ],
+      "answer": 1,
+      "cite": "8.35",
+      "explain": "After substitution he introduces elimination and matrices as the more powerful approach."
+    },
+    {
+      "id": "l8-q5",
+      "prompt": "What real-world relevance does Snellman claim for systems of linear equations?",
+      "choices": [
+        "A They are only historical curiosities.",
+        "B Modern GPS (and later fitting/regression ideas) rely on this kind of mathematics.",
+        "C They replace all exponential models.",
+        "D They forbid using more equations than variables."
+      ],
+      "answer": 1,
+      "cite": "8.22",
+      "explain": "He explicitly ties the topic to GPS technology on phones as motivation."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-1",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 1,
+  "title": "Foundations of Algebra",
+  "questions": [
+    {
+      "id": "l1-q1",
+      "prompt": "According to Snellman, how should we primarily think of mathematics (and algebra within it)?",
+      "choices": [
+        "A As a collection of memorized computational tricks with no interpretive role.",
+        "B As a language used to explain and model various phenomena.",
+        "C As a substitute for critical thinking in everyday life.",
+        "D As primarily Roman-numeral arithmetic preserved for tradition."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "Snellman opens by describing mathematics as a language for explaining things, with algebra playing an integral part."
+    },
+    {
+      "id": "l1-q2",
+      "prompt": "Whom does Snellman say people typically credit with laying foundational principles of algebra, and what related contribution does he highlight?",
+      "choices": [
+        "A Euclid alone, for Euclidean geometry with no number-system link.",
+        "B Mohamed Al-Khwarizmi; Snellman also ties our number system to the Arabic mathematical tradition.",
+        "C Newton, for inventing variables and inequalities.",
+        "D Descartes, for writing the book titled Algebra."
+      ],
+      "answer": 1,
+      "cite": "1.3",
+      "explain": "He attributes foundational algebra to Al-Khwarizmi and notes gratitude that our number system comes from Arabic mathematicians rather than Roman numerals."
+    },
+    {
+      "id": "l1-q3",
+      "prompt": "In Snellman’s algebraic vocabulary, what distinguishes an expression from an equation?",
+      "choices": [
+        "A An expression always has exactly two variables; an equation has one.",
+        "B An equation includes an equality; an expression does not assert equality.",
+        "C Expressions are only for wages; equations are only for geometry.",
+        "D There is no difference—he uses the words interchangeably."
+      ],
+      "answer": 1,
+      "cite": "1.23",
+      "explain": "He contrasts 1000+100x (expression) with 1000+100x=50 (equation), remembering that an equation has an equality."
+    },
+    {
+      "id": "l1-q4",
+      "prompt": "What is a variable, on Snellman’s account, and how rigid is the choice of symbol?",
+      "choices": [
+        "A A fixed physical object that must always be labeled x.",
+        "B A symbol representing an abstract quantity; the label (x, y, α, etc.) is conventional.",
+        "C A synonym for “expression” that forbids substitution.",
+        "D Only a placeholder for already-known numerical constants."
+      ],
+      "answer": 1,
+      "cite": "1.14",
+      "explain": "A variable is a symbol for an abstract quantity; he stresses you can call it x, y, z, gamma, and so on."
+    },
+    {
+      "id": "l1-q5",
+      "prompt": "When solving inequalities, what does Snellman emphasize about multiplying or dividing by a negative number?",
+      "choices": [
+        "A The inequality direction always stays the same.",
+        "B You must reverse (flip) the inequality direction.",
+        "C Inequalities become equations and the direction disappears.",
+        "D Negative multipliers are forbidden in algebra."
+      ],
+      "answer": 1,
+      "cite": "1.92",
+      "explain": "After isolating −2x ≥ 3, he notes that dividing by a negative flips the inequality; if the multiplier is positive, the direction stays the same."
+    }
+  ]
+}

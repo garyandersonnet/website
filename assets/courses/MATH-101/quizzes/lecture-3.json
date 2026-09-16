@@ -1,0 +1,74 @@
+{
+  "id": "math-101-lecture-3",
+  "course": "MATH 101",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Rules of Exponents",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "What does Snellman say about x raised to the 0 power (for nonzero x)?",
+      "choices": [
+        "A It equals 0.",
+        "B It equals 1; but 0⁰ is left undetermined (“I don’t know”).",
+        "C It equals x.",
+        "D It is always undefined for every x."
+      ],
+      "answer": 1,
+      "cite": "3.4",
+      "explain": "Nonzero bases to the 0 power give 1; he refuses to assign a value to 0⁰."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "When multiplying powers with the same base, what rule does Snellman emphasize?",
+      "choices": [
+        "A Multiply the exponents and add the bases.",
+        "B Add the exponents (same base).",
+        "C Subtract the bases and ignore exponents.",
+        "D Divide the exponents."
+      ],
+      "answer": 1,
+      "cite": "3.9",
+      "explain": "Moral of the story: same base, multiply → add exponents (e.g., 2²·2³ = 2⁵)."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "How does Snellman handle a quotient of powers with the same base?",
+      "choices": [
+        "A Add the exponents.",
+        "B Subtract the denominator’s exponent from the numerator’s: xᵐ/xⁿ = xᵐ⁻ⁿ.",
+        "C Multiply the exponents.",
+        "D The quotient is always 1."
+      ],
+      "answer": 1,
+      "cite": "3.10",
+      "explain": "He defines xᵐ/xⁿ as xᵐ⁻ⁿ by subtracting exponents."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "How does Snellman interpret a negative exponent such as x⁻¹?",
+      "choices": [
+        "A As always equal to −x.",
+        "B As the multiplicative inverse: x⁻¹ · x = 1 (e.g., 2⁻¹ = 1/2).",
+        "C As undefined for all positive x.",
+        "D As the square of x."
+      ],
+      "answer": 1,
+      "cite": "3.12",
+      "explain": "x⁻¹ is the multiplicative inverse of x; negative exponents correspond to reciprocals."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "What does Snellman identify fractional exponents of the form x^(1/n) with?",
+      "choices": [
+        "A Only negative integers.",
+        "B Roots—e.g., x^(1/2) is the square root of x.",
+        "C Logarithms base x.",
+        "D The degree of a polynomial."
+      ],
+      "answer": 1,
+      "cite": "3.43",
+      "explain": "He connects fractional exponents 1/n to roots; x to the one-half is the square root."
+    }
+  ]
+}

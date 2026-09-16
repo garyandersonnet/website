@@ -1,0 +1,528 @@
+{
+  "id": "math-101-final",
+  "course": "MATH 101",
+  "kind": "final",
+  "title": "Final Exam",
+  "questions": [
+    {
+      "id": "f-q1",
+      "prompt": "Snellman frames mathematics chiefly as which of the following?",
+      "choices": [
+        "A A closed list of formulas with no modeling role.",
+        "B A language for explaining and structuring phenomena.",
+        "C Pure memorization of Roman arithmetic.",
+        "D A ban on using symbols for quantities."
+      ],
+      "answer": 1,
+      "cite": "1.1",
+      "explain": "He presents mathematics as a language, with algebra central to that language."
+    },
+    {
+      "id": "f-q2",
+      "prompt": "Who is typically credited in the lecture with foundational algebra, alongside the Arabic number tradition Snellman praises?",
+      "choices": [
+        "A Al-Khwarizmi.",
+        "B Only Babylonian scribes with no named book.",
+        "C Gauss alone.",
+        "D Hilbert."
+      ],
+      "answer": 0,
+      "cite": "1.3",
+      "explain": "Foundational algebra is attributed to Al-Khwarizmi; number system gratitude goes to Arabic mathematicians."
+    },
+    {
+      "id": "f-q3",
+      "prompt": "Which pair correctly matches Snellman’s distinction?",
+      "choices": [
+        "A Expression asserts equality; equation never does.",
+        "B Equation has an equality; expression does not.",
+        "C Both require three variables.",
+        "D Neither may contain a variable."
+      ],
+      "answer": 1,
+      "cite": "1.23",
+      "explain": "Equation includes “=”; expression is a symbolic form without that assertion."
+    },
+    {
+      "id": "f-q4",
+      "prompt": "A variable, for Snellman, is best described as:",
+      "choices": [
+        "A A permanent physical widget.",
+        "B A symbol standing for an abstract quantity (name is conventional).",
+        "C Always the wage amount itself.",
+        "D Forbidden in inequalities."
+      ],
+      "answer": 1,
+      "cite": "1.14",
+      "explain": "Variables are symbols for abstract quantities; labels are arbitrary."
+    },
+    {
+      "id": "f-q5",
+      "prompt": "If you multiply/divide both sides of an inequality by a negative, Snellman requires you to:",
+      "choices": [
+        "A Leave the inequality direction unchanged.",
+        "B Reverse the inequality direction.",
+        "C Convert it into an absolute value.",
+        "D Discard the variable."
+      ],
+      "answer": 1,
+      "cite": "1.92",
+      "explain": "Negative scaling flips the inequality."
+    },
+    {
+      "id": "f-q6",
+      "prompt": "A two-variable linear equation in Snellman’s setup looks like:",
+      "choices": [
+        "A ax + cy = d with a, c, d numbers.",
+        "B Only x² + y² = 1.",
+        "C xy + x/y = 0 exclusively.",
+        "D Inequalities in five variables."
+      ],
+      "answer": 0,
+      "cite": "2.7",
+      "explain": "Standard form: linear combination of two variables equals a constant."
+    },
+    {
+      "id": "f-q7",
+      "prompt": "Descartes’s contribution emphasized in lecture 2 is:",
+      "choices": [
+        "A Replacing algebra with rhetoric.",
+        "B Linking algebra to geometry via a coordinate plane.",
+        "C Proving all lines have undefined slope.",
+        "D Inventing the quadratic formula."
+      ],
+      "answer": 1,
+      "cite": "2.13",
+      "explain": "Cartesian coordinates marry algebra and analytic geometry."
+    },
+    {
+      "id": "f-q8",
+      "prompt": "To find an x-intercept algebraically:",
+      "choices": [
+        "A Set x = 0.",
+        "B Set y = 0 and solve for x.",
+        "C Multiply slope by intercept.",
+        "D Use logarithms."
+      ],
+      "answer": 1,
+      "cite": "2.54",
+      "explain": "x-intercept ↔ y = 0."
+    },
+    {
+      "id": "f-q9",
+      "prompt": "Slope as “rise over run” means:",
+      "choices": [
+        "A Change in x over change in y only for vertical lines.",
+        "B Change in y divided by change in x (rate of tilt).",
+        "C Product of intercepts.",
+        "D Always equal to the y-intercept."
+      ],
+      "answer": 1,
+      "cite": "2.60",
+      "explain": "Rise = Δy, run = Δx."
+    },
+    {
+      "id": "f-q10",
+      "prompt": "Slope-intercept form is written:",
+      "choices": [
+        "A x = my + b only.",
+        "B y = mx + b, revealing slope m and y-intercept b.",
+        "C ax² + bx + c = 0.",
+        "D y − y1 = m(x − x1) exclusively, never y = mx + b."
+      ],
+      "answer": 1,
+      "cite": "2.70",
+      "explain": "He highlights y = mx + b for quick graphing."
+    },
+    {
+      "id": "f-q11",
+      "prompt": "For nonzero x, x⁰ equals:",
+      "choices": [
+        "A 0.",
+        "B 1.",
+        "C x.",
+        "D Undefined always."
+      ],
+      "answer": 1,
+      "cite": "3.4",
+      "explain": "Any nonzero to the 0 power is 1 (0⁰ unsettled)."
+    },
+    {
+      "id": "f-q12",
+      "prompt": "Same-base product rule for exponents:",
+      "choices": [
+        "A xᵐ · xⁿ = xᵐⁿ.",
+        "B xᵐ · xⁿ = xᵐ⁺ⁿ.",
+        "C xᵐ · xⁿ = xᵐ⁻ⁿ.",
+        "D xᵐ · xⁿ = (x + x)ᵐ⁺ⁿ."
+      ],
+      "answer": 1,
+      "cite": "3.9",
+      "explain": "Multiply same bases → add exponents."
+    },
+    {
+      "id": "f-q13",
+      "prompt": "Same-base quotient rule:",
+      "choices": [
+        "A xᵐ / xⁿ = xᵐ⁺ⁿ.",
+        "B xᵐ / xⁿ = xᵐ⁻ⁿ.",
+        "C xᵐ / xⁿ = xⁿ⁻ᵐ always only.",
+        "D Quotients of powers are illegal."
+      ],
+      "answer": 1,
+      "cite": "3.10",
+      "explain": "Divide → subtract exponents."
+    },
+    {
+      "id": "f-q14",
+      "prompt": "x⁻¹ means:",
+      "choices": [
+        "A −x.",
+        "B The multiplicative inverse 1/x.",
+        "C √x.",
+        "D x²."
+      ],
+      "answer": 1,
+      "cite": "3.12",
+      "explain": "Negative exponent denotes reciprocal/inverse."
+    },
+    {
+      "id": "f-q15",
+      "prompt": "x^(1/2) is identified with:",
+      "choices": [
+        "A log x.",
+        "B The square root of x.",
+        "C x/2.",
+        "D Degree 2 polynomials only."
+      ],
+      "answer": 1,
+      "cite": "3.43",
+      "explain": "Fractional exponent 1/n ↔ nth root."
+    },
+    {
+      "id": "f-q16",
+      "prompt": "A function, in Snellman’s machine metaphor:",
+      "choices": [
+        "A May map one valid input to many unrelated outputs freely.",
+        "B Takes valid input to an output via a rule.",
+        "C Is identical to an inequality.",
+        "D Forbids naming the rule."
+      ],
+      "answer": 1,
+      "cite": "4.5",
+      "explain": "Input → rule → output."
+    },
+    {
+      "id": "f-q17",
+      "prompt": "Domain means:",
+      "choices": [
+        "A Only plotted y-values.",
+        "B The set of valid inputs.",
+        "C The composition operator.",
+        "D Always R excluding nothing for 1/x."
+      ],
+      "answer": 1,
+      "cite": "4.24",
+      "explain": "Domain = valid inputs."
+    },
+    {
+      "id": "f-q18",
+      "prompt": "For 1/x, exclude from the domain:",
+      "choices": [
+        "A All positives.",
+        "B Zero.",
+        "C All negatives.",
+        "D Every integer."
+      ],
+      "answer": 1,
+      "cite": "4.28",
+      "explain": "x ≠ 0."
+    },
+    {
+      "id": "f-q19",
+      "prompt": "Range of x ↦ x² over the reals:",
+      "choices": [
+        "A All reals.",
+        "B [0, ∞).",
+        "C (−∞, 0).",
+        "D {1,2,3} only."
+      ],
+      "answer": 1,
+      "cite": "4.40",
+      "explain": "Squares of reals are nonnegative."
+    },
+    {
+      "id": "f-q20",
+      "prompt": "Composition of functions is:",
+      "choices": [
+        "A Ordinary addition of outputs only.",
+        "B Feeding one function’s output into another function.",
+        "C Forbidden in algebra.",
+        "D The same as dividing domains."
+      ],
+      "answer": 1,
+      "cite": "4.60",
+      "explain": "Composition is the new operation beyond ±×÷."
+    },
+    {
+      "id": "f-q21",
+      "prompt": "Degree of a polynomial is:",
+      "choices": [
+        "A Count of plus signs.",
+        "B Highest power with nonzero coefficient.",
+        "C Always 1.",
+        "D The constant term’s absolute value."
+      ],
+      "answer": 1,
+      "cite": "5.7",
+      "explain": "Highest nonzero-power term sets degree."
+    },
+    {
+      "id": "f-q22",
+      "prompt": "Degree 2 polynomials are called:",
+      "choices": [
+        "A Cubics.",
+        "B Quadratics.",
+        "C Quartics.",
+        "D Constants."
+      ],
+      "answer": 1,
+      "cite": "5.13",
+      "explain": "Degree 2 ↔ quadratics."
+    },
+    {
+      "id": "f-q23",
+      "prompt": "If the leading coefficient of an apparent quadratic is 0:",
+      "choices": [
+        "A Degree stays 2.",
+        "B Degree drops (no longer genuinely degree 2).",
+        "C It becomes exponential.",
+        "D It becomes undefined."
+      ],
+      "answer": 1,
+      "cite": "5.12",
+      "explain": "Leading coefficient must be nonzero to keep the claimed degree."
+    },
+    {
+      "id": "f-q24",
+      "prompt": "Multiplying polynomials fundamentally uses:",
+      "choices": [
+        "A Only cancellation of unlike terms.",
+        "B Distributivity across every term.",
+        "C Completing the square exclusively.",
+        "D Matrix inversion."
+      ],
+      "answer": 1,
+      "cite": "5.26",
+      "explain": "Distributive property drives polynomial multiplication."
+    },
+    {
+      "id": "f-q25",
+      "prompt": "Polynomial long division is presented as:",
+      "choices": [
+        "A Unrelated to numeric division.",
+        "B An abstraction of numeric quotient/remainder long division.",
+        "C Replacement by logarithms.",
+        "D Only possible for degree 0."
+      ],
+      "answer": 1,
+      "cite": "5.60",
+      "explain": "Same long-division principles lifted to polynomials."
+    },
+    {
+      "id": "f-q26",
+      "prompt": "Why is “√1 = ±1” the wrong reading of the square-root function?",
+      "choices": [
+        "A Because functions must give a single output; √1 = 1.",
+        "B Because 1 has no square root.",
+        "C Because negative numbers square to negatives.",
+        "D Because square roots are undefined at 1."
+      ],
+      "answer": 0,
+      "cite": "6.22",
+      "explain": "Single-valued square-root function vs. two algebraic solutions of x² = 1."
+    },
+    {
+      "id": "f-q27",
+      "prompt": "Factoring x² − 1 aims at writing it as:",
+      "choices": [
+        "A A sum of cubes only.",
+        "B A product of linear factors set to zero.",
+        "C An exponential.",
+        "D A logarithm."
+      ],
+      "answer": 1,
+      "cite": "6.26",
+      "explain": "Seek (x−1)(x+1)-style factorization."
+    },
+    {
+      "id": "f-q28",
+      "prompt": "Before completing the square, Snellman wants:",
+      "choices": [
+        "A Leading coefficient 1 (factor out if needed).",
+        "B Discriminant negative always.",
+        "C b removed permanently without adjusting.",
+        "D Conversion to logs."
+      ],
+      "answer": 0,
+      "cite": "6.40",
+      "explain": "Normalize a = 1, then use b/2."
+    },
+    {
+      "id": "f-q29",
+      "prompt": "The quadratic formula solves:",
+      "choices": [
+        "A Only linear equations.",
+        "B ax² + bx + c = 0 with a ≠ 0.",
+        "C Systems of five lines only.",
+        "D Domain questions for logs exclusively."
+      ],
+      "answer": 1,
+      "cite": "6.60",
+      "explain": "General quadratic solver when a ≠ 0."
+    },
+    {
+      "id": "f-q30",
+      "prompt": "Snellman’s take on “imaginary” numbers includes:",
+      "choices": [
+        "A They are useless historically and now.",
+        "B The name is historical; such quantities appear in real applications (e.g., flight).",
+        "C They contradict the quadratic formula.",
+        "D They equal Roman numerals."
+      ],
+      "answer": 1,
+      "cite": "6.75",
+      "explain": "He defends their reality via applications despite the name."
+    },
+    {
+      "id": "f-q31",
+      "prompt": "Doubling grains of rice square-by-square illustrates:",
+      "choices": [
+        "A Linear growth with slope 2.",
+        "B Exponential growth.",
+        "C Polynomial degree 0.",
+        "D A system with no solution."
+      ],
+      "answer": 1,
+      "cite": "7.13",
+      "explain": "Constant doubling → exponential function."
+    },
+    {
+      "id": "f-q32",
+      "prompt": "Allowed bases b for bˣ in his discussion exclude:",
+      "choices": [
+        "A All b > 1.",
+        "B b = 0 and b = 1 (and he uses 0<b<1 or b>1).",
+        "C Every fraction.",
+        "D b = 2."
+      ],
+      "answer": 1,
+      "cite": "7.16",
+      "explain": "Bases not 0 or 1; either (0,1) or >1."
+    },
+    {
+      "id": "f-q33",
+      "prompt": "log_b is introduced as:",
+      "choices": [
+        "A The derivative of bˣ.",
+        "B The inverse function of bˣ.",
+        "C Synonym for slope.",
+        "D A type of cubic polynomial."
+      ],
+      "answer": 1,
+      "cite": "7.45",
+      "explain": "Logs undo exponentials; log_b(bˣ) = x."
+    },
+    {
+      "id": "f-q34",
+      "prompt": "A key use of logarithms in solving equations is:",
+      "choices": [
+        "A Hiding the variable forever.",
+        "B Bringing exponents down to apply algebra.",
+        "C Forcing complex solutions only.",
+        "D Replacing all bases with 0."
+      ],
+      "answer": 1,
+      "cite": "7.50",
+      "explain": "Same-base log pulls the exponent out."
+    },
+    {
+      "id": "f-q35",
+      "prompt": "Domain of log_b is:",
+      "choices": [
+        "A (−∞, ∞).",
+        "B (0, ∞).",
+        "C (−∞, 0].",
+        "D {b} only."
+      ],
+      "answer": 1,
+      "cite": "7.70",
+      "explain": "Matches range of the exponential."
+    },
+    {
+      "id": "f-q36",
+      "prompt": "A solution of a linear system must:",
+      "choices": [
+        "A Satisfy one equation chosen at random.",
+        "B Satisfy every equation simultaneously.",
+        "C Be the slope of each line.",
+        "D Be undefined if there are two variables."
+      ],
+      "answer": 1,
+      "cite": "8.23",
+      "explain": "Simultaneous satisfaction of all equations."
+    },
+    {
+      "id": "f-q37",
+      "prompt": "Two distinct parallel lines as a system yield:",
+      "choices": [
+        "A Unique solution.",
+        "B Infinitely many solutions.",
+        "C No solution.",
+        "D Exactly two solutions."
+      ],
+      "answer": 2,
+      "cite": "8.30",
+      "explain": "Parallel distinct lines never meet → no solution."
+    },
+    {
+      "id": "f-q38",
+      "prompt": "Unlike many quadratics, linear systems do not allow:",
+      "choices": [
+        "A A unique solution.",
+        "B Exactly two solutions (as a separate case).",
+        "C No solution.",
+        "D Infinitely many solutions."
+      ],
+      "answer": 1,
+      "cite": "8.31",
+      "explain": "Trichotomy only: unique / none / infinitely many."
+    },
+    {
+      "id": "f-q39",
+      "prompt": "Elimination is highlighted because:",
+      "choices": [
+        "A Substitution always scales better to huge systems.",
+        "B It systematically removes variables and leads toward matrices/linear algebra.",
+        "C It requires completing the square.",
+        "D It only works for parallel lines."
+      ],
+      "answer": 1,
+      "cite": "8.35",
+      "explain": "Elimination + matrices as the powerful method."
+    },
+    {
+      "id": "f-q40",
+      "prompt": "Snellman motivates systems partly by noting:",
+      "choices": [
+        "A GPS technology uses this mathematics.",
+        "B Phones forbid linear algebra.",
+        "C Systems are unrelated to fitting curves.",
+        "D Only pure number theory uses them."
+      ],
+      "answer": 0,
+      "cite": "8.22",
+      "explain": "He cites phone GPS as a concrete relevance hook."
+    }
+  ]
+}
