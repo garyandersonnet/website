@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "assets/courses.json.zlib.b64"
+      - "assets/courses/parts/*.json"
       - ".github/workflows/inflate-courses.yml"
 permissions:
   contents: write
@@ -12,19 +13,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decode zlib.b64 to courses.json
+      - name: Assemble courses.json from catalog parts
         run: |
           python3 - <<'PY'
-          import base64, zlib, pathlib
-          b64 = pathlib.Path("assets/courses.json.zlib.b64").read_text().strip()
-          raw = zlib.decompress(base64.b64decode(b64))
-          pathlib.Path("assets/courses.json").write_bytes(raw)
-          print("wrote", len(raw), "bytes")
+          import base64
+          import json
+          import pathlib
+          import zlib
+
+          assets = pathlib.Path("assets")
+          catalog = assets / "courses.json"
+          parts_dir = assets / "courses" / "parts"
+          names = ["sem-1.json", "sem-2.json", "sem-3.json", "sem-4.json", "sem-5.json", "sem-6.json", "sem-other.json"]
+          parts = [parts_dir / name for name in names]
+
+          if all(path.exists() for path in parts):
+              courses = []
+              for path in parts:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+                  if not isinstance(data, list):
+                      raise ValueError(f"{path} must contain a JSON array")
+                  courses.extend(data)
+              catalog.write_text(json.dumps(courses, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+              print(f"assembled {len(courses)} courses from {len(parts)} parts")
+          elif (assets / "courses.json.zlib.b64").exists():
+              encoded = (assets / "courses.json.zlib.b64").read_text(encoding="utf-8").strip()
+              raw = zlib.decompress(base64.b64decode(encoded))
+              catalog.write_bytes(raw)
+              print("wrote", len(raw), "bytes from zlib.b64")
+          else:
+              raise FileNotFoundError("course parts and assets/courses.json.zlib.b64 are both unavailable")
           PY
       - name: Commit courses.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/courses.json
-          git diff --staged --quiet || git commit -m "Inflate full courses.json from zlib.b64"
+          git diff --staged --quiet || git commit -m "Assemble full courses.json from catalog parts"
           git push
