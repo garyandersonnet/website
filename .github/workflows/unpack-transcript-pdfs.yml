@@ -1,0 +1,42 @@
+name: Unpack transcript PDFs
+on:
+  push:
+    branches: [restore/transcript-pdfs]
+    paths:
+      - "assets/transcripts/_pack/**"
+      - ".github/workflows/unpack-transcript-pdfs.yml"
+  workflow_dispatch:
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: restore/transcript-pdfs
+          fetch-depth: 0
+      - name: Decode pack and commit PDFs
+        run: |
+          set -euo pipefail
+          if [ ! -d assets/transcripts/_pack ]; then
+            echo "No pack directory; nothing to do"
+            exit 0
+          fi
+          mkdir -p assets/transcripts
+          cat assets/transcripts/_pack/part-* | base64 -d | tar -xz -C assets/transcripts
+          rm -rf assets/transcripts/_pack
+          rm -f assets/transcripts/_encoding_smoke.bin assets/transcripts/_b64_probe.pdf assets/transcripts/.gitkeep
+          COUNT=$(ls assets/transcripts/*.pdf | wc -l)
+          echo "PDF count=$COUNT"
+          test -f assets/transcripts/PSYC-100_transcript.pdf
+          test "$COUNT" -ge 100
+          git config user.name "Grok Bot"
+          git config user.email "publiusnakamoto@hotmail.com"
+          git add -A assets/transcripts
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Restore assets/transcripts PDFs from All Transcripts — via Grok Bot"
+          git push origin HEAD:restore/transcript-pdfs
