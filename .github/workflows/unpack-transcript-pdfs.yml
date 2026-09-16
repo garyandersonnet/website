@@ -23,6 +23,9 @@ jobs:
             echo "No pack directory; nothing to do"
             exit 0
           fi
+          PARTS=$(ls assets/transcripts/_pack/part-* | wc -l)
+          echo "Pack parts=$PARTS"
+          test "$PARTS" -ge 100
           mkdir -p assets/transcripts
           cat assets/transcripts/_pack/part-* | base64 -d | tar -xz -C assets/transcripts
           rm -rf assets/transcripts/_pack
