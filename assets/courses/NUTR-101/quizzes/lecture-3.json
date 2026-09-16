@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-3",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 3,
+  "title": "Nutrition Standards",
+  "questions": [
+    {
+      "id": "l3-q1",
+      "prompt": "He urges shifting the old disease model from single nutrients in isolation toward:",
+      "choices": [
+        "A Ignoring food entirely.",
+        "B Foods and dietary patterns—we eat foods, not isolated nutrients.",
+        "C Only demonizing one nutrient forever.",
+        "D Supplements replacing all meals."
+      ],
+      "answer": 1,
+      "cite": "3.5",
+      "explain": "Move from single-nutrient demonization to foods and patterns."
+    },
+    {
+      "id": "l3-q2",
+      "prompt": "The Standard American Diet is typically high in:",
+      "choices": [
+        "A Only wild fish and olives.",
+        "B Added sugars, unhealthy fats, and refined grains (and often ultra-processed foods).",
+        "C Exclusive whole-food protein.",
+        "D Nothing linked to disease."
+      ],
+      "answer": 1,
+      "cite": "3.6",
+      "explain": "SAD: added sugars, unhealthy fats, refined grains."
+    },
+    {
+      "id": "l3-q3",
+      "prompt": "A practical check he likes for real food is:",
+      "choices": [
+        "A Only influencer endorsements.",
+        "B Could you recreate it in your own kitchen?—real foods are the ingredients.",
+        "C Preferring the longest ingredient list.",
+        "D Avoiding all home cooking."
+      ],
+      "answer": 1,
+      "cite": "3.61",
+      "explain": "Recreatability in your kitchen marks minimally processed food."
+    },
+    {
+      "id": "l3-q4",
+      "prompt": "Industrial seed oils are concerning partly because:",
+      "choices": [
+        "A Consumption has not changed in a century.",
+        "B Intake of some has risen enormously (e.g., about a thousandfold) versus historical baselines.",
+        "C They are identical to butter nutritionally always.",
+        "D They never appear in ultra-processed foods."
+      ],
+      "answer": 1,
+      "cite": "3.41",
+      "explain": "Some oil intakes are up on the order of 1000× versus ~100 years ago."
+    },
+    {
+      "id": "l3-q5",
+      "prompt": "The 'entourage effect' idea suggests:",
+      "choices": [
+        "A Isolated nutrients always outperform whole foods.",
+        "B Isolated nutrients can underperform relative to the food matrix's full compound context.",
+        "C Foods have no synergistic compounds.",
+        "D Only pills matter."
+      ],
+      "answer": 1,
+      "cite": "3.53",
+      "explain": "Isolated compounds can paradoxically underperform versus whole-food context."
+    }
+  ]
+}

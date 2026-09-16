@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-4",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 4,
+  "title": "Nutrient Timing",
+  "questions": [
+    {
+      "id": "l4-q1",
+      "prompt": "The primary circadian time setter he emphasizes is:",
+      "choices": [
+        "A Only caffeine timing.",
+        "B Light intensity via the eyes acting on the SCN (suprachiasmatic nucleus).",
+        "C Television volume.",
+        "D Shoe size."
+      ],
+      "answer": 1,
+      "cite": "4.6",
+      "explain": "Bright light to the eyes triggers the SCN and sets the ~24-hour cycle."
+    },
+    {
+      "id": "l4-q2",
+      "prompt": "Besides light, an important peripheral clock is:",
+      "choices": [
+        "A Only fingernail growth.",
+        "B The digestive system / meal timing as a peripheral time cue.",
+        "C Unused in humans.",
+        "D Only lunar phases."
+      ],
+      "answer": 1,
+      "cite": "4.8",
+      "explain": "Peripheral clocks—especially digestive—also set time cues."
+    },
+    {
+      "id": "l4-q3",
+      "prompt": "On intermittent fasting versus calorie control for weight:",
+      "choices": [
+        "A IF is always magically superior to calorie control.",
+        "B It does not seem superior to regular calorie control for weight/body composition.",
+        "C IF forbids all protein forever.",
+        "D Late-night eating always raises metabolic rate."
+      ],
+      "answer": 1,
+      "cite": "4.16",
+      "explain": "IF is not shown superior to ordinary calorie control for weight."
+    },
+    {
+      "id": "l4-q4",
+      "prompt": "The old 'anabolic window' myth claimed:",
+      "choices": [
+        "A Protein timing never matters for anyone.",
+        "B You must ingest protein immediately post-workout or gains are lost—an overstated urgency.",
+        "C Only carbs post-workout matter.",
+        "D Fasting after lifting is mandatory."
+      ],
+      "answer": 1,
+      "cite": "4.37",
+      "explain": "He critiques the idea that missing immediate post-workout protein nullifies the session."
+    },
+    {
+      "id": "l4-q5",
+      "prompt": "His closing timing advice prioritizes:",
+      "choices": [
+        "A Majoring in every timing hack.",
+        "B Overall diet quality first—do not major in the minors.",
+        "C Only pre-bed protein for everyone.",
+        "D Ignoring sleep entirely."
+      ],
+      "answer": 1,
+      "cite": "4.49",
+      "explain": "Do not major in the minors; overall quality dominates."
+    }
+  ]
+}

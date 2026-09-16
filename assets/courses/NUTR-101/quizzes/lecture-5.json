@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-5",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 5,
+  "title": "Dietary Tailoring",
+  "questions": [
+    {
+      "id": "l5-q1",
+      "prompt": "On food morality he stresses:",
+      "choices": [
+        "A Foods are inherently sinful or virtuous as moral agents.",
+        "B Food does not have moral value—you are not good or bad for eating outside a pattern occasionally.",
+        "C Guilt always improves adherence.",
+        "D Only vegan foods are moral."
+      ],
+      "answer": 1,
+      "cite": "5.3",
+      "explain": "Food lacks moral value; avoid guilt framing."
+    },
+    {
+      "id": "l5-q2",
+      "prompt": "Mediterranean diet, correctly understood in his telling:",
+      "choices": [
+        "A Is strictly a low-meat vegan template everywhere.",
+        "B Emphasizes whole foods and olive oil; is not simply a low-meat diet when you look at regions.",
+        "C Forbids olive oil.",
+        "D Was invented in 2010 only."
+      ],
+      "answer": 1,
+      "cite": "5.9",
+      "explain": "Often mislabeled low-meat; regional Mediterranean eating is not simply low-meat."
+    },
+    {
+      "id": "l5-q3",
+      "prompt": "During fat-loss dieting he says resistance training is crucial to:",
+      "choices": [
+        "A Maximize muscle loss.",
+        "B Signal the body to hold onto muscle while losing primarily fat.",
+        "C Replace all protein needs.",
+        "D Prove cardio is useless forever."
+      ],
+      "answer": 1,
+      "cite": "5.33",
+      "explain": "Keep resistance training so fat loss does not sacrifice muscle."
+    },
+    {
+      "id": "l5-q4",
+      "prompt": "NEAT in his fat-loss toolkit mainly means:",
+      "choices": [
+        "A Nightly eating after midnight.",
+        "B Non-exercise activity such as walking—high bang-for-buck energy burn.",
+        "C Only HIIT twice yearly.",
+        "D Net Electrolyte Absorption Theory."
+      ],
+      "answer": 1,
+      "cite": "5.49",
+      "explain": "NEAT ≈ walking and daily movement; a powerful adjunct."
+    },
+    {
+      "id": "l5-q5",
+      "prompt": "The best-diet myth-busting line he lands on is:",
+      "choices": [
+        "A There is one universal best diet for all humans.",
+        "B Best is what you can adhere to that nourishes, satiates, and fits your life.",
+        "C Fat-burning foods melt adipose magically.",
+        "D Women always get bulky from lifting."
+      ],
+      "answer": 1,
+      "cite": "5.58",
+      "explain": "Adherence plus nourishment and satiety beat a mythical single best diet."
+    }
+  ]
+}

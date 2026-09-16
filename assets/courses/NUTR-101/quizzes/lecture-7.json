@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-7",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 7,
+  "title": "Genius Foods",
+  "questions": [
+    {
+      "id": "l7-q1",
+      "prompt": "What startling metabolic-health statistic does he cite for US adults?",
+      "choices": [
+        "A Only 7% have any metabolic issue.",
+        "B About 93% of adults have some form of metabolic anomaly.",
+        "C Metabolic syndrome never clusters.",
+        "D Two-thirds have perfect labs."
+      ],
+      "answer": 1,
+      "cite": "7.3",
+      "explain": "About 93% have some metabolic anomaly; syndrome features raise disease risk."
+    },
+    {
+      "id": "l7-q2",
+      "prompt": "Visceral versus subcutaneous fat:",
+      "choices": [
+        "A Visceral fat is only under the skin of arms and legs.",
+        "B Subcutaneous is under-skin stored energy; visceral (deeper abdominal) is the more concerning depot he highlights.",
+        "C All fat is identical in risk.",
+        "D HDL creates visceral fat."
+      ],
+      "answer": 1,
+      "cite": "7.9",
+      "explain": "Subcutaneous vs visceral—abdominal/visceral fat is the metabolic concern."
+    },
+    {
+      "id": "l7-q3",
+      "prompt": "After resistance training, glucose handling includes:",
+      "choices": [
+        "A Insulin-independent glucose uptake—muscles act like a sponge for glucose.",
+        "B Complete inability to use glucose.",
+        "C Only liver uptake forever.",
+        "D Mandatory candy immediately."
+      ],
+      "answer": 0,
+      "cite": "7.17",
+      "explain": "Insulin-independent glucose uptake after training."
+    },
+    {
+      "id": "l7-q4",
+      "prompt": "Why list genius foods? The Tufts-related insight:",
+      "choices": [
+        "A Healthiest people buy infinite random SKUs weekly.",
+        "B Healthiest people bought a narrower set of foods on loop—so a short repeatable list helps.",
+        "C Variety for its own sake always wins.",
+        "D Only meal kits work."
+      ],
+      "answer": 1,
+      "cite": "7.59",
+      "explain": "Narrow repeatable healthy purchases beat sprawling carts."
+    },
+    {
+      "id": "l7-q5",
+      "prompt": "Exercise preference advice:",
+      "choices": [
+        "A Cardio-only people need no lifting; lifters need no cardio.",
+        "B Enjoy what you will sustain, but cardio-preferrers should add resistance and vice versa.",
+        "C Exercise never affects endothelium.",
+        "D Only ultramarathons count."
+      ],
+      "answer": 1,
+      "cite": "7.25",
+      "explain": "Complement cardio and resistance; sustain what you enjoy."
+    }
+  ]
+}

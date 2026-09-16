@@ -1,0 +1,74 @@
+{
+  "id": "nutr-101-lecture-6",
+  "course": "NUTR 101",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "Nutrition Controversies",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "Why is epidemiology alone insufficient for dietary causation claims?",
+      "choices": [
+        "A It always proves causation perfectly.",
+        "B It mainly shows correlation; confounders and absolute vs relative risk complicate headlines.",
+        "C Randomized trials never exist in nutrition.",
+        "D Correlation equals causation by definition."
+      ],
+      "answer": 1,
+      "cite": "6.3",
+      "explain": "Distinguish correlation from causation and how nutrition evidence is generated."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "Dietary cholesterol for most people:",
+      "choices": [
+        "A Fully determines blood cholesterol one-for-one.",
+        "B Has very little impact on blood cholesterol; limited bioavailability.",
+        "C Is the only driver of heart disease.",
+        "D Must be zero always."
+      ],
+      "answer": 1,
+      "cite": "6.16",
+      "explain": "Dietary cholesterol usually has little effect on blood cholesterol."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "Unhealthy fats in the population diet often come more from:",
+      "choices": [
+        "A Plain steaks and grilled fish alone.",
+        "B Mixed dishes like pizza, fast-food burgers, and lasagnas—not simply whole steaks.",
+        "C Only olive oil.",
+        "D Water."
+      ],
+      "answer": 1,
+      "cite": "6.19",
+      "explain": "Mixed and fast-food dishes supply most unhealthy fats."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "Plant defense compounds / hormetic phytochemicals are framed as:",
+      "choices": [
+        "A Always pure toxins to avoid forever.",
+        "B Often beneficial low-dose stressors (symbiotic phyto-adaptation), though individuals vary.",
+        "C Identical to essential amino acids.",
+        "D Only found in animal liver."
+      ],
+      "answer": 1,
+      "cite": "6.43",
+      "explain": "Low-dose plant compounds can stimulate adaptive benefit."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "On obesity and genes he concludes:",
+      "choices": [
+        "A Genes are the primary fixed cause with no behavioral response.",
+        "B Genes play a role but obesity is highly responsive to choices compared with some other conditions.",
+        "C Obesity never responds to diet.",
+        "D Only surgery matters."
+      ],
+      "answer": 1,
+      "cite": "6.50",
+      "explain": "Genes matter but are not primary; obesity is highly choice-responsive."
+    }
+  ]
+}
