@@ -1,1 +1,19 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peterson Academy — Publius Nakamoto</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+body{background:#f4ecd8;color:#2c2416}.catalog{max-width:72rem;margin:0 auto;padding:3rem 1rem}.catalog-toolbar{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}.catalog-search{padding:.65rem .9rem;border:1px solid #2c241633;border-radius:.5rem;background:#fff7}table{width:100%;border-collapse:collapse;background:#fff6;border:1px solid #2c241622;border-radius:.75rem;overflow:hidden}th,td{text-align:left;padding:.8rem;border-bottom:1px solid #2c241611}th{background:#2c24160f;color:#2c2416bb}td:first-child,td:nth-child(2){white-space:nowrap}.pa-link,.transcript-link{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem}.pa-link img{width:18px;height:18px;object-fit:contain}.empty{opacity:.2}.semester-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}.semester-nav button{padding:.5rem .8rem;border:1px solid #2c241633;border-radius:999px;background:#fff7;cursor:pointer}.semester-nav button.active{background:#2c241622;font-weight:600}@media(max-width:700px){.catalog{padding:.75rem}.catalog-table{overflow:auto}table{min-width:900px}}
+</style>
+</head>
+<body>
+<header><div class="catalog"><a href="/">Publius Nakamoto</a></div></header>
+<main class="catalog"><h1>Peterson Academy</h1><p>The full Peterson Academy course catalog.</p><div class="catalog-toolbar"><h2>Course catalog</h2><input id="catalog-search" class="catalog-search" type="search" placeholder="Search title, code, instructor…" autocomplete="off"></div><nav id="semester-nav" class="semester-nav" aria-label="Filter by semester"></nav><p id="catalog-status">Loading catalog…</p><div class="catalog-table"><table><thead><tr><th>Seq</th><th>Semester</th><th>Code</th><th>Title</th><th>Instructor</th><th>Transcript</th><th>Peterson Academy</th></tr></thead><tbody id="course-catalog"></tbody></table></div></main>
+<script>
+(function(){var rows=[],sem='all',q='';var body=document.getElementById('course-catalog'),status=document.getElementById('catalog-status'),search=document.getElementById('catalog-search'),nav=document.getElementById('semester-nav');function esc(v){return String(v==null?'':v).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]})}function render(){var out=rows.filter(function(r){return q||sem==='all'||(r.semester||'—')===sem}).filter(function(r){return !q||[r.sequence,r.semester,r.code,r.title,r.instructor,r.type].join(' ').toLowerCase().indexOf(q.toLowerCase())>-1});body.innerHTML=out.map(function(r){return '<tr><td>'+esc(r.sequence)+'</td><td>'+esc(r.semester||'—')+'</td><td>'+esc(r.code)+'</td><td>'+esc(r.title)+'</td><td>'+esc(r.instructor)+'</td><td>'+(r.transcript?'<a class="transcript-link" href="'+esc(r.transcript)+'" target="_blank" rel="noopener">PDF</a>':'<span class="empty">—</span>')+'</td><td>'+(r.paUrl?'<a class="pa-link" href="'+esc(r.paUrl)+'" target="_blank" rel="noopener" title="Open on Peterson Academy"><img src="/assets/pa-logo.png" alt="Peterson Academy"></a>':'<span class="empty">—</span>')+'</td></tr>'}).join('');status.textContent=out.length+' of '+rows.length+' courses';Array.prototype.forEach.call(nav.querySelectorAll('button'),function(b){b.classList.toggle('active',b.dataset.sem===sem&&!q)})}function buildNav(){['all','1','2','3','4','5','6','—'].forEach(function(s){var b=document.createElement('button');b.type='button';b.dataset.sem=s;b.textContent=s==='all'?'All':s;b.onclick=function(){sem=s;q='';search.value='';render()};nav.appendChild(b)})}search.oninput=function(){q=search.value.trim();render()};buildNav();fetch('/assets/courses.json').then(function(r){return r.json()}).then(function(v){rows=v;render()}).catch(function(){status.textContent='Could not load the course catalog.'})})();
+</script>
+</body>
+</html>
