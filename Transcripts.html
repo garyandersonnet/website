@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- deploy 2026-09-15-transcripts-separate-page -->
+<!-- deploy 2026-09-15-transcripts-sample-image -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -36,7 +36,11 @@
 <div class="max-w-3xl mx-auto px-4 py-12 space-y-8">
 <div>
 <h1 class="font-serif text-4xl mb-3">Make your own course transcript</h1>
-<p class="text-[#2c2416]/80 leading-relaxed">Build clean, numbered transcripts from <em>your</em> Peterson Academy enrollment. We don’t host PA copies here. The skill blocks below are the full skill files — select and copy/paste into Cursor (or a similar agent); you don’t need to open a separate .md.</p>
+<p class="text-[#2c2416]/80 leading-relaxed mb-4">Build clean, numbered transcripts from <em>your</em> Peterson Academy enrollment. We don’t host PA copies here. The skill blocks below are the full skill files — select and copy/paste into Cursor (or a similar agent); you don’t need to open a separate .md.</p>
+<figure class="rounded-xl border border-[#3a2f22]/15 bg-white overflow-hidden shadow-sm">
+<img src="/assets/transcript-numbered-sample.png" alt="Sample cleaned transcript page: lecture heading, At a glance box, and numbered paragraphs 1.1, 1.2, 1.3" class="w-full h-auto block" width="1200" loading="eager">
+<figcaption class="px-4 py-3 text-sm text-[#2c2416]/70 border-t border-[#3a2f22]/10">Example of what you get after cleanup — lecture title, an “At a glance” box, and paragraph numbers (1.1, 1.2, …) for study and AI use.</figcaption>
+</figure>
 </div>
 
 <div class="bg-card text-card-foreground flex flex-col gap-4 rounded-xl border py-6 shadow-sm">
@@ -115,7 +119,7 @@ Create a new Word copy of the attached course transcript with automatic paragrap
 
 ## PDF — not part of this skill for now
 
-Do not produce a PDF. The deliverable is the validated .docx only. Skipping PDF conversion is intentional — it keeps this step fast and low-cost. If a PDF is ever needed (e.g. for printing, where Word's automatic numbering may not render reliably), it is a separate, on-demand step run later by converting the final validated .docx (see the numbered-transcripts-to-pdf skill) — never rebuilt independently with reportlab or a from-scratch PDF renderer, which can silently drift out of sync with the Word file.
+Do not produce a PDF. The deliverable is the validated .docx only. Skipping PDF conversion is intentional — it keeps this step fast and low-cost in output quality. If a PDF is ever needed (e.g. for printing, where Word's automatic numbering may not render reliably), it is a separate, on-demand step run later by converting the final validated .docx (see the numbered-transcripts-to-pdf skill) — never rebuilt independently with reportlab or a from-scratch PDF renderer, which can silently drift out of sync with the Word file's numbering.
 
 ## Verification — proportional, not exhaustive
 
@@ -146,7 +150,7 @@ description: "Convert finished numbered-paragraph transcript Word files (.docx) 
 
 Convert already-finished numbered transcript Word documents (the `[... ] - Numbered Paragraphs.docx` files produced by the clean-course-transcript skill) into printable PDFs. Use this as a separate, on-demand step — for printing, or when a search tool cites paragraph numbers incorrectly from the .docx.
 
-The PDF must be produced by converting the actual validated .docx. Never render an independent PDF from scratch (e.g. with reportlab, weasyprint, or any from-scratch renderer) — a separately-built PDF can silently drift out of sync with the Word file's numbering, at-a-glance boxes, and layout.
+The PDF must be produced by converting the actual validated .docx. Never render an independent PDF from scratch (e.g. with reportlab, weasyprint, or any from-scratch renderer) — a separately-built PDF can silently drift out of sync with the .docx's numbering, at-a-glance boxes, and layout.
 
 ## Inputs
 
