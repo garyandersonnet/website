@@ -3,8 +3,8 @@ on:
   push:
     branches: [restore/transcript-pdfs]
     paths:
-      - "assets/transcripts/_pack/**"
       - ".github/workflows/unpack-transcript-pdfs.yml"
+      - "assets/transcripts/_pack/**"
   workflow_dispatch:
 jobs:
   unpack:
@@ -16,24 +16,23 @@ jobs:
         with:
           ref: restore/transcript-pdfs
           fetch-depth: 0
-      - name: Decode pack and commit PDFs
+      - name: Download and unpack transcript PDFs
+        env:
+          PACK_URL: https://6aaabf7f921e47fb8677490e--publiusnakamotonet.netlify.app/transcripts-108.tar.gz
+          PACK_SHA256: 67e3c6f74526680e518cd30725ab81c12d9905b5861855ff5934ca6450890df1
         run: |
           set -euo pipefail
-          if [ ! -d assets/transcripts/_pack ]; then
-            echo "No pack directory; nothing to do"
-            exit 0
-          fi
-          PARTS=$(ls assets/transcripts/_pack/part-* | wc -l)
-          echo "Pack parts=$PARTS"
-          test "$PARTS" -ge 100
           mkdir -p assets/transcripts
-          cat assets/transcripts/_pack/part-* | base64 -d | tar -xz -C assets/transcripts
+          curl -fsSL "$PACK_URL" -o /tmp/transcripts-108.tar.gz
+          echo "$PACK_SHA256  /tmp/transcripts-108.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/transcripts-108.tar.gz -C assets/transcripts
           rm -rf assets/transcripts/_pack
           rm -f assets/transcripts/_encoding_smoke.bin assets/transcripts/_b64_probe.pdf assets/transcripts/.gitkeep
           COUNT=$(ls assets/transcripts/*.pdf | wc -l)
           echo "PDF count=$COUNT"
           test -f assets/transcripts/PSYC-100_transcript.pdf
-          test "$COUNT" -ge 100
+          test "$COUNT" -eq 108
+          du -sh assets/transcripts
           git config user.name "Grok Bot"
           git config user.email "publiusnakamoto@hotmail.com"
           git add -A assets/transcripts
