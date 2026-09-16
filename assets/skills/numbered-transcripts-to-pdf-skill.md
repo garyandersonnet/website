@@ -36,14 +36,14 @@ Notes:
 
 ## Batch handling
 
-- For a folder or long list, convert in small groups and confirm each PDF exists on disk (`ls` the target) before moving on.
+- For a folder or long list, convert in small groups and confirm each expected `.pdf` exists on disk (`ls` the target) before moving on.
 - Skip a file if an up-to-date PDF already exists (same basename, newer than the .docx), unless the user asks to re-convert.
 - Report a short summary at the end: how many converted, skipped, and any that failed.
 
 ## Verification
 
 - After converting, confirm each expected `.pdf` exists and is non-empty.
-- Spot-check one PDF per batch by opening/rendering a couple of pages — the cover/TOC, a lecture-boundary page, and the densest-numbering page — to confirm the paragraph numbers, at-a-glance boxes, and gutter survived the conversion (Word's automatic numbering can render differently in PDF). If numbers are missing or clipped, flag it to the user rather than silently delivering — the fix is in the source `.docx`, not the PDF.
+- Spot-check one PDF per batch by opening/rendering a couple of pages — the cover/TOC, a lecture-boundary page, and the densest-numbering page — to confirm the paragraph numbers, at-a-glance boxes, and gutter survived the conversion (Word's automatic numbering can render differently in PDF). If numbers are missing or clipped, flag it to the user rather than silently delivering — the fix is in the source .docx, not the PDF.
 - Do not re-verify exhaustively; a spot-check per batch is enough.
 
 ## Delivery

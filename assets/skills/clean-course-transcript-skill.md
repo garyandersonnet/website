@@ -39,7 +39,7 @@ Create a new Word copy of the attached course transcript with automatic paragrap
 
 ## PDF — not part of this skill for now
 
-Do not produce a PDF. The deliverable is the validated .docx only. Skipping PDF conversion is intentional — it keeps this step fast and low-cost in output quality. If a PDF is ever needed (e.g. for printing, where Word's automatic numbering may not render reliably), it is a separate, on-demand step run later by converting the final validated .docx (see the numbered-transcripts-to-pdf skill) — never rebuilt independently with reportlab or a from-scratch PDF renderer, which can silently drift out of sync with the Word file's numbering.
+Do not produce a PDF. The deliverable is the validated .docx only. Skipping PDF conversion is intentional — it keeps this step fast and low-cost. If a PDF is ever needed (e.g. for printing, where Word's automatic numbering may not render reliably), it is a separate, on-demand step run later by converting the final validated .docx (see the numbered-transcripts-to-pdf skill) — never rebuilt independently with reportlab or a from-scratch PDF renderer, which can silently drift out of sync with the Word file.
 
 ## Verification — proportional, not exhaustive
 
