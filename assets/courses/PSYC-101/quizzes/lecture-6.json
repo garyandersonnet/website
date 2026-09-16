@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-6",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "Love and Attraction",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "Relational schema idea:",
+      "choices": [
+        "A People never encode couples.",
+        "B We store cognitive structures of people-as-couples—names recalled as pairs.",
+        "C Only sibling bonds exist.",
+        "D Psychology ignores dyads."
+      ],
+      "answer": 1,
+      "cite": "6.4",
+      "explain": "Relational schemas: remember Keith-and-Stacey as a unit."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "Powerful predictor of attraction he stresses:",
+      "choices": [
+        "A Only shared zip codes.",
+        "B Physical appearance—people spend hugely on looking good.",
+        "C Ignoring all biology.",
+        "D Random lottery only."
+      ],
+      "answer": 1,
+      "cite": "6.29",
+      "explain": "Physical appearance is a powerful attraction predictor."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "Aron's self-expansion model:",
+      "choices": [
+        "A Relationships shrink the self always.",
+        "B Forming a relationship expands the self by including the other.",
+        "C Only applies to pets.",
+        "D Forbids intimacy."
+      ],
+      "answer": 1,
+      "cite": "6.85",
+      "explain": "Self expands through including partner."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "Companionate love (Sternberg-style discussion) has:",
+      "choices": [
+        "A Only passion without commitment.",
+        "B Intimacy and commitment without (or with less) passion.",
+        "C Zero intimacy.",
+        "D Only lust."
+      ],
+      "answer": 1,
+      "cite": "6.99",
+      "explain": "Companionate: intimacy + commitment, less passion."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "Rusbult's investment model highlights:",
+      "choices": [
+        "A Only initial sparks.",
+        "B Investments in the relationship as key to staying—beyond satisfaction alone.",
+        "C Ignoring alternatives.",
+        "D That accommodation never matters."
+      ],
+      "answer": 1,
+      "cite": "6.127",
+      "explain": "Investment model named for what people overlook: investments."
+    }
+  ]
+}

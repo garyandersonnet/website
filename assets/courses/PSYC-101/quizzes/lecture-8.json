@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-8",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 8,
+  "title": "Social Navigation",
+  "questions": [
+    {
+      "id": "l8-q1",
+      "prompt": "Two big reasons for social influence:",
+      "choices": [
+        "A Only genetic mutation.",
+        "B Normative (be liked/avoid trouble) and informational (be right) motives.",
+        "C Only hunger.",
+        "D Ignoring all others."
+      ],
+      "answer": 1,
+      "cite": "8.3",
+      "explain": "Liked vs right—normative and informational influence."
+    },
+    {
+      "id": "l8-q2",
+      "prompt": "Asch line studies demonstrate:",
+      "choices": [
+        "A People never conform on easy perceptual tasks.",
+        "B Group pressure can make people give wrong line judgments.",
+        "C Only experts are influenced.",
+        "D Conformity requires electric shocks."
+      ],
+      "answer": 1,
+      "cite": "8.49",
+      "explain": "Classic conformity: match the wrong line under group pressure."
+    },
+    {
+      "id": "l8-q3",
+      "prompt": "Door-in-the-face technique:",
+      "choices": [
+        "A Start tiny then huge with no retreat.",
+        "B Start with an extreme ask then retreat to a smaller request (Mexico week → smaller ask).",
+        "C Only foot-in-the-door.",
+        "D Never used by teens."
+      ],
+      "answer": 1,
+      "cite": "8.73",
+      "explain": "Big ask then smaller concession request."
+    },
+    {
+      "id": "l8-q4",
+      "prompt": "Milgram-style obedience result he cites:",
+      "choices": [
+        "A Almost nobody continues to high shock levels.",
+        "B About two-thirds go to the XXX/450V range depending on setup—obedience is powerful.",
+        "C Only psychopaths obey.",
+        "D Isolation always reduces obedience to zero."
+      ],
+      "answer": 1,
+      "cite": "8.85",
+      "explain": "~2/3 shock to max in classic setups."
+    },
+    {
+      "id": "l8-q5",
+      "prompt": "Closing social health advice:",
+      "choices": [
+        "A Maximize isolation and FOMO via social media comparison.",
+        "B Get outside doing social stuff with people—isolation/loneliness/social media FOMO aren't helpful.",
+        "C Only online friends count.",
+        "D Never join groups."
+      ],
+      "answer": 1,
+      "cite": "8.151",
+      "explain": "Real-world social engagement over isolated FOMO."
+    }
+  ]
+}

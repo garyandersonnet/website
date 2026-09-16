@@ -1,0 +1,74 @@
+{
+  "id": "psyc-101-lecture-7",
+  "course": "PSYC 101",
+  "kind": "lecture",
+  "lecture": 7,
+  "title": "Mental Health",
+  "questions": [
+    {
+      "id": "l7-q1",
+      "prompt": "Psychiatrists versus clinical psychologists (as he sketches):",
+      "choices": [
+        "A Identical training always.",
+        "B Psychiatrists are MDs; clinical psychology is a distinct path—he has a clinical PhD but is not a licensed clinician in the practice sense he notes.",
+        "C Only social workers diagnose.",
+        "D Psychology began in 2000 only."
+      ],
+      "answer": 1,
+      "cite": "7.6",
+      "explain": "Psychiatry = MD route; clinical psych distinct."
+    },
+    {
+      "id": "l7-q2",
+      "prompt": "Disturbances can appear in cognition meaning:",
+      "choices": [
+        "A Only muscle spasms.",
+        "B Thoughts—e.g., delusions or problematic beliefs.",
+        "C Exclusive skin rashes.",
+        "D Only income tax."
+      ],
+      "answer": 1,
+      "cite": "7.13",
+      "explain": "Cognition = thoughts; delusions etc."
+    },
+    {
+      "id": "l7-q3",
+      "prompt": "Grief after losing a spouse:",
+      "choices": [
+        "A Always a lifelong psychotic disorder by default.",
+        "B Depression-like response can be pretty normal bereavement—not automatically pathological.",
+        "C Never emotional.",
+        "D Requires schizophrenia diagnosis."
+      ],
+      "answer": 1,
+      "cite": "7.25",
+      "explain": "Bereavement depression can be normal."
+    },
+    {
+      "id": "l7-q4",
+      "prompt": "Schizophrenia is framed as:",
+      "choices": [
+        "A Only mild sadness.",
+        "B A thought disorder with florid positives like delusions of grandeur or persecution.",
+        "C Identical to simple shyness.",
+        "D Only personality antagonism."
+      ],
+      "answer": 1,
+      "cite": "7.97",
+      "explain": "Thought disorder with delusions etc."
+    },
+    {
+      "id": "l7-q5",
+      "prompt": "Psychotherapy outcome takeaway:",
+      "choices": [
+        "A Everyone becomes beach-party zen perfect.",
+        "B Reviews show meaningful but moderate change; goal often moving off debilitating extremes toward functioning—not perfection.",
+        "C Therapy never helps anyone.",
+        "D Only medication exists."
+      ],
+      "answer": 1,
+      "cite": "7.147",
+      "explain": "Get off extreme dysfunction; not become perfect."
+    }
+  ]
+}
