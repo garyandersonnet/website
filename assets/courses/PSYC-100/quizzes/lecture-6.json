@@ -1,0 +1,74 @@
+{
+  "id": "psyc-100-lecture-6",
+  "course": "PSYC 100",
+  "kind": "lecture",
+  "lecture": 6,
+  "title": "A Higher Vision",
+  "questions": [
+    {
+      "id": "l6-q1",
+      "prompt": "Clinically, how does he distinguish 'not having a life' from depression?",
+      "choices": [
+        "A They are always the same diagnosis.",
+        "B A multi-dimensional check (relationships, friends, meaning, etc.) can show misery from lacking a life vs clinical depression.",
+        "C Only blood tests define either condition.",
+        "D If you have a job you cannot be either."
+      ],
+      "answer": 1,
+      "cite": "6.4",
+      "explain": "Assess whether someone has intimacy, family, friends, meaningful engagement—if not, misery may be absence of a life, not depression per se."
+    },
+    {
+      "id": "l6-q2",
+      "prompt": "What does he say is the right question instead of 'Where is the perfect partner for me'?",
+      "choices": [
+        "A How can I lower my standards to zero?",
+        "B How can I become the person who would attract the person I would want to be with?",
+        "C How can I force someone to be right for me?",
+        "D Why bother with relationships at all?"
+      ],
+      "answer": 1,
+      "cite": "6.12",
+      "explain": "The productive question is how to become the person who would attract the partner you'd want."
+    },
+    {
+      "id": "l6-q3",
+      "prompt": "What rule of thumb does he give for real friends regarding good and bad news?",
+      "choices": [
+        "A Friends should always trump your news with their own.",
+        "B You can tell them good news and they're happy for you; you can tell bad news and they sustain you without competing misery.",
+        "C Friends exist only for networking.",
+        "D Never share news with anyone."
+      ],
+      "answer": 1,
+      "cite": "6.23",
+      "explain": "Good friends rejoice at your good news (without substituting their own 'greater' story) and support you through bad news."
+    },
+    {
+      "id": "l6-q4",
+      "prompt": "What does Carl Rogers establish as a cardinal rule before clinical help works?",
+      "choices": [
+        "A The therapist must force insight with shock.",
+        "B The person must come wanting to be better—court-mandated unwilling clients often can't be helped that way.",
+        "C Only medication matters.",
+        "D Clients should never decide anything."
+      ],
+      "answer": 1,
+      "cite": "6.27",
+      "explain": "Rogers: the person has to come deciding they'd rather be better; forced clients may refuse that decision."
+    },
+    {
+      "id": "l6-q5",
+      "prompt": "In the closing recapitulation, what is the vision he asks you to build?",
+      "choices": [
+        "A vague Caribbean vacation poster from age 13, left unexamined.",
+        "B How you would set the world straight optimally around yourself—decomposed into relationships, work, and concrete plans you take seriously.",
+        "C A list of people to resent.",
+        "D Only financial KPIs with no human domain."
+      ],
+      "answer": 1,
+      "cite": "6.100",
+      "explain": "Vision = optimally setting the world straight around you; decompose into relationships and actionable elements—take yourself seriously."
+    }
+  ]
+}
