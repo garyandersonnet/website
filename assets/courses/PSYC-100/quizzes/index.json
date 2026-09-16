@@ -1,0 +1,54 @@
+{
+  "course": "PSYC 100",
+  "quizzes": [
+    {
+      "id": "psyc-100-lecture-1",
+      "lecture": 1,
+      "title": "Between Order and Chaos",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-1.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-lecture-2",
+      "lecture": 2,
+      "title": "The Walled Garden",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-2.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-lecture-3",
+      "lecture": 3,
+      "title": "Desire and Discipline",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-3.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-lecture-4",
+      "lecture": 4,
+      "title": "Fear as a Catalyst",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-4.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-lecture-5",
+      "lecture": 5,
+      "title": "Faith in Tragedy",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-5.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-lecture-6",
+      "lecture": 6,
+      "title": "A Higher Vision",
+      "path": "/assets/courses/PSYC-100/quizzes/lecture-6.json",
+      "questions": 5
+    },
+    {
+      "id": "psyc-100-final",
+      "lecture": "Final",
+      "title": "Final Exam",
+      "path": "/assets/courses/PSYC-100/quizzes/final.json",
+      "questions": 40
+    }
+  ]
+}
