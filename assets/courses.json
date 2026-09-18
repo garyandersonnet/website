@@ -168,7 +168,10 @@
         "url": "/assets/courses/NUTR-101/quizzes/final.json"
       }
     ],
-    "studyAidsDemo": false
+    "studyAidsDemo": false,
+    "slides": "/assets/courses/NUTR-101/slides",
+    "slidesCount": 15,
+    "audio": "/assets/courses/NUTR-101/deep-dive.m4a"
   },
   {
     "sequence": "4",
@@ -1037,7 +1040,7 @@
     "semester": "3",
     "type": "Required",
     "code": "BUS 220",
-    "title": "Successful Mistakes–In Business",
+    "title": "Successful Mistakes\u2013In Business",
     "instructor": "Dr. Weng Tao; Derick Cooper",
     "transcript": "/assets/transcripts/BUS-220_transcript.pdf",
     "paUrl": "https://petersonacademy.com/courses/successful-mistakes-in-business?referral_code=293XVS"
@@ -1843,7 +1846,7 @@
     "semester": "",
     "type": "",
     "code": "ECON 320",
-    "title": "Ayn Rand — Novelist and Philosopher",
+    "title": "Ayn Rand \u2014 Novelist and Philosopher",
     "instructor": "Dr. Yaron Brook",
     "paUrl": "https://petersonacademy.com/signup?referral_code=293XVS"
   },
