@@ -1,0 +1,53 @@
+name: Oneshot rename PSYC transcript
+on:
+  push:
+    branches:
+      - rename/psyc-250-oneshot
+    paths:
+      - '.github/workflows/oneshot-rename-psyc-transcript.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rename via git (reuse blob)
+        env:
+          TARGET_BRANCH: rename/psyc-250-transcript
+        run: |
+          set -euo pipefail
+          git config user.name "Grok Bot Designer"
+          git config user.email "grok-bot[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/nakamotopublius/website.git || true
+          git fetch upstream main
+          git checkout -B "$TARGET_BRANCH" upstream/main
+          test -f assets/transcripts/PSYC-240_transcript.pdf
+          test ! -e assets/transcripts/PSYC-250_transcript.pdf
+          git mv assets/transcripts/PSYC-240_transcript.pdf assets/transcripts/PSYC-250_transcript.pdf
+          python3 <<'PY'
+          from pathlib import Path
+          old = "/assets/transcripts/PSYC-240_transcript.pdf"
+          new = "/assets/transcripts/PSYC-250_transcript.pdf"
+          for rel in ["assets/courses/parts/sem-2.json", "assets/courses.json"]:
+              p = Path(rel)
+              text = p.read_text()
+              if old not in text:
+                  raise SystemExit(f"missing old path in {rel}")
+              p.write_text(text.replace(old, new))
+              print("updated", rel)
+          PY
+          git add assets/courses/parts/sem-2.json assets/courses.json
+          git status
+          git commit -m "$(cat <<'EOF'
+          Rename Psychology of Self transcript to PSYC-250 (via Grok Bot Designer)
+
+          Move assets/transcripts/PSYC-240_transcript.pdf → PSYC-250_transcript.pdf
+          (same blob; no content change) and point sem-2.json / courses.json at the
+          new path. Old PSYC-240 path freed for The Self in Action.
+          EOF
+          )"
+          git push -u origin "$TARGET_BRANCH" --force
