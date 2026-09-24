@@ -969,7 +969,7 @@
     "sequence": "25",
     "semester": "2",
     "type": "Required",
-    "code": "PSYC 240",
+    "code": "PSYC 250",
     "title": "The Psychology of Self",
     "instructor": "Dr. Keith Campbell",
     "transcript": "/assets/transcripts/PSYC-240_transcript.pdf",
@@ -1863,7 +1863,7 @@
     "sequence": "115",
     "semester": "",
     "type": "",
-    "code": "",
+    "code": "PSYC 240",
     "title": "The Self in Action",
     "instructor": "Dr. Roy Baumeister",
     "paUrl": "https://petersonacademy.com/courses/the-self-in-action?referral_code=293XVS"
