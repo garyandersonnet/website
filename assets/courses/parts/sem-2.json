@@ -1,1 +1,152 @@
-[{"sequence":"16","semester":"2","type":"Required","code":"PHIL 215","title":"Ideas of the 20th Century Part 1","instructor":"Dr. Daniel Bonevac","transcript":"/assets/transcripts/PHIL-215_transcript.pdf","paUrl":"https://petersonacademy.com/courses/ideas-of-the-20th-century-part-1?referral_code=293XVS"},{"sequence":"17","semester":"2","type":"Required","code":"HIST 210","title":"Modern European History","instructor":"Dr. Robert Tombs","transcript":"/assets/transcripts/HIST-210_transcript.pdf","paUrl":"https://petersonacademy.com/courses/modern-european-history?referral_code=293XVS"},{"sequence":"18","semester":"2","type":"Required","code":"PHIL 110","title":"Skepticism 101","instructor":"Dr. Michael Shermer","transcript":"/assets/transcripts/PHIL-110_transcript.pdf","paUrl":"https://petersonacademy.com/courses/skepticism-101?referral_code=293XVS"},{"sequence":"19","semester":"2","type":"Required","code":"JOUR 101","title":"Journalism 101","instructor":"Gerald Posner","transcript":"/assets/transcripts/JOUR-101_transcript.pdf","paUrl":"https://petersonacademy.com/courses/journalism-101?referral_code=293XVS"},{"sequence":"20","semester":"2","type":"Required","code":"NEUR 101","title":"Intro to Neuroscience","instructor":"Dr. Baland Jalal","transcript":"/assets/transcripts/NEUR-101_transcript.pdf","paUrl":"https://petersonacademy.com/courses/intro-to-neuroscience?referral_code=293XVS"},{"sequence":"21","semester":"2","type":"Required","code":"ECON 210","title":"The History & Economics of Money","instructor":"Dr. Yaron Brook","transcript":"/assets/transcripts/ECON-210_transcript.pdf","paUrl":"https://petersonacademy.com/courses/the-history-and-economics-of-money?referral_code=293XVS"},{"sequence":"22","semester":"2","type":"Required","code":"PHIL 210","title":"Ancient Philosophy","instructor":"Dr. James Orr","transcript":"/assets/transcripts/PHIL-210_transcript.pdf","paUrl":"https://petersonacademy.com/courses/ancient-philosophy?referral_code=293XVS"},{"sequence":"23","semester":"2","type":"Required","code":"BIO 110","title":"The Fundamentals of Physiology","instructor":"Dr. Benjamin Bikman","transcript":"/assets/transcripts/BIO-110_transcript.pdf","paUrl":"https://petersonacademy.com/courses/the-fundamentals-of-physiology?referral_code=293XVS"},{"sequence":"24","semester":"2","type":"Required","code":"MUS 210","title":"The Great Composers","instructor":"Samuel Andreyev","transcript":"/assets/transcripts/MUS-210_transcript.pdf","paUrl":"https://petersonacademy.com/courses/the-great-composers?referral_code=293XVS"},{"sequence":"25","semester":"2","type":"Required","code":"PSYC 240","title":"The Psychology of Self","instructor":"Dr. Keith Campbell","transcript":"/assets/transcripts/PSYC-240_transcript.pdf","paUrl":"https://petersonacademy.com/courses/the-psychology-of-self?referral_code=293XVS"},{"sequence":"26","semester":"2","type":"Elective","code":"ASTR 210","title":"Intro to Cosmology","instructor":"Dr. Brian Keating","transcript":"/assets/transcripts/ASTR-210_transcript.pdf","paUrl":"https://petersonacademy.com/courses/intro-to-cosmology?referral_code=293XVS"},{"sequence":"27","semester":"2","type":"Elective","code":"ENGL 220","title":"The Art of Storytelling","instructor":"Gregg Hurwitz; Dr. Andy Martin","transcript":"/assets/transcripts/ENGL-220_transcript.pdf","paUrl":"https://petersonacademy.com/courses/the-art-of-storytelling?referral_code=293XVS"},{"sequence":"28","semester":"2","type":"Elective","code":"PSYC 230","title":"Introduction to Abnormal Psychology","instructor":"Dr. Robert O. Pihl","transcript":"/assets/transcripts/PSYC-230_transcript.pdf","paUrl":"https://petersonacademy.com/courses/introduction-to-abnormal-psychology?referral_code=293XVS"},{"sequence":"29","semester":"2","type":"Elective","code":"PSYC 231","title":"Introduction to Abnormal Psychology Part 2","instructor":"Dr. Robert O. Pihl","transcript":"/assets/transcripts/PSYC-231_transcript.pdf","paUrl":"https://petersonacademy.com/courses/introduction-to-abnormal-psychology-part-2?referral_code=293XVS"},{"sequence":"30","semester":"2","type":"Elective","code":"MUS 250","title":"Introduction to Music Composition","instructor":"Samuel Andreyev","transcript":"/assets/transcripts/MUS-250_transcript.pdf","paUrl":"https://petersonacademy.com/courses/introduction-to-music-composition?referral_code=293XVS"}]
+[
+  {
+    "sequence": "16",
+    "semester": "2",
+    "type": "Required",
+    "code": "PHIL 215",
+    "title": "Ideas of the 20th Century Part 1",
+    "instructor": "Dr. Daniel Bonevac",
+    "transcript": "/assets/transcripts/PHIL-215_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/ideas-of-the-20th-century-part-1?referral_code=293XVS"
+  },
+  {
+    "sequence": "17",
+    "semester": "2",
+    "type": "Required",
+    "code": "HIST 210",
+    "title": "Modern European History",
+    "instructor": "Dr. Robert Tombs",
+    "transcript": "/assets/transcripts/HIST-210_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/modern-european-history?referral_code=293XVS"
+  },
+  {
+    "sequence": "18",
+    "semester": "2",
+    "type": "Required",
+    "code": "PHIL 110",
+    "title": "Skepticism 101",
+    "instructor": "Dr. Michael Shermer",
+    "transcript": "/assets/transcripts/PHIL-110_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/skepticism-101?referral_code=293XVS"
+  },
+  {
+    "sequence": "19",
+    "semester": "2",
+    "type": "Required",
+    "code": "JOUR 101",
+    "title": "Journalism 101",
+    "instructor": "Gerald Posner",
+    "transcript": "/assets/transcripts/JOUR-101_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/journalism-101?referral_code=293XVS"
+  },
+  {
+    "sequence": "20",
+    "semester": "2",
+    "type": "Required",
+    "code": "NEUR 101",
+    "title": "Intro to Neuroscience",
+    "instructor": "Dr. Baland Jalal",
+    "transcript": "/assets/transcripts/NEUR-101_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/intro-to-neuroscience?referral_code=293XVS"
+  },
+  {
+    "sequence": "21",
+    "semester": "2",
+    "type": "Required",
+    "code": "ECON 210",
+    "title": "The History & Economics of Money",
+    "instructor": "Dr. Yaron Brook",
+    "transcript": "/assets/transcripts/ECON-210_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/the-history-and-economics-of-money?referral_code=293XVS"
+  },
+  {
+    "sequence": "22",
+    "semester": "2",
+    "type": "Required",
+    "code": "PHIL 210",
+    "title": "Ancient Philosophy",
+    "instructor": "Dr. James Orr",
+    "transcript": "/assets/transcripts/PHIL-210_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/ancient-philosophy?referral_code=293XVS"
+  },
+  {
+    "sequence": "23",
+    "semester": "2",
+    "type": "Required",
+    "code": "BIO 110",
+    "title": "The Fundamentals of Physiology",
+    "instructor": "Dr. Benjamin Bikman",
+    "transcript": "/assets/transcripts/BIO-110_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/the-fundamentals-of-physiology?referral_code=293XVS"
+  },
+  {
+    "sequence": "24",
+    "semester": "2",
+    "type": "Required",
+    "code": "MUS 210",
+    "title": "The Great Composers",
+    "instructor": "Samuel Andreyev",
+    "transcript": "/assets/transcripts/MUS-210_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/the-great-composers?referral_code=293XVS"
+  },
+  {
+    "sequence": "25",
+    "semester": "2",
+    "type": "Required",
+    "code": "PSYC 250",
+    "title": "The Psychology of Self",
+    "instructor": "Dr. Keith Campbell",
+    "transcript": "/assets/transcripts/PSYC-250_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/the-psychology-of-self?referral_code=293XVS"
+  },
+  {
+    "sequence": "26",
+    "semester": "2",
+    "type": "Elective",
+    "code": "ASTR 210",
+    "title": "Intro to Cosmology",
+    "instructor": "Dr. Brian Keating",
+    "transcript": "/assets/transcripts/ASTR-210_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/intro-to-cosmology?referral_code=293XVS"
+  },
+  {
+    "sequence": "27",
+    "semester": "2",
+    "type": "Elective",
+    "code": "ENGL 220",
+    "title": "The Art of Storytelling",
+    "instructor": "Gregg Hurwitz; Dr. Andy Martin",
+    "transcript": "/assets/transcripts/ENGL-220_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/the-art-of-storytelling?referral_code=293XVS"
+  },
+  {
+    "sequence": "28",
+    "semester": "2",
+    "type": "Elective",
+    "code": "PSYC 230",
+    "title": "Introduction to Abnormal Psychology",
+    "instructor": "Dr. Robert O. Pihl",
+    "transcript": "/assets/transcripts/PSYC-230_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/introduction-to-abnormal-psychology?referral_code=293XVS"
+  },
+  {
+    "sequence": "29",
+    "semester": "2",
+    "type": "Elective",
+    "code": "PSYC 231",
+    "title": "Introduction to Abnormal Psychology Part 2",
+    "instructor": "Dr. Robert O. Pihl",
+    "transcript": "/assets/transcripts/PSYC-231_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/introduction-to-abnormal-psychology-part-2?referral_code=293XVS"
+  },
+  {
+    "sequence": "30",
+    "semester": "2",
+    "type": "Elective",
+    "code": "MUS 250",
+    "title": "Introduction to Music Composition",
+    "instructor": "Samuel Andreyev",
+    "transcript": "/assets/transcripts/MUS-250_transcript.pdf",
+    "paUrl": "https://petersonacademy.com/courses/introduction-to-music-composition?referral_code=293XVS"
+  }
+]
